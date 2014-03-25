@@ -3,3 +3,20 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    application: 
+      title: "Company"
+  common:
+    theme:
+      head:
+        menu_home: "Home"
+        menu_company: "Company"
+        menu_products: "Products"
+        menu_intmarket: "Int Market"
+        menu_fields: "Field"
+        menu_equipments: "Equipments"
+        menu_contactus: "Contact us"
+
+  front:
+    index:
+
