@@ -1,5 +1,14 @@
 RailsApp::Application.routes.draw do
-  get "front/index"
+  devise_for :admins, only: [:session], :path => '/admin', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  
+  controller :front do
+    get "/" => :index
+    get "/admin" => :admin, as: "front_admin"
+  end
+  namespace 'admin' do    
+    resources :activities
+    resources :news
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

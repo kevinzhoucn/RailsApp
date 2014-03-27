@@ -1,8 +1,12 @@
 .page-content
 	#top-container.container-fluid
-
 		.col-md-8#videozone See the video!
-		.col-md-4#updates paa this is the recent activity
+		.col-md-4#updates 
+			%h3 Recent activity
+			%ul
+				- @activities.each do |activity|
+					%li= activity.title
+
 	#middle-container.container-fluid
 		.col-md-2#partners
 			%h3 Partners
@@ -13,5 +17,6 @@
 			%span asdf
 		.col-mid-3#news
 			%h3 News
-			%span what makes you crazy
-			%span Who nose
+			%ul
+				- @news.each do |news|
+					%li= news.title
