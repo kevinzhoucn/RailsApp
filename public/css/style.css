@@ -1,19 +1,17 @@
-﻿*{
-	margin:0px;
-	font-family:Arial, Helvetica, sans-serif;
-}
-div.background{
+﻿/*div.background{
 	width:100%;
 	height:100%;
 	background-color:#EFF4F4;
-}
+}*/
+
 /*这个是网页总容器，里面装着Banner, Menu, page, footer*/
 div.mainsheet{
 	border: 1px solid #2B7DB1;
 	width:90%;
 	margin:auto;
-	padding:5px;
+
 }
+
 div.banner{
 	background-size: auto 100%;
 	height: 110px;
@@ -24,8 +22,7 @@ div.nav-menu{
 	height:auto;
 	overflow:hidden;
 	text-align:center;
-	margin:auto;
-	margin-top:2px;
+	margin-top:1px;
 }
 /*这个是位于菜单下面的 页面 容器*/
 div.page-content{
@@ -47,14 +44,15 @@ div.page-content{
 }*/
 /*这个class只规定菜单Li的颜色、边框*/
 ul.menu-item li{
-	border-color: #001984;
 	border-right-style: solid;
 	border-width: thin;
 	border-radius: 5px 5px 0px 0px;
-	line-height: 40px;
-	background-color: #015EA4;
-	color: #FFFFFF;
+	background-color:#015EA4;
+	line-height:40px;
+	font-weight:bold;
+
 }
+
 /*这个class规定了当前页/当前标签的颜色*/
 ul.menu-item li.active{
 	background-color: #FFFFFF;
