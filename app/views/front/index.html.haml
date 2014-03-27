@@ -1,18 +1,22 @@
-%h1 This is main body content.
-%p Find me in app/views/front/index.html.haml
+.page-content
+	#top-container.container-fluid
+		.col-md-8#videozone See the video!
+		.col-md-4#updates 
+			%h3 Recent activity
+			%ul
+				- @activities.each do |activity|
+					%li= activity.title
 
-.row
-  .col-md-8
-    %p Video section
-  .col-md-4
-    %ul
-      %p Recent Activities
-.row
-  .col-md-3
-    %ul
-      %p Partners
-  .col-md-6
-    %p Product Slide show
-  .col-md-3
-    %ul
-      %p News headlines
+	#middle-container.container-fluid
+		.col-md-2#partners
+			%h3 Partners
+			%li Microsoft
+			%li 31 Heavy Ind
+		.col-md-7#prodparam
+			%h3 Product Parameters
+			%span asdf
+		.col-mid-3#news
+			%h3 News
+			%ul
+				- @news.each do |news|
+					%li= news.title

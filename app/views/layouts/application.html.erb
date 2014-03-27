@@ -3,17 +3,16 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : t('.title') %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="<%= root_url %>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<%= root_url %>css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="<%= root_url %>css/bootstrap.css" rel="stylesheet">
     <link href="<%= root_url %>css/style.css" rel="stylesheet">
     <%= stylesheet_link_tag "application" %>    
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
   <body>
-    <div class="background">
-      <div class="mainsheet">
-        <div class="row">
+      
+      <div class="row">
+        <div class="mainsheet">
           <div class="container">
             <%= render :partial => 'common/theme/top' %>
           </div>
@@ -33,7 +32,7 @@
           </div>
         </div>
       </div>
-    </div>
+
 
   <!-- Bootstrap core JavaScript
   ================================================== -->

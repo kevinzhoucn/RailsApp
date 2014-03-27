@@ -1,17 +1,16 @@
-%i This is head / Find me in app/views/common/theme/_head.html.haml
-
-%ul.menu-list
-  %li
-    = t('.menu_home')
-  %li
-    = t('.menu_company')
-  %li
-    = t('.menu_products')
-  %li
-    = t('.menu_intmarket')
-  %li
-    = t('.menu_fields')
-  %li
-    = t('.menu_equipments')
-  %li
-    = t('.menu_contactus')
+.nav-menu
+	%ul.nav.nav-pills.nav-justified.menu-item
+		%li.active 
+			=link_to 'Home', root_url
+		%li
+			%a Company
+		%li
+			%a WRD Products
+		%li
+			%a International Markets
+		%li
+			%a Fields
+		%li
+			%a Equipments
+		%li
+			%a Contactus
