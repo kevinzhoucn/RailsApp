@@ -1,13 +1,13 @@
 .page-content
-	#top-container.container-fluid
+	.container-fluid
 		.col-md-8#videozone See the video!
 		.col-md-4#updates 
 			%h3 Recent activity
 			%ul
-				- @activities.each do |activity|
-					%li= activity.title
-
-	#middle-container.container-fluid
+			- @activities.each do |activity|
+				%li= activity.title
+	
+	.container-fluid
 		.col-md-2#partners
 			%h3 Partners
 			%li Microsoft
@@ -15,8 +15,8 @@
 		.col-md-7#prodparam
 			%h3 Product Parameters
 			%span asdf
-		.col-mid-3#news
+		.col-md-2#news
 			%h3 News
 			%ul
-				- @news.each do |news|
-					%li= news.title
+			- @news.each do |news|
+				%li= news.title
