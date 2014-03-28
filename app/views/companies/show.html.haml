@@ -1,0 +1,15 @@
+%p#notice= notice
+
+- if not @company.nil?
+  %p
+    %b Content:
+    = @company.content
+
+  = link_to 'Edit', edit_company_path(@company)
+  \|
+  = link_to 'Back', companies_path
+- else
+  %p 
+    %b Empty company page.
+  %p 
+    %b Create company page first.
