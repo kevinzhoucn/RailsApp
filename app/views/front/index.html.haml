@@ -1,6 +1,7 @@
 .page-content
 	#top-container.container-fluid
-		.col-md-8#videozone See the video!
+		.col-md-8#videozone
+			%embed{style: "height: 350px; width:750px;", src: "http://player.youku.com/player.php/sid/XNTEyOTM1MDQ4/v.swf", quality: "high", align: "middle",  mode: "transparent", type: "application/x-shockwave-flash"}
 		.col-md-4#updates 
 			%h3 Recent activity
 			- @activities.each do |activity|
