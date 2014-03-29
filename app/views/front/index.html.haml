@@ -14,7 +14,7 @@
 			%li 31 Heavy Ind
 		.col-md-7#prodparam
 			%h3 Product Parameters
-			%span asdf
+			=render partial: 'common/theme/carousel', object: @slides
 		.col-md-2#news
 			%h3 News
 			- @news.each do |news|
