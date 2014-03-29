@@ -5,7 +5,7 @@ class Company < ActiveRecord::Base
   validates_presence_of :content
   validates_length_of :content, :maximum => 20000
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, 
+  has_attached_file :avatar, :styles => { :large => "600x400", :medium => "300x300>", :thumb => "100x100>" }, 
                     :default_url => "/images/:style/missing.png", :whiny => false,
                     :url => "/uploadfiles/:class/:attachment/:id_partition/:basename_:style.:extension",
                     :path => ":rails_root/public/uploadfiles/:class/:attachment/:id_partition/:basename_:style.:extension"

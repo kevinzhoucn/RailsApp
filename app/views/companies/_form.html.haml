@@ -1,10 +1,17 @@
+%script{:type => "text/javascript",
+        :src  => "#{root_url}ckeditor/ckeditor.js"}
+
 = simple_form_for(@company) do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :avatar, as: :file
-  .form-inputs
-    = f.input :content
+    = f.input :avatar, as: :file, label: 'Picture'
+    = f.input :content, label: 'Content'
+  / .form-inputs
+  /   = f.input :content
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, 'Submit'
+
+:javascript
+  CKEDITOR.replace('company_content');    
