@@ -6,6 +6,7 @@
     <link href="<%= root_url %>css/bootstrap.css" rel="stylesheet">
     <link href="<%= root_url %>css/style.css" rel="stylesheet">
     <%= stylesheet_link_tag "application" %>    
+    <%= javascript_include_tag "application" %>  
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
@@ -76,9 +77,7 @@ function delay(elem, src, delayTime){
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="<%= root_url %>js/jquery-1.11.0.min.js"></script>  
+  <!-- <script src="<%= root_url %>js/jquery-1.11.0.min.js"></script>  -->  
   <script src="<%= root_url %>js/bootstrap.js"></script>  
-  <script src="<%= root_url %>js/site.js"></script>
-  <%= javascript_include_tag "application" %>  
   </body>
 </html>
