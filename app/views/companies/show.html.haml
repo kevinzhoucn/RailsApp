@@ -1,13 +1,16 @@
 %p#notice= notice
 
 - if not @company.nil?
+  =image_tag @company.avatar.url(:large)
+  
   %p
     %b Content:
-    = @company.content
+    = @company.content.html_safe
 
-  = link_to 'Edit', edit_company_path(@company)
-  \|
-  = link_to 'Back', companies_path
+  
+  / = link_to 'Edit', edit_company_path(@company)
+  / \|
+  / = link_to 'Back', companies_path
 - else
   %p 
     %b Empty company page.

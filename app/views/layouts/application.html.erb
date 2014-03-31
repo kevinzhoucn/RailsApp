@@ -10,12 +10,52 @@
     <%= yield(:head) %>
   </head>
   <body>
+
+<!--admin menu-->
+<script type="text/javascript">
+function toggle(id) {
+    var el = document.getElementById(id);
+    var img = document.getElementById("arrow");
+    var box = el.getAttribute("class");
+    if(box == "hide"){
+        el.setAttribute("class", "show");
+        delay(img, "../img/arrowright.png", 400);
+    }
+    else{
+        el.setAttribute("class", "hide");
+        delay(img, "../img/arrowleft.png", 400);
+    }
+}
+
+function delay(elem, src, delayTime){
+    window.setTimeout(function() {elem.setAttribute("src", src);}, delayTime);
+}
+
+</script>
+<div id="box" class="hide">
+    <ul id="tab">
+        <li>
+            <img id="arrow" onclick="toggle('box');" src="../img/arrowleft.png">
+        </li>
+    </ul>
+    <div id="links">
+        <div id="deco">
+            <div class="bt"><a href="index.php" >HOME</a></div>
+            <div class="bt"><a href="tut.php" >TUTS</a></div>
+            <div class="bt"><a href="about.php" >ABOUT</a></div>
+            <div class="bt"><a href="contact.php" >CONTACT</a></div>
+        </div>
+    </div>
+</div>
+
+<!--end of admin menu-->
+
+
       <div class="row">
         <div class="mainsheet">
           <div class="container">
             <%= render :partial => 'common/theme/top' %>
           </div>
-
           <div class="container" >
             <%= render :partial => 'common/theme/head' %>
           </div>
@@ -31,11 +71,14 @@
           </div>
         </div>
       </div>
+
+
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="<%= root_url %>js/jquery-1.11.0.min.js"></script>  
-  <script src="<%= root_url %>js/bootstrap.min.js"></script>
-  <%= javascript_include_tag "application" %>
+  <script src="<%= root_url %>js/bootstrap.js"></script>  
+  <script src="<%= root_url %>js/site.js"></script>
+  <%= javascript_include_tag "application" %>  
   </body>
 </html>

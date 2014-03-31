@@ -14,6 +14,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @company = Company.last
+    @company_active = true
 
     respond_to do |format|
       format.html # show.html.erb
@@ -44,7 +45,7 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.save
-        format.html { redirect_to @company, notice: 'Company was successfully created.' }
+        format.html { redirect_to front_admin_url, notice: 'Company was successfully created.' }
         format.json { render json: @company, status: :created, location: @company }
       else
         format.html { render action: "new" }
