@@ -1,21 +1,27 @@
 .page-content
-	#top-container.container-fluid
-		.col-md-8#videozone
-			%embed{style: "height: 350px; width:750px;", src: "http://player.youku.com/player.php/sid/XNTEyOTM1MDQ4/v.swf", quality: "high", align: "middle",  mode: "transparent", type: "application/x-shockwave-flash"}
-		.col-md-4#updates 
-			%h3 Recent activity
-			- @activities.each do |activity|
-				%li= activity.title
+  #top-container.container-fluid
+    .col-md-8#videozone
+      %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0", width:"490", height:"390"}
+        %param{name:"movie", value:"../public/img/flvplayer.swf"}
+        %param{name:"quality", value:"high"}
+        %param{name:"allowFullScreen", value:"true"}
+        %param{name:"FlashVars", value:"vcastr_file=../public/img/videofile.flv"}
+        %embed{src:"../public/img/player.swf", allowFullScreen:"true", FlashVars:"vcastr_file=videofile.flv", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"700", height:"345"}
 
-	#middle-container.container-fluid
-		.col-md-2#partners
-			%h3 Partners
-			%li Microsoft
-			%li 31 Heavy Ind
-		.col-md-7#prodparam
-			%h3 Product Parameters
-			=render partial: 'common/theme/carousel', object: @slides
-		.col-md-2#news
-			%h3 News
-			- @news.each do |news|
-				%li= news.title
+    .col-md-4#updates 
+      %h3 Recent activity
+      - @activities.each do |activity|
+        %li= activity.title
+  #middle-container.container-fluid
+    .col-md-2#partners
+      %h3 Partners
+      %li Microsoft
+      %li 31 Heavy Ind
+    .col-md-7#prodparam
+      %h3 Product Parameters
+      =render partial: 'common/theme/carousel', object: @slides
+    .col-md-2#news
+      %h3 News
+      - @news.each do |news|
+        %li= news.title
+
