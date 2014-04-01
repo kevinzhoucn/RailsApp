@@ -15,8 +15,26 @@
   #middle-container.container-fluid
     .col-md-2#partners
       %h3 Partners
-      %li Microsoft
-      %li 31 Heavy Ind
+      %div{style:"margin-left:10px"}
+        %li
+          %a{href:"http://ts.lg.ua",target:"_blank"}
+            %img{src:"#{root_url}img/ts.lg.ua.jpg", alt:"LG"}
+        %li
+          %a{href:"http://www.crm.nl",target:"_blank"}
+            %img{src:"#{root_url}img/www.crm.nl.jpg", alt:"CRM Nederland"}
+        %li
+          %a{href:"http://www.idmar.com.ua",target:"_blank"}
+            %img{src:"#{root_url}img/www.idmar.com.ua.jpg", alt:"Idmar"}
+        %li
+          %a{href:"http://www.nornat.net",target:"_blank"}
+            %img{src:"#{root_url}img/www.nornat.net.jpg", alt:"Nornat"}
+        %li
+          %a{href:"http://www.oilsystem.kz",target:"_blank"}
+            %img{src:"#{root_url}img/www.oilsystem.kz.jpg", alt:"Oil System"}
+        %li
+          %a{href:"http://www.teploenergoprom.ru",target:"_blank"}
+            %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom"}
+
     .col-md-7#prodparam
       %h3 Product Parameters
       =render partial: 'common/theme/carousel', object: @slides
