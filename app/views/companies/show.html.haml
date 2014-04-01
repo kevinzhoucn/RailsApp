@@ -1,18 +1,25 @@
-%p#notice= notice
+.page-content
+  #top-container.container-fluid
+    .col-md-5#companyavatar{style:"height:300px"}
+      %p#notice= notice
 
-- if not @company.nil?
-  =image_tag @company.avatar.url(:large)
+      - if not @company.nil?
+        =image_tag @company.avatar.url(:large)
   
-  %p
-    %b Content:
-    = @company.content.html_safe
+        %p
+          %b Content:
+          = @company.content.html_safe
 
   
-  / = link_to 'Edit', edit_company_path(@company)
-  / \|
-  / = link_to 'Back', companies_path
-- else
-  %p 
-    %b Empty company page.
-  %p 
-    %b Create company page first.
+        / = link_to 'Edit', edit_company_path(@company)
+        / \|
+        / = link_to 'Back', companies_path
+      - else
+        %p 
+          %b Empty company page.
+        %p 
+          %b Create company page first.
+    .col-lg-6#companyintro{style:"height:300px"}
+      %h2 Introduction to WRD Valves Co., Ltd
+      %p WRD valves Co., Ltd formed in 1999
+

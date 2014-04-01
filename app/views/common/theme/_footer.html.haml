@@ -1,6 +1,12 @@
 .footer
-  %p 
-    Home | Marketing | Contact Us | Site Map
+  %p{style:"background-color:#539cdb"} 
+    =link_to 'Home', root_url
+    |
+    =link_to 'Marketing', root_url
+    |
+    =link_to 'Contact Us', root_url
+    |
+    =link_to 'Site Map', root_url
     / | 
     / =link_to 'Site Admin', front_admin_path
   %p Copyright &copy; WRD Valves Ltd.

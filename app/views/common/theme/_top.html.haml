@@ -1,7 +1,11 @@
 .banner
-	#wrdlogo
-	#sitename
-		%h4 Welcome!
-		%p Change Language:
-		%a Pусский
-		%a English
+  #wrdlogo
+  #sitename
+    %h4 Welcome!
+    %p Select Language:
+    %p &nbsp;
+    %a{href:"#{}"}
+      %img{src:"#{root_url}img/ru.jpg"}
+    |
+    %a{href:"#{}"}
+      %img{src:"#{root_url}img/en_us.jpg"}
