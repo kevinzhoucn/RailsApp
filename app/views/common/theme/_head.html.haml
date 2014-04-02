@@ -1,16 +1,17 @@
 .nav-menu
-	%ul.nav.nav-pills.nav-justified.menu-item
-		%li.active#home 
-			=link_to 'Home', root_url
-		%li#company
-			=link_to 'Company', front_company_path
-		%li#products
-			%a Products
-		%li#internationalmarkets
-			%a International Markets
-		%li#fields
-			%a Fields
-		%li#equipments
-			%a Equipments
-		%li#contactus
-			%a Contact us
+  %ul.nav.nav-pills.nav-justified.menu-item
+    %li.active#home 
+      =link_to 'Home', root_url
+    %li.inactive#company
+      =link_to 'Company', front_company_path
+    %li.inactive#products
+      %a Products
+    %li.inactive#internationalmarkets
+      %a International Markets
+    %li.inactive#fields
+      %a Fields
+    %li.inactive#equipments
+      %a Equipments
+    %li.inactive#contactus
+      %a Contact us
+  %script{src:"#{root_url}js/navbar.js"}
