@@ -32,7 +32,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'will_paginate'
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 gem 'paperclip', '~> 3.5.3'
 
 # To use ActiveModel has_secure_password
