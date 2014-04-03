@@ -1,10 +1,11 @@
 class FrontController < ApplicationController
+  layout 'admin', :only => [:admin]
   def index
     @activities = Activity.all
     @news = News.all
     @slides = Slide.all
   end
-  
+
   def product
   end
 
@@ -21,5 +22,6 @@ class FrontController < ApplicationController
   end
 
   def admin
+
   end
 end
