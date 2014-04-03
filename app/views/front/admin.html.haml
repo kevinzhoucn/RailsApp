@@ -1,11 +1,44 @@
-.col-xs-4
-  %h2 Admin page
-  %ul
-    %li
-      =link_to "New Activity", new_admin_activity_path
-    %li
-      =link_to "New News", new_admin_news_path
-    %li
-      =link_to "Edit Company Page", new_company_path
-    %li
-      =link_to "Add Slide", new_admin_slide_path
+.page-content
+  #container-fluid
+  
+  %h2{align:"center"} WRD valves Site Administration
+  .adminlist.col-md-3
+    #homeadmin
+      %h2 Homepage settings
+    %ul.admin-menu
+      %li
+        =link_to "Add Activity", new_admin_activity_path
+      %li
+        =link_to "Add News Headline", new_admin_news_path
+      %li
+        =link_to "Add Slide", new_admin_slide_path
+  .adminlist.col-md-2
+    #companyadmin
+      %h2 Company Page settings
+    %ul.admin-menu
+      %li
+        =link_to "Edit Company info", new_admin_activity_path
+  .adminlist.col-md-3
+    #productadmin
+      %h2 Product & Catagory Settings
+    %ul.admin-menu
+      %li
+        =link_to "Add Product", new_admin_activity_path
+      %li
+        =link_to "Add Cateogry", new_admin_activity_path
+      %li
+        =link_to "Edit Product", new_admin_activity_path
+      %li
+        =link_to "Edit Cateogry", new_admin_activity_path
+      %li
+        =link_to "Remove Product or Category"
+  .adminlist.col-md-3
+    #fieldadmin
+      %h2 Field Settings
+    %ul.admin-menu
+      %li
+        =link_to "Add Field", new_admin_activity_path
+      %li
+        =link_to "Edit Field", new_admin_activity_path
+      %li
+        =link_to "Remove Field"

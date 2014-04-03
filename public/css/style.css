@@ -66,6 +66,23 @@ ul.menu-item li.active{
 	font-weight: bold;
 	color: #015EA4;
 }
+ul.admin-menu {
+	background-color:#7eaceb;
+	padding-left:5px;
+	line-height: 20px;
+	margin:auto;
+	width:95%;
+	margin-bottom: 5px;
+	font-size:12pt;
+}
+ul.admin-menu a{
+	color:#ffffff;
+}
+ul.admin-menu a:hover{
+	color:#2E86BD;
+	background-color: #EEEEEE;
+}
+
 div.footer{
 	margin: 5px;
 	border: 1px solid #C1D4D3;
@@ -100,7 +117,7 @@ div#videozone,#updates{
 	margin-top:5px;
 	padding-left:5px;
 }
-div#partners,#prodparam,#news,#companyavatar,#companyintro{
+div#partners,#prodparam,#news,#companyavatar,#companyintro,.adminlist{
 	margin-top:5px;
 	background-color:#FFFFFF;
 	border-radius: 4px;
