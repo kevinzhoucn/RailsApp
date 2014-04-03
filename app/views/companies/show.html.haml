@@ -4,7 +4,7 @@
       %p#notice= notice
 
       - if not @company.nil?
-        =image_tag @company.avatar.url
+        =image_tag @company.avatar.url(:medium)
   
         %p
           %b Content:
