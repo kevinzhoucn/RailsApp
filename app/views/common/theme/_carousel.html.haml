@@ -7,7 +7,7 @@
     - @slides.each_with_index do |slide, index|
     - foo = "active" if index == 0
       .item{class: "#{foo}"}
-        =image_tag slide.avatar.url(:medium), {alt: "Slide-#{index}"}
+        =image_tag slide.avatar.url, {alt: "Slide-#{index}"}
         .container
           .carousel-caption
             %h1= slide.title
