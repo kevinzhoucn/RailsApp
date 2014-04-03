@@ -8,6 +8,10 @@ li
 	padding-bottom: 5px;
 	list-style: none;
 }
+h2,h3{
+	color:#2E86BD;
+}
+
 /*这个是网页总容器，里面装着Banner, Menu, page, footer*/
 div.mainsheet{
 	border: 1px solid #2B7DB1;
@@ -27,6 +31,7 @@ div.nav-menu{
 	overflow:hidden;
 	text-align:center;
 	margin-top:1px;
+	font-size: 14px;
 }
 /*这个是位于菜单下面的 页面 容器*/
 	div.page-content{
@@ -49,9 +54,10 @@ ul.menu-item li{
 	border-right-style: groove;
 	border-width: 1px;
 	background-color: #015EA4;
+	color: #ffffff;
 	line-height: 40px;
 	font-weight: bold;
-	padding: 4px 4px 0px 4px;
+	padding: 10px 8px 0px 8px;
 }
 
 /*这个class规定了当前页/当前标签的颜色*/
@@ -60,6 +66,23 @@ ul.menu-item li.active{
 	font-weight: bold;
 	color: #015EA4;
 }
+ul.admin-menu {
+	background-color:#7eaceb;
+	padding-left:5px;
+	line-height: 20px;
+	margin:auto;
+	width:95%;
+	margin-bottom: 5px;
+	font-size:12pt;
+}
+ul.admin-menu a{
+	color:#ffffff;
+}
+ul.admin-menu a:hover{
+	color:#2E86BD;
+	background-color: #EEEEEE;
+}
+
 div.footer{
 	margin: 5px;
 	border: 1px solid #C1D4D3;
@@ -94,7 +117,7 @@ div#videozone,#updates{
 	margin-top:5px;
 	padding-left:5px;
 }
-div#partners,#prodparam,#news,#companyavatar,#companyintro{
+div#partners,#prodparam,#news,#companyavatar,#companyintro,.adminlist{
 	margin-top:5px;
 	background-color:#FFFFFF;
 	border-radius: 4px;

@@ -291,7 +291,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #FFFFFF; /*原值 #428bca;*/
+  color: #EEEEEE;/*#428bca;*/
   text-decoration: none;
 }
 a.admin{
