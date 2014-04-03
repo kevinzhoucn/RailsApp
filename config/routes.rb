@@ -6,7 +6,12 @@ RailsApp::Application.routes.draw do
   get "/company" => "Companies#show", as: 'front_company'
 
   controller :front do
-    get "/" => :index
+    get "/home" => :index
+    get "/products" => :product, as: 'front_product'
+    get "/intmarkets" => :market, as: 'front_market'
+    get "/fields" => :field, as: 'front_field'
+    get "/equipments" => :equipment, as: 'front_equipment'
+    get "/contactus" => :contact, as: 'front_contact'
     get "/admin" => :admin, as: 'front_admin'
   end
   namespace 'admin' do
