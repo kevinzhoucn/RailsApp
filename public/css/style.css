@@ -97,14 +97,15 @@ div.footer{
 /*以下是各种ID*/
 div#sitename{
 	color:#015ea4;
-	width: 30%;
+	width: 20%;
 	height: 80%;
 	float:right;
+	text-align: right;
 }
 div#wrdlogo{
 	background-image:url('../img/logoNtext.png');
-	background-size: 100% 100%;
-	width: 60%;
+	background-repeat:no-repeat;
+	width: 70%;
 	height:100%;
 	float: left;
 }
@@ -124,4 +125,5 @@ div#partners,#prodparam,#news,#companyavatar,#companyintro,.adminlist{
 	border:1px solid #C1D4D3;
 	margin-top:5px;
 	padding-left:5px;
+	padding-top: 5px;
 }

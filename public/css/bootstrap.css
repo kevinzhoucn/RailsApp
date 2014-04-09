@@ -16,7 +16,9 @@
 	padding:0px
 }
 body {
-  background:#EFF4F4;
+  background-image:url(../img/bgimg.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat-x;
 }
 article,
 aside,
