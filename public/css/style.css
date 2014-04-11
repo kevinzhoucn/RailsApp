@@ -118,12 +118,29 @@ div#videozone,#updates{
 	margin-top:5px;
 	padding-left:5px;
 }
-div#partners,#prodparam,#news,#companyavatar,#companyintro,.adminlist{
+div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist{
 	margin-top:5px;
 	background-color:#FFFFFF;
 	border-radius: 4px;
 	border:1px solid #C1D4D3;
 	margin-top:5px;
-	padding-left:5px;
-	padding-top: 5px;
+	padding:5px;
+	overflow:hidden;
+	height:auto;
+}
+
+div.Cinfo{
+	font-weight: normal;
+	color:#2E86BD;
+	font-size: 13pt;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #008080;
+}
+div#R,#E{
+	width:50%;
+	color:#2E86BD;
+	font-weight:bold;
+	font-size:16pt;
+	float:left;
 }
