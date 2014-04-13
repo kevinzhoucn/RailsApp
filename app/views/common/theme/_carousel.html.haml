@@ -9,9 +9,10 @@
       .item{class: "#{foo}"}
         =image_tag slide.avatar.url(:large), {alt: "Slide-#{index}"}
         .container
-          .carousel-caption
-            %h1= slide.title
-            %p.lead= slide.summary
+          .carousel-caption{style: "top:10px"}
+            #textcontainer{style:"float:right"}
+              %h1= slide.title
+              %p= slide.summary
   %a.carousel-control.left{href: "#myCarousel", data: {slide: "prev"}}
     %span.glyphicon.glyphicon-chevron-left
   %a.carousel-control.right{href: "#myCarousel", data: {slide: "next"}}

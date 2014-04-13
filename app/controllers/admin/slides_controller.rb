@@ -48,5 +48,12 @@ class Admin::SlidesController < ApplicationController
   end
 
   def destroy
+    @slide = Slide.find(params[:id])
+    @slide.destroy
+
+    respond_to do |format|
+      format.html { redirect_to admin_slides_path }
+      format.json { head :no_content }
+    end
   end
 end
