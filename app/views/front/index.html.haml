@@ -1,41 +1,42 @@
 .page-content
   #top-container.container-fluid
-    .col-md-8#videozone{style:"height:410px"}
-      %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"520", height:"400"}
+    .col-md-8#videozone
+      %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"100%", height:"100%"}
         %param{name:"movie", value:"#{root_url}video/flvplayer.swf"}
         %param{name:"quality", value:"high"}
         %param{name:"allowFullScreen", value:"true"}
         %param{name:"FlashVars", value:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1"}
-        %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"520", height:"400"}
+        %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"100%", height:"100%"}
     
-    .col-md-4#updates{style:"height:410px"}
-      %h3 Recent activity
+    .col-md-4#updates
+      %h2{style:"text-align:center;background-color:#ccf8fF"} Recent activity
+      %hr
       - @activities.each do |activity|
         %li= activity.title
   #middle-container.container-fluid
-    .col-md-2#partners
-      %h3 &nbsp;
-      %h3 Our Partners
+    .col-md-2#partners{style:"height:auto"}
+      %h2{style:"text-align:center;background-color:#bce8f1"} Our Partners
+      %hr
       %div{style:"margin-left:10px"}
-        %li
-          %img{src:"#{root_url}img/ts.lg.ua.jpg", alt:"LG"}
-        %li
-          %img{src:"#{root_url}img/www.crm.nl.jpg", alt:"CRM Nederland"}
-        %li
-          %img{src:"#{root_url}img/www.idmar.com.ua.jpg", alt:"Idmar"}
-        %li
-          %img{src:"#{root_url}img/www.nornat.net.jpg", alt:"Nornat"}
-        %li
-          %img{src:"#{root_url}img/www.oilsystem.kz.jpg", alt:"Oil System"}
-        %li
-          %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom"}
-    .col-md-7#prodparam
-      %h3 &nbsp;
-      %h3 Product Parameters
+        %li{style:"margin-bottom:5px"}
+          %img{src:"#{root_url}img/ts.lg.ua.jpg", alt:"LG",width:"100%"}
+        %li{style:"margin-bottom:5px"}
+          %img{src:"#{root_url}img/www.crm.nl.jpg", alt:"CRM Nederland",width:"100%"}
+        %li{style:"margin-bottom:5px"}
+          %img{src:"#{root_url}img/www.idmar.com.ua.jpg", alt:"Idmar",width:"100%"}
+        %li{style:"margin-bottom:5px"}
+          %img{src:"#{root_url}img/www.nornat.net.jpg", alt:"Nornat",width:"100%"}
+        %li{style:"margin-bottom:5px"}
+          %img{src:"#{root_url}img/www.oilsystem.kz.jpg", alt:"Oil System",width:"100%"}
+        %li{style:"margin-bottom:5px"}
+          %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom",width:"100%"}
+    .col-md-7#prodparam{style:"height:415px"}
+      %h2{style:"text-align:center;background-color:#bce8f1"} Product Parameters
+      %h
       =render partial: 'common/theme/carousel', object: @slides
-    .col-md-2#news
-      %h3 &nbsp;
-      %h3 News
+    .col-md-2#news{style:"height:415px"}
+      %h2{style:"text-align:center;background-color:#bce8f1"} News
+      %hr
       - @news.each do |news|
         %li= news.title
 

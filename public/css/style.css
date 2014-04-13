@@ -111,12 +111,12 @@ div#wrdlogo{
 }
 
 div#videozone,#updates{
-	height:350px;
+	height:425px;
 	background-color:#FFFFFF;
 	border-radius: 4px;
 	border:1px solid #C1D4D3;
 	margin-top:5px;
-	padding-left:5px;
+	padding:5px;
 }
 div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist{
 	margin-top:5px;
