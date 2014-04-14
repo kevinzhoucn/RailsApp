@@ -2,11 +2,14 @@
   %p{style:"background-color:#539cdb"} 
     =link_to 'Home', root_url
     |
-    =link_to 'Marketing', root_url
+    =link_to 'Marketing', front_market_path
     |
-    =link_to 'Contact Us', root_url
+    =link_to 'Contact Us', front_contact_path
     |
     =link_to 'Site Map', root_url
     / | 
     / =link_to 'Site Admin', front_admin_path
-  %p Copyright &copy; WRD Valves Ltd.
+  %p
+    Copyright &copy; WRD Valves Ltd. | Powered by 
+    %a{href:"http://w3try.com",style:"color:#539cdb"}
+      w3try

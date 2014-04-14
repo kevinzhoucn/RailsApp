@@ -13,6 +13,7 @@ RailsApp::Application.routes.draw do
     get "/equipments" => :equipment, as: 'front_equipment'
     get "/contactus" => :contact, as: 'front_contact'
     get "/admin" => :admin, as: 'front_admin'
+    get "/productdetail" => :productdetail
   end
   namespace 'admin' do
     resources :activities
