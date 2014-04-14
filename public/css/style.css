@@ -32,6 +32,7 @@ div.nav-menu{
 	text-align:center;
 	margin-top:1px;
 	font-size: 14px;
+	border-radius: 5px;
 }
 /*这个是位于菜单下面的 页面 容器*/
 	div.page-content{
@@ -42,13 +43,6 @@ div.nav-menu{
 	overflow:hidden;
 }
 
-/*这个是网页区块的类*/
-/*div.content-section{
-	border: 1px solid #FFFFFF;
-	border-radius: 5px;
-	background-color:#FFFFFF;
-	margin-right:8px;
-}*/
 /*这个class只规定菜单Li的颜色、边框*/
 ul.menu-item li{
 	border-right-style: groove;
