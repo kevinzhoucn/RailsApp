@@ -6,13 +6,13 @@
         %li.active
           =link_to 'All Products', front_product_path
         %li
-          %a{href:"#"} Ball Valves
+          =link_to 'Ball Valves', front_product_ballvalve_path
         %li
-          %a Check Valves
+          =link_to 'Check Valves', front_product_checkvalve_path
         %li
-          %a Globe Valves
+          =link_to 'Globe Valves', front_product_globevalve_path
         %li
-          %a Gate Valves
+          =link_to 'Gate Valves', front_product_gatevalve_path
         %li
           %form.navbar-form.navbar-left{role:"search",style:"padding:1px"}
             .form-group
@@ -33,7 +33,8 @@
                   %br
                   Pressure: Class 150-2500 LB
                 %p{align:"right"}
-                  %a.btn.btn-info{href:"/productdetail/",role:"button"} View Details
+                  =link_to 'View Details', front_product_ballvalve_path, {class:"btn btn-info", role: "button"}
+                  
           .col-md-3{style:"margin-left:5%;margin-right:0px"}
             .thumbnail
               %img{src:"#{root_url}img/products/gatevalve.jpg",alt:"..."}
@@ -44,7 +45,7 @@
                   %br
                   Pressure: Class 150-2500 LB
                 %p{align:"right"}
-                  %a.btn.btn-info{href:"#",role:"button"} View Details
+                  =link_to 'View Details', front_product_gatevalve_path, {class:"btn btn-info", role: "button"}
           .col-md-3{style:"margin-left:5%;margin-right:0px"}
             .thumbnail
               %img{src:"#{root_url}img/products/globevalve.jpg",alt:"..."}
@@ -55,7 +56,7 @@
                   %br
                   Pressure: Class 150-2500 LB
                 %p{align:"right"}
-                  %a.btn.btn-info{href:"#",role:"button"} View Details
+                  =link_to 'View Details', front_product_globevalve_path, {class:"btn btn-info", role: "button"}
           .col-md-3{style:"margin-left:5%;margin-right:0px"}
             .thumbnail
               %img{src:"#{root_url}img/products/Checkvalve.jpg",alt:"..."}
@@ -66,4 +67,4 @@
                   %br
                   Pressure: Class 150-2500 LB
                 %p{align:"right"}
-                  %a.btn.btn-info{href:"#",role:"button"} View Details
+                  =link_to 'View Details', front_product_checkvalve_path, {class:"btn btn-info", role: "button"}

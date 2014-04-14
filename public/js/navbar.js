@@ -15,7 +15,7 @@ function setMenuBackground()
     {
         $("#home").removeClass("active");
         $("#products").removeClass("inactive").addClass("active");
-    }else if(/productdetail/.test(url.toLowerCase()))
+    }else if(/product/.test(url.toLowerCase()))
     {
         $("#home").removeClass("active");
         $("#products").removeClass("inactive").addClass("active");
@@ -35,5 +35,21 @@ function setMenuBackground()
     {
         $("#home").removeClass("active");
         $("#contactus").removeClass("inactive").addClass("active");
+    }else if(/ballvalve/.test(url.toLowerCase()))
+    {
+        $("#home").removeClass("active");
+        $("#products").removeClass("inactive").addClass("active");
+    }else if(/checkvalve/.test(url.toLowerCase()))
+    {
+        $("#home").removeClass("active");
+        $("#products").removeClass("inactive").addClass("active");
+    }else if(/globevalve/.test(url.toLowerCase()))
+    {
+        $("#home").removeClass("active");
+        $("#products").removeClass("inactive").addClass("active");
+    }else if(/gatevalve/.test(url.toLowerCase()))
+    {
+        $("#home").removeClass("active");
+        $("#products").removeClass("inactive").addClass("active");
     }
 }

@@ -22,8 +22,5 @@ class FrontController < ApplicationController
   end
 
   def admin
-
-  end
-  def productdetail
   end
 end

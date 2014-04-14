@@ -9,13 +9,17 @@
         %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"100%", height:"100%"}
     
     .col-md-4#updates
-      %h2{style:"text-align:center;background-color:#ccf8fF"} Recent activity
+      %h2{style:"text-align:center;background-color:#ccf8fF"}
+        %img{src:"#{root_url}img/blockheadericon.png"}
+        Recent activity
       %hr
       - @activities.each do |activity|
-        %li= activity.title
+        %li.bullets= activity.title
   #middle-container.container-fluid
     .col-md-2#partners{style:"height:auto"}
-      %h2{style:"text-align:center;background-color:#bce8f1"} Our Partners
+      %h2{style:"text-align:center;background-color:#bce8f1"}
+        %img{src:"#{root_url}img/blockheadericon.png"}
+        Our Partners
       %hr
       %div{style:"margin-left:10px"}
         %li{style:"margin-bottom:5px"}
@@ -31,12 +35,16 @@
         %li{style:"margin-bottom:5px"}
           %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom",width:"100%"}
     .col-md-7#prodparam{style:"height:415px"}
-      %h2{style:"text-align:center;background-color:#bce8f1"} Product Parameters
-      %h
+      %h2{style:"text-align:center;background-color:#bce8f1"}
+        %img{src:"#{root_url}img/blockheadericon.png"}
+        Product Parameters
+      %hr
       =render partial: 'common/theme/carousel', object: @slides
     .col-md-2#news{style:"height:415px"}
-      %h2{style:"text-align:center;background-color:#bce8f1"} News
+      %h2{style:"text-align:center;background-color:#bce8f1"}
+        %img{src:"#{root_url}img/blockheadericon.png"}
+        News
       %hr
       - @news.each do |news|
-        %li= news.title
+        %li.bullets= news.title
 

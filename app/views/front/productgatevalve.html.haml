@@ -6,13 +6,13 @@
         %li
           =link_to 'All Products', front_product_path
         %li
-          %a{href:"#"} Ball Valves
+          =link_to 'Ball Valves', front_product_ballvalve_path
         %li
-          %a Check Valves
+          =link_to 'Check Valves', front_product_checkvalve_path
         %li
-          %a Globe Valves
-        %li
-          %a Gate Valves
+          =link_to 'Globe Valves', front_product_globevalve_path
+        %li.active
+          =link_to 'Gate Valves', front_product_gatevalve_path
         %li
           %form.navbar-form.navbar-left{role:"search",style:"padding:1px"}
             .form-group
@@ -21,10 +21,10 @@
     #containerright.col-md-9
       .panel.panel-info
         .panel-heading
-          %h3.panel-subject Ball Valve
+          %h3.panel-subject Gate Valve
         .panel-body
           #prodimg{style:"width:35%;float:left"}
-            %img{src:"#{root_url}img/products/ballvalve.jpg",alt:"...",width:"100%",height:"100%"}
+            %img{src:"#{root_url}img/products/gatevalve.jpg",alt:"...",width:"100%",height:"100%"}
           #proddesc{style:"width:65%;float:left"}
             .panel.panel-info
               .panel-heading
@@ -32,31 +32,31 @@
               .panel-body
                 %li
                   %b Name:
-                  Ball valve
+                  Gate valve
                 %li
                   %b Size:
-                  NPS 1/2" - 56"
+                  NPS 1/2" - 48"
                 %li
                   %b Pressure:
                   Class 150-2500 LB
                 %li
                   %b Material:
-                  WCB,LCB,CF8,CF8M,CF3,CF3M,A105, LF2,F304,F316,F304L,F316L
+                  WCB,LCB,WC6,WC9,C12,C5,CF8,CF3,CF3M,CF8M, A105,LF2,F11,F22,F5,F304,F316,F304L,F316L
                 %li
                   %b Design & Manufacture Std:
-                  API 608,API 6D,BS 5351,ASME B16.34
+                  API 600,API 6D,BS 1414,ASME B16.34
                 %li
                   %b Face to Face Std:
-                  API B16.10,API 6D,DIN 3202
+                  API 6D,ASME B16.10,DIN 3202,BS2080
                 %li
                   %b End Connection Std:
-                  ASME B16.5,DIN2543-2550,ASME B 16.47,ASME B 16.25
+                  ASME B16.11,ASME B1.20.1,ASME B16.5, ASME B16.47,DIN2543-2551
                 %li
                   %b Test Standard:
-                  ISO5208,API 6D,BS 6755
+                  API 6D,API 598,BS 6755
                 %li
                   %b Structure Type:
-                  One-Piece,Two-Piece,Three-Piece,Reduced Bore,Full Bore
+                  Rising Stem and Wedge Single Disc
                 %li
                   %b Operated Type:
-                  Lever,Gear,Pneumatic,Electric
+                  Handwheel,Bevel Gear,Pneumatic,Electric

@@ -10,29 +10,45 @@
         #contactcontainer{style:"width:90%;margin:auto"}
           #R
             Russian Contact
-            .Cinfo Email: chinadragon2008@mail.ru
-            .Cinfo Skype: Chinadragon2008
+            .Cinfo
+              %img{src:"#{root_url}img/mailicon.jpg"}
+              %a{href:"mailto:chinadragon2008@mail.ru",style:"color:#2E86BD"}
+                chinadragon2008@mail.ru
+            .Cinfo
+              %img{src:"#{root_url}img/skype.gif"}
+              Chinadragon2008
             .Cinfo Mobile: +86-13552546716
           #E
             English Contact
-            .Cinfo Email: nancy2008@163.com
-            .Cinfo Skype: nancy2008wrh
+            .Cinfo
+              %img{src:"#{root_url}img/mailicon.jpg"}
+              %a{href:"mailto:nancy2008@163.com",style:"color:#2E86BD"}
+                nancy2008@163.com
+            .Cinfo
+              %img{src:"#{root_url}img/skype.gif"}
+              nancy2008wrh
             .Cinfo Mobile: +86-13511028009
-          .Cinfo Website:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.wrdvalve.com
+          .Cinfo
+            Website:
+            %a{href:"http://www.wrdvalve.com",style:"color:#2E86BD"}
+              www.wrdvalve.com
           .Cinfo Tel/Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +86-10-87653811
           .Cinfo Address: Room 521, 4/F Block1, Building No. 15, Fangzhuang South Road, Fengtai Disdrict, Beijing, China
           .Cinfo Postcode: 100164
         #leavemsg
           %hr
           %h2 Leave us a message here:
-          #customername{style:"margin-bottom:5px;margin-left:5px"}
-            Your Name:
-            %input{type:"text",size:"16"}
-            Your Phone:
-            %input{type:"text",size:"16"}
-          #customeremail{style:"margin-bottom:5px;margin-left:5px"}
-            Your Email:&nbsp;
-            %input{type:"text",size:"16"}
+          .input-group
+            %span.input-group-addon Name
+            %input.form-control{type:"text",placeholder:"Your name"}
+            %span.input-group-addon Phone Number
+            %input.form-control{type:"text",placeholder:"Your contact phone"}
+          #separator{style:"line-height:5px"} &nbsp;
+          .input-group
+            %span.input-group-addon E-mail
+            %input.form-control{type:"text",placeholder:"Your E-Mail"}
+            %span.input-group-addon Mobile Number
+            %input.form-control{type:"text",placeholder:"Your Moile number"}
           #customermsg{style:"margin-left:5px"}
             Your Message:
             %br
