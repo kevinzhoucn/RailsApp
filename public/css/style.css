@@ -3,8 +3,9 @@
 	padding-bottom: 5px;
 	list-style: none;
 }
-li.bullets{
+ul.bullets li{
 	list-style-image: url('../img/postbullets.png');
+	margin-left:20px;
 }
 
 h2,h3{

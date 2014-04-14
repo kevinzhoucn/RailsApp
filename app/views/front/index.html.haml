@@ -18,7 +18,8 @@
         Recent Activities
       %hr
       - @activities.each do |activity|
-        %li.bullets= activity.title
+        %ul.bullets
+          %li= activity.title
   #middle-container.container-fluid
     .col-md-2#partners{style:"height:auto"}
       %h2{style:"text-align:center;background-color:#bce8f1"}
@@ -50,5 +51,6 @@
         News
       %hr
       - @news.each do |news|
-        %li.bullets= news.title
+        %ul.bullets
+          %li= news.title
 
