@@ -7,11 +7,15 @@
         %param{name:"allowFullScreen", value:"true"}
         %param{name:"FlashVars", value:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1"}
         %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"100%", height:"100%"}
-    
     .col-md-4#updates
+      #searchsearch{style:"overflow:hidden"}
+        %form.navbar-form.navbar-left{role:"search",style:"padding:1px"}
+          .form-group
+            %input.form-control{type:"text",placeholder:"In-site Search"}
+            %button.btn.btn-default{type:"submit"} Go
       %h2{style:"text-align:center;background-color:#ccf8fF"}
         %img{src:"#{root_url}img/blockheadericon.png"}
-        Recent activity
+        Recent Activities
       %hr
       - @activities.each do |activity|
         %li.bullets= activity.title

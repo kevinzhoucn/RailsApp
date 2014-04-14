@@ -90,10 +90,13 @@ div.footer{
 /*以下是各种ID*/
 div#sitename{
 	color:#015ea4;
-	width: 20%;
-	height: 80%;
+	width: 25%;
+	height: 100%;
 	float:right;
 	text-align: right;
+	background-image:url('../img/people.png');
+	background-repeat: no-repeat;
+
 }
 div#wrdlogo{
 	background-image:url('../img/logoNtext.png');

@@ -5,10 +5,10 @@
 
       - if not @company.nil?
         =image_tag @company.avatar.url(:large)
-  
-        %p
-          %b Content:
-          = @company.content.html_safe
+
+        / %p
+        /   %b Content:
+        /   = @company.content.html_safe
 
   
         / = link_to 'Edit', edit_company_path(@company)
@@ -19,7 +19,9 @@
           %b Empty company page.
         %p 
           %b Create company page first.
-    #companyintro{style:"height:300px"}
-      %h2 Introduction to WRD Valves Co., Ltd
-      %p WRD valves Co., Ltd established in 2008
+    - if not @company.nil?
+      #companyintro{style:"height:300px"}
+        = @company.content.html_safe
+      / %h2 Introduction to WRD Valves Co., Ltd
+      / %p WRD valves Co., Ltd established in 2008
 
