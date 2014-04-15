@@ -13,7 +13,7 @@
           .form-group
             %input.form-control{type:"text",placeholder:"In-site Search"}
             %button.btn.btn-default{type:"submit"} Go
-      %h2{style:"text-align:center;background-color:#ccf8fF"}
+      %h2{style:"text-align:center;background-color:#ccf8fF;border-radius:5px"}
         %img{src:"#{root_url}img/blockheadericon.png"}
         Recent Activities
       %hr
@@ -22,7 +22,7 @@
           %li= activity.title
   #middle-container.container-fluid
     .col-md-2#partners{style:"height:auto"}
-      %h2{style:"text-align:center;background-color:#bce8f1"}
+      %h2{style:"text-align:center;background-color:#bce8f1;border-radius:5px"}
         %img{src:"#{root_url}img/blockheadericon.png"}
         Our Partners
       %hr
@@ -40,13 +40,13 @@
         %li{style:"margin-bottom:5px"}
           %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom",width:"100%"}
     .col-md-7#prodparam{style:"height:415px"}
-      %h2{style:"text-align:center;background-color:#bce8f1"}
+      %h2{style:"text-align:center;background-color:#bce8f1;border-radius:5px"}
         %img{src:"#{root_url}img/blockheadericon.png"}
         Product Parameters
       %hr
       =render partial: 'common/theme/carousel', object: @slides
     .col-md-2#news{style:"height:415px"}
-      %h2{style:"text-align:center;background-color:#bce8f1"}
+      %h2{style:"text-align:center;background-color:#bce8f1;border-radius:5px"}
         %img{src:"#{root_url}img/blockheadericon.png"}
         News
       %hr

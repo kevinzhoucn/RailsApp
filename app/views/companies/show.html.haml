@@ -1,6 +1,6 @@
 .page-content
   #top-container.container-fluid
-    .col-md-5#companyavatar{style:"height:300px"}
+    .col-md-6#companyavatar{style:"height:300px"}
       %p#notice= notice
 
       - if not @company.nil?
@@ -21,6 +21,8 @@
           %b Create company page first.
     - if not @company.nil?
       #companyintro{style:"height:300px"}
+        #companyintrotitle
+          %h3 Introduction to WRD Valves Ltd.
         = @company.content.html_safe
       / %h2 Introduction to WRD Valves Co., Ltd
       / %p WRD valves Co., Ltd established in 2008
