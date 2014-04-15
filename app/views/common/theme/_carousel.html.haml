@@ -17,7 +17,7 @@
     %span.glyphicon.glyphicon-chevron-left
   %a.carousel-control.right{href: "#myCarousel", data: {slide: "next"}}
     %span.glyphicon.glyphicon-chevron-right
-  %ol.carousel-indicators
+  %ol.carousel-indicators{style:"z-index:10"}
     - @slides.each_with_index do |slide, index|
     - foo = "active" if ( index == 0 )
       %li{class: "#{foo}", data: {target: "#myCarousel", slide_to: "#{index}"}}
