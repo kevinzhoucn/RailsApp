@@ -1,6 +1,6 @@
 .page-content
   #top-container.container-fluid
-    .col-md-6#companyavatar{style:"height:300px"}
+    .col-md-6#companyavatar{style:"height:auto"}
       %p#notice= notice
 
       - if not @company.nil?
@@ -20,7 +20,7 @@
         %p 
           %b Create company page first.
     - if not @company.nil?
-      #companyintro{style:"height:300px"}
+      #companyintro{style:"height:auto"}
         #companyintrotitle
           %h3 Introduction to WRD Valves Ltd.
         = @company.content.html_safe
