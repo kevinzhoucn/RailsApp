@@ -1,5 +1,5 @@
 #myCarousel.carousel.slide{style: "max-width:670px;max-height:447px;margin:auto"}
-  %ol.carousel-indicators{style:"z-index:10"}
+  %ol.carousel-indicators{style:"z-index:10;height:auto;overflow:hidden"}
   - @slides.each_with_index do |slide, index|
   - foo = "active" if ( index == 0 )
     %li{class: "#{foo}", data: {target: "#myCarousel", slide_to: "#{index}"}}
