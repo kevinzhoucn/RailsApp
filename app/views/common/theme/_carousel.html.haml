@@ -1,5 +1,8 @@
 #myCarousel.carousel.slide{style: "max-width:670px;max-height:447px;margin:auto"}
-
+  %ol.carousel-indicators{style:"z-index:10"}
+  - @slides.each_with_index do |slide, index|
+  - foo = "active" if ( index == 0 )
+    %li{class: "#{foo}", data: {target: "#myCarousel", slide_to: "#{index}"}}
   .carousel-inner
     - @slides.each_with_index do |slide, index|
     - foo = "active" if index == 0
@@ -11,16 +14,13 @@
               %h1
                 %a{href:"/products",style:"color:#2E86BD"}
                   = slide.title
-              %p= slide.summary
+              %p{style:"color:#2E86BD"}= slide.summary
 
   %a.carousel-control.left{href: "#myCarousel", data: {slide: "prev"}}
     %span.glyphicon.glyphicon-chevron-left
   %a.carousel-control.right{href: "#myCarousel", data: {slide: "next"}}
     %span.glyphicon.glyphicon-chevron-right
-  %ol.carousel-indicators{style:"z-index:10"}
-    - @slides.each_with_index do |slide, index|
-    - foo = "active" if ( index == 0 )
-      %li{class: "#{foo}", data: {target: "#myCarousel", slide_to: "#{index}"}}
+
 :javascript
   $(document).ready(function() {
     $('#myCarousel').carousel({
