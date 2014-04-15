@@ -9,7 +9,8 @@
           .carousel-caption{style: "top:10px"}
             #textcontainer{style:"float:right"}
               %h1
-                =link_to "= slide.title", front_product_path
+                %a{href:"/product"}
+                  = slide.title
               %p= slide.summary
 
   %a.carousel-control.left{href: "#myCarousel", data: {slide: "prev"}}
