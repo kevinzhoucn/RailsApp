@@ -15,14 +15,10 @@ function setMenuBackground()
     {
         $("#home").removeClass("active");
         $("#products").removeClass("inactive").addClass("active");
-    }else if(/product/.test(url.toLowerCase()))
+    }else if(/application/.test(url.toLowerCase()))
     {
         $("#home").removeClass("active");
-        $("#products").removeClass("inactive").addClass("active");
-    }else if(/fields/.test(url.toLowerCase()))
-    {
-        $("#home").removeClass("active");
-        $("#fields").removeClass("inactive").addClass("active");
+        $("#application").removeClass("inactive").addClass("active");
     }else if(/intmarkets/.test(url.toLowerCase()))
     {
         $("#home").removeClass("active");

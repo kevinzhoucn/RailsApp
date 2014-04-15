@@ -23,4 +23,8 @@ class FrontController < ApplicationController
 
   def admin
   end
+
+  def application
+  end
+  
 end

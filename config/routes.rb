@@ -17,6 +17,7 @@ RailsApp::Application.routes.draw do
     get "/product/gatevalve" => :productgatevalve, as:'front_product_gatevalve'
     get "/product/globevalve" => :productglobevalve, as:'front_product_globevalve'
     get "/product/checkvalve" => :productcheckvalve, as:'front_product_checkvalve'
+    get "/application" => :application, as:'front_application'
   end
   namespace 'admin' do
     resources :activities
