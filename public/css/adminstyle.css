@@ -1,0 +1,77 @@
+/* Basic Elements */
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	overflow: hidden;
+	line-height: 35px;
+}
+body{
+  background-color:#DAF0FB;
+  color: #565656;
+  background-image: url('../img/admin/topbg.jpg');
+  background-repeat: repeat-x;
+}
+a,a:visited{
+	outline-style:none;
+	color:#535353;
+	text-decoration:none
+}
+
+a:hover{
+	color:#c00;
+	text-decoration:underline
+}
+
+ul#horizontal li{
+	float:left;
+	padding-left:15px;
+}
+/*Classes*/
+.generalcontainer{
+	width:1000px;
+	margin: auto;
+}
+
+/*IDs*/
+#topdiv{
+	height:35px;
+	color: #EEEEEE;
+	float:left;
+	width: 400px;
+	vertical-align: middle;
+}
+
+
+/*left navigation menu*/
+#basic-accordian{
+	border:5px solid #EEE;
+	padding:5px;
+ 	width:100%;
+}
+
+.accordion_headings{
+	padding:5px;
+	background:#DAF0FB;
+	color:#58b5FF;
+	border:1px solid #FFF;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+.accordion_headings:hover{
+	background:#58b5EE;
+	color:#FEFEFE;
+}
+
+.accordion_child{
+	padding:15px;
+	background:#FEFEFE;
+	border: 2px solid #DAF0FB;
+}
+
+.header_highlight{
+	background:#58b5EE;
+	color:#FEFEFE;
+}
