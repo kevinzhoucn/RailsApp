@@ -15,7 +15,7 @@ body{
 }
 a,a:visited{
 	outline-style:none;
-	color:#535353;
+	color:#234393;
 	text-decoration:none
 }
 
@@ -24,10 +24,16 @@ a:hover{
 	text-decoration:underline
 }
 
-ul#horizontal li{
+ul.horizontal li{
 	float:left;
 	padding-left:15px;
 }
+
+p{
+	font-size:90%;
+	line-height:25px;
+}
+
 /*Classes*/
 .generalcontainer{
 	width:1000px;
@@ -53,7 +59,11 @@ ul#horizontal li{
 
 .accordion_headings{
 	padding:5px;
+	padding-left:17px;
 	background:#DAF0FB;
+	background-image: url('../img/blockheadericon.png');
+	background-repeat:no-repeat;
+	background-position: 0px 16px;
 	color:#58b5FF;
 	border:1px solid #FFF;
 	cursor:pointer;
@@ -63,6 +73,10 @@ ul#horizontal li{
 .accordion_headings:hover{
 	background:#58b5EE;
 	color:#FEFEFE;
+	background-image: url('../img/blockheadericonv.png');
+	background-repeat:no-repeat;
+	background-position: 0px 16px;
+	padding-left: 17px;
 }
 
 .accordion_child{
@@ -73,5 +87,9 @@ ul#horizontal li{
 
 .header_highlight{
 	background:#58b5EE;
+	background-image: url('../img/blockheadericonv.png');
+	background-repeat:no-repeat;
+	background-position: 0px 16px;
+	padding-left:17px;
 	color:#FEFEFE;
 }

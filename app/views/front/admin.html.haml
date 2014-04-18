@@ -1,60 +1,85 @@
 .generalcontainer
   #topdiv
-    Hello admin, welcome to WRD Site Admin Portal
+    你好 admin, 欢迎来到伟润德后台管理界面
 .generalcontainer#banner{style:"height:130px"}
-  %h1 this is the banner
+  %h1{style:"text-align:center;line-height:130px;border: 1px solid #DAF0FB;background:#DAF0FB"} 你就当我是个横幅图片吧
 .generalcontainer#navmenu
-  %ul#horizontal{style:"float:right"}
+  %ul.horizontal{style:"float:right"}
     %li
-      %a Change Password
+      =link_to "预览网站首页", root_url
+      &nbsp;|
     %li
-      %a Sign out
-.generalcontainer#body{style:"margin-top:5px;height:700px;background-color:#FFFFFF"}
+      %a 更改登录密码
+      &nbsp;|
+    %li
+      %a 注销
+.generalcontainer#body{style:"margin-top:3px;height:600px;background-color:#FFFFFF"}
   #basic-accordian
     #left{style:"float:left;width:25%"}
       #test1-header.accordion_headings.header_highlight
-        Homepage
+        首页管理
       #test2-header.accordion_headings
-        Company Info
+        公司简介管理
       #test3-header.accordion_headings
-        Products & Category
+        产品管理
       #test4-header.accordion_headings
-        Application & Equipments
+        应用范围和设备管理
       #test5-header.accordion_headings
-        Contact Info
+        联系信息管理
     /end of left
     #right{style:"float:left;width:73%;margin-right:1px"}
       #test1-content
         .accordion_child#homepage
-          %h2 Manage Homepage Items
+          %h2 首页栏目管理
           %hr
           #homepageitems
-            %a Manage Activities <br />
-            %a Manage News <br />
-            %a Manage Slides
+            %ul.horizontal
+              %li
+                %a{href:"/admin/activities/"} 管理网站动态 <br />
+              %li
+                %a{href:"/admin/news/"} 管理新闻标题 <br />
+              %li
+                %a{href:"/admin/slides/"} 管理图片轮播
       #test2-content
         .accordion_child
-          %h2 Manage Company Info
+          %h2 公司简介管理
           %hr
-          %p Upload Company Picture
+          %p 上传公司图片
           %input{type:"file",size:"16" }
-          %p Update company introduction
-          %textarea{col:"50",row:"5"}
+          %p 更新公司简介内容
+          %textarea{cols:"50",rows:"5"}
           %br
-          %button Update
-          
+          %button 提  交
       #test3-content
         .accordion_child
-          Welcome to download
+          %h2 产品管理
+          %hr
+          #productitems
+            %a 去产品管理页面
+            %hr
+            快捷方式：
+            %a 添加新产品
       #test4-content
         .accordion_child
-          welcome to visit us
+          %h2 应用范围和设备
+          %hr
+          %ul.horizontal
+            %li
+              %a 管理应用范围
+            %li
+              %a 管理设备信息
       #test5-content
         .accordion_child
-          um...
-
-
-
-  /.rightpart{style:"border:1px #b4e0fc solid;margin-left:2px;float:left;width:74.4%;height:100%"}
-  /  %big Welcome to the administration portal
-    
+          %h2 管理联系信息
+          %hr
+          %ul.horizontal
+            %li
+              %a 俄文联系人信息
+            %li
+              %a 英文联系人信息
+            %li
+              %a 联系电话
+            %li
+              %a 地址信息
+            %li
+              %a 留言管理
