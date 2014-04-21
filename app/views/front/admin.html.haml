@@ -1,5 +1,12 @@
 /*Body*/
-.generalcontainer#body{style:"margin-top:3px;height:600px;background-color:#FFFFFF"}
+.generalcontainer#adminbody{style:"height:600px;"}
+  #adminnav{style:""}
+    %ul.horizontal
+      %li
+        快速导航:
+      %li
+        管理员首页
+
   #basic-accordian
     #left{style:"float:left;width:25%;"}
       #test1-header.accordion_headings.header_highlight
@@ -27,15 +34,11 @@
               %li
                 %a{href:"/admin/slides/"} 管理图片轮播
       #test2-content
-        .accordion_child
-          %h2 公司简介管理
+        .accordion_child#companyinfo
+          %h2 公司信息管理
           %hr
-          %p 上传公司图片
-          %input{type:"file",size:"16" }
-          %p 更新公司简介内容
-          %textarea{cols:"50",rows:"5"}
-          %br
-          %button 提  交
+          #companypicNintro
+            =image_tag @company.avatar.url(:large)
       #test3-content
         .accordion_child
           %h2 产品管理

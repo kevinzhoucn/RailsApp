@@ -60,7 +60,10 @@ p{
 	width: 400px;
 	vertical-align: middle;
 }
-
+#adminbody{
+	margin-top:3px;
+	background-color:#FFFFFF
+}
 
 /*left navigation menu*/
 #basic-accordian{
