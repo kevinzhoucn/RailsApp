@@ -3,7 +3,7 @@
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
-	font-size: 16px;
+	font-size: 12px;
 	overflow: hidden;
 	line-height: 35px;
 }
@@ -24,6 +24,18 @@ a:hover{
 	text-decoration:underline
 }
 
+h1,h2,h3{
+	color:#2E86BD;
+}
+h1{
+	font-size:150%;
+}
+h2{
+	font-size: 125%;
+}
+h3{
+	font-size:110%;
+}
 ul.horizontal li{
 	float:left;
 	padding-left:15px;
