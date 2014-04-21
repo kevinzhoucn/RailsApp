@@ -1,4 +1,5 @@
 class Admin::NewsController < ApplicationController
+  layout 'admin'
   # GET /news
   # GET /news.json
   def index

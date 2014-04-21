@@ -1,4 +1,5 @@
 class Admin::ActivitiesController < ApplicationController
+  layout 'admin'
   # GET /activities
   # GET /activities.json
   def index

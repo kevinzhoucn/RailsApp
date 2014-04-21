@@ -8,9 +8,11 @@
 
   </head>
   <body onload="new Accordian('basic-accordian',5,'header_highlight');">
-
+    <%= render :partial => 'admin/common/head' %>   
 
      <%= yield %> 
+
+    <%= render :partial => 'admin/common/footer' %>
 
   </body>
 </html>

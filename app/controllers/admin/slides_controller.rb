@@ -1,4 +1,5 @@
 class Admin::SlidesController < ApplicationController
+  layout 'admin'
   def index
     @slides = Slide.all
 
