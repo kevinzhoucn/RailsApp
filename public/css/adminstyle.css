@@ -76,7 +76,7 @@ p{
 	background-image: url('../img/blockheadericon.png');
 	background-repeat:no-repeat;
 	background-position: 0px 16px;
-	color:#58b5FF;
+	color:#4895FF;
 	border:1px solid #FFF;
 	cursor:pointer;
 	font-weight:bold;
@@ -98,7 +98,7 @@ p{
 }
 
 .header_highlight{
-	background:#58b5EE;
+	background:#58b5DD;
 	background-image: url('../img/blockheadericonv.png');
 	background-repeat:no-repeat;
 	background-position: 0px 16px;

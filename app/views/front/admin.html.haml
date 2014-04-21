@@ -1,3 +1,4 @@
+/*Header*/
 .generalcontainer
   #topdiv
     你好 admin, 欢迎来到伟润德后台管理界面
@@ -13,9 +14,12 @@
       &nbsp;|
     %li
       %a 注销
+/*Header*/
+
+/*Body*/
 .generalcontainer#body{style:"margin-top:3px;height:600px;background-color:#FFFFFF"}
   #basic-accordian
-    #left{style:"float:left;width:25%"}
+    #left{style:"float:left;width:25%;"}
       #test1-header.accordion_headings.header_highlight
         首页管理
       #test2-header.accordion_headings
@@ -83,3 +87,21 @@
               %a 地址信息
             %li
               %a 留言管理
+/*Body*/
+
+/*Footer*/
+.generalcontainer#footer{style:"width:100%;text-align:center"}
+  %p{style:"background-color:#539cdb"}
+    %a{href:"/admin/"}
+      Admin Home
+    |
+    %a{href:"/",target:"_blank"}
+      Preview Homepage
+    |
+    %a{href:"#"}
+      Change Password
+    %a{href:"/"}
+      Logout
+  %p
+    Copyright(C) WRD Valves Ltd. | Powered by w3try.com
+/*Footer*/
