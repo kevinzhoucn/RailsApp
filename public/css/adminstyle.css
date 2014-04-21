@@ -18,6 +18,16 @@ a,a:visited{
 	color:#234393;
 	text-decoration:none
 }
+a.button,a.button:hover{
+	width:auto;
+	display:inline-block;
+	text-decoration: none;
+	border:1px solid #AAA;
+	background-color: #EEE;
+	color:inherit;
+	border-radius: 3px;
+	padding:3px;
+}
 
 a:hover{
 	color:#c00;

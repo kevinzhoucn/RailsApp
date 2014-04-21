@@ -38,7 +38,20 @@
           %h2 公司信息管理
           %hr
           #companypicNintro
-            =image_tag @company.avatar.url(:large)
+            - if not @company.nil?
+              %h3 公司图片(小)
+              =image_tag @company.avatar.url(:small)
+            - else
+              %p 
+                %b 无公司简介信息
+              %p 
+                %b 请先添加公司简介
+            - if not @company.nil?
+              #companyintro{style:"height:auto"}
+                #companyintrotitle
+                  %h3 公司简介文本
+                = @company.content.html_safe
+              %a.button{href:"/admin/companies"} 编辑公司信息
       #test3-content
         .accordion_child
           %h2 产品管理

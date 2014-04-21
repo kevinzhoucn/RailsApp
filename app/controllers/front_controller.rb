@@ -22,6 +22,7 @@ class FrontController < ApplicationController
   end
 
   def admin
+    @company = Company.last
   end
 
   def application
