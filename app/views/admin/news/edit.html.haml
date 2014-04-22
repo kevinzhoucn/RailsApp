@@ -1,7 +1,33 @@
-%h1 Editing news
-
-= render 'form'
-
-/ = link_to 'Show', admin_news_path(@news)
-/ \|
-/ = link_to 'Back', admin_news_index_path
+.generalcontainer#adminbody
+  #adminnav{style:""}
+    %ul.horizontal
+      %li 快速导航:
+      %li
+        %a{href:"/admin"} 管理员首页
+        >
+      %li
+        %a{href:"/admin/news"} 新闻标题管理
+        >
+      %li 编辑新闻标题
+  #basic-accordian
+    #left{style:"float:left;width:25%;"}
+      #test1-header.accordion_headings.header_highlight
+        编辑新闻标题
+      %a{href:"/admin/news",style:"text-decoration:none"}
+        #test2-header.accordion_headings
+          返回上一级
+      %a{href:"/admin",style:"text-decoration:none"}
+        #test3-header.accordion_headings
+          返回管理员首页
+    #right{style:"float:left;width:73%;margin-right:1px"}
+      #test1-content
+        .accordion_child#allnews
+          %h2 编辑新闻标题
+          %hr
+          = render 'form'
+      #test2-content
+        .accordion_child
+          正在前往上一级...
+      #test3-content
+        .accordion_child
+          正在前往管理员首页...

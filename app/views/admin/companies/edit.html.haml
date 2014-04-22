@@ -6,14 +6,14 @@
         %a{href:"/admin"} 管理员首页
         >
       %li
-        %a{href:"/admin/slides"} 图片轮播管理
+        %a{href:"/admin/companies"} 公司简介管理
         >
-      %li 编辑图片轮播
+      %li 编辑公司简介
   #basic-accordian
     #left{style:"float:left;width:25%;"}
       #test1-header.accordion_headings.header_highlight
-        编辑图片轮播
-      %a{href:"/admin/slides",style:"text-decoration:none"}
+        编辑公司简介
+      %a{href:"/admin/companies",style:"text-decoration:none"}
         #test2-header.accordion_headings
           返回上一级
       %a{href:"/admin",style:"text-decoration:none"}
@@ -22,7 +22,7 @@
     #right{style:"float:left;width:73%;margin-right:1px"}
       #test1-content
         .accordion_child#allnews
-          %h2 编辑图片轮播
+          %h2 编辑公司简介
           %hr
           = render 'form'
       #test2-content
