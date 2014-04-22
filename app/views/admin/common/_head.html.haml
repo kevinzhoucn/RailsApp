@@ -8,7 +8,7 @@
 .generalcontainer#navmenu
   %ul.horizontal{style:"float:right"}
     %li
-      =link_to "预览网站首页", root_url
+      %a{href:"/",target:"_blank"} 预览网站首页
       &nbsp;|
     %li
       %a 更改登录密码
@@ -16,3 +16,9 @@
     %li
       %a 注销
 /*Header*/
+
+/半成品：单击更改密码，弹出层
+#canvas{style:"width:100%;height:100%;z-index:100;position:fixed;top:0px;left:0px;background-color:#000;opacity:0.8;display:none"}
+  #changepassworddialog{style:"width:600px;height:500px;position:fixed;top:12%;left:25%;z-index:101;background-color:#FFF;"}
+    asdfasdf
+  

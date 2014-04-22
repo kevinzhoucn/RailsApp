@@ -1,15 +1,34 @@
-%h1 Listing Slides
+.generalcontainer#adminbody
+  #adminnav{style:""}
+    %ul.horizontal
+      %li
+        快速导航:
+      %li
+        %a{href:"/admin"} 管理员首页
+        >
+      %li 图片轮播管理
+  #basic-accordian
+    #left{style:"float:left;width:25%;"}
+      #test1-header.accordion_headings.header_highlight
+        所有图片轮播
+      %a{href:"/admin",style:"text-decoration:none"}
+        #test2-header.accordion_headings
+          返回管理员首页
 
-%table
-  %tr
-    %th Title
-    %th Summary
-    %th
-    %th
+    #right{style:"float:left;width:73%;margin-right:1px"}
+      #test1-content
+        .accordion_child#allnews
+          %h2 当前所有图片轮播
+          %hr
+          #newslist
+            - @slides.each do |slides|
+              %ul.horizontal
+                %li= slides.title
+                %li= link_to '编辑', edit_admin_slide_path(slides)
+                %li= link_to '删除', admin_slide_path(slides), :method => :delete, :data => { :confirm => '确定删除吗？' }
+            %br
 
-  - @slides.each do |slide|
-    %tr
-      %td= slide.title
-      %td= slide.summary
-      %td= link_to 'Edit', edit_admin_slide_path(slide)
-      %td= link_to 'Destroy', admin_slide_path(slide), :method => :delete, :data => { :confirm => 'Are you sure?' }
+            = link_to '添加图片轮播', new_admin_slide_path
+      #test2-content
+        .accordion_child
+          正在前往管理员首页...
