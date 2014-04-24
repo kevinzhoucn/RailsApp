@@ -25,7 +25,7 @@
               %ul.horizontal
                 %li= activity.title
                 %li= link_to '编辑', edit_admin_activity_path(activity)
-                %li= link_to '删除', admin_activity_path(activity), :method => :delete, :data => { :confirm => '确定删除吗？' }
+                %li= button_to '删除', admin_activity_path(activity), :method => :delete, :data => { :confirm => '确定删除吗？' }
             %br
 
             = link_to '添加网站动态', new_admin_activity_path
