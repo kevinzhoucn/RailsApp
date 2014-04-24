@@ -15,7 +15,7 @@ h2,h3{
 /*这个是网页总容器，里面装着Banner, Menu, page, footer*/
 div.mainsheet{
 	border: 1px solid #2B7DB1;
-	width:90%;
+	width:75%;
 	margin:auto;
 
 }
@@ -108,14 +108,14 @@ div#wrdlogo{
 }
 
 div#videozone,#updates{
-	height:425px;
+	height:215px;
 	background-color:#FFFFFF;
 	border-radius: 4px;
 	border:1px solid #C1D4D3;
 	margin-top:5px;
 	padding:5px;
 }
-div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist{
+div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist,#aboutus{
 	margin-top:5px;
 	background-color:#FFFFFF;
 	border-radius: 4px;
