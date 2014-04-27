@@ -24,7 +24,7 @@
             - @slides.each do |slides|
               %ul.horizontal
                 %li= slides.title
-                %li= button_to '编辑', edit_admin_slide_path(slides)
+                %li= link_to '编辑', edit_admin_slide_path(slides)
                 %li= button_to '删除', admin_slide_path(slides), :method => :delete, :data => { :confirm => '确定删除吗？' }
             %br
 

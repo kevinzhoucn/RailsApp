@@ -51,7 +51,7 @@
                 #companyintrotitle
                   %h3 公司简介文本
                 = @company.content.html_safe
-              %a.button{href:"/admin/companies"} 编辑公司信息
+              =link_to '编辑公司信息', edit_admin_company_path(@company)
       #test3-content
         .accordion_child
           %h2 产品管理

@@ -45,7 +45,7 @@ class Admin::NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to front_admin_path, notice: 'News was successfully created.' }
+        format.html { redirect_to admin_news_index_path, notice: 'News was successfully created.' }
         format.json { render json: @news, status: :created, location: @news }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class Admin::NewsController < ApplicationController
 
     respond_to do |format|
       if @news.update_attributes(params[:news])
-        format.html { redirect_to front_admin_path, notice: 'News was successfully updated.' }
+        format.html { redirect_to admin_news_index_path, notice: 'News was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -77,7 +77,7 @@ class Admin::NewsController < ApplicationController
     @news.destroy
 
     respond_to do |format|
-      format.html { redirect_to front_admin_path }
+      format.html { redirect_to admin_news_index_path }
       format.json { head :no_content }
     end
   end

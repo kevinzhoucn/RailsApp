@@ -5,6 +5,6 @@ class CreateCompanies < ActiveRecord::Migration
 
       t.timestamps
     end
-    # Company.create(content: "<p>This is Title</p>")
+    Company.create(content: "<p>This is Title</p>")
   end
 end

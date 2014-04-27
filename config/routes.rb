@@ -26,6 +26,7 @@ RailsApp::Application.routes.draw do
     resources :activities
     resources :news
     resources :slides
+    resources :companies
   end
 
   # The priority is based upon order of creation:
