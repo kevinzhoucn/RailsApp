@@ -1,0 +1,17 @@
+= simple_form_for(@product) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :standards
+    = f.input :description
+
+  .form-inputs
+    = f.input :materials_img, as: :file
+    = f.input :dimensions_img, as: :file
+    = f.input :drawing1_img, as: :file
+    = f.input :drawing2_img, as: :file
+    = f.input :photo, as: :file
+
+  .form-actions
+    = f.button :submit

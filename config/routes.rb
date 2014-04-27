@@ -1,4 +1,7 @@
 RailsApp::Application.routes.draw do
+  resources :products
+
+
   resources :companies
 
   devise_for :admins, only: [:session], :path => '/admin', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
