@@ -1,15 +1,16 @@
 %script{src:"#{root_url}js/navbar.js"}
-.nav-menu
-  %ul.nav.nav-pills.nav-justified.menu-item
-    %li.active#home 
-      =link_to 'Home', root_url
-    %li.inactive#company
-      =link_to 'About Us', front_company_path
-    %li.inactive#products
-      =link_to 'Products', front_product_path
-    %li.inactive#internationalmarkets
-      =link_to 'Marketing', front_market_path
-    %li.inactive#application
-      =link_to 'Application', front_application_path
-    %li.inactive#contactus
-      =link_to 'Contact us', front_contact_path
+%ul.nav.nav-pills.nav-justified.menu-item
+  %li.active#home 
+    =link_to 'Home', root_url
+  %li.inactive#company
+    =link_to 'About Us', front_company_path
+  %li.inactive#products
+    =link_to 'Products', front_product_path
+  %li.inactive#internationalmarkets
+    =link_to 'Marketing', front_market_path
+  %li.inactive#application
+    =link_to 'Application', front_application_path
+  %li.inactive#equipments
+    =link_to 'Equipments', front_equipment_path
+  %li.inactive#contactus
+    =link_to 'Contact us', front_contact_path

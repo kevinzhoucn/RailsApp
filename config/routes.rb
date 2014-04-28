@@ -12,8 +12,8 @@ RailsApp::Application.routes.draw do
     get "/home" => :index
     get "/products" => :product, as: 'front_product'
     get "/intmarkets" => :market, as: 'front_market'
-    get "/fields" => :field, as: 'front_field'
-    # equipments改名为applications #get "/equipments" => :equipment, as: 'front_equipment'
+    #fields 改成application了。 get "/fields" => :field, as: 'front_field'
+    get "/equipments" => :equipment, as: 'front_equipment'
     get "/contactus" => :contact, as: 'front_contact'
     get "/admin" => :admin, as: 'front_admin'
     get "/product/ballvalve" => :productballvalve, as:'front_product_ballvalve'

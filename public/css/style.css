@@ -8,8 +8,16 @@ ul.bullets li{
 	margin-left:20px;
 }
 
-h2,h3{
+
+.blockhead{
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 30px;
 	color:#2E86BD;
+	background-image: url('../img/blocktitlebg.jpg');
+	background-repeat: repeat-x;
+	margin-bottom: 3px;
+	margin-top: 0px;
 }
 
 /*这个是网页总容器，里面装着Banner, Menu, page, footer*/
@@ -26,17 +34,9 @@ div.banner{
 	background-image: url('../img/banner.jpg');
 	background-repeat: no-repeat;
 }
-div.nav-menu{
-	height:auto;
-	overflow:hidden;
-	text-align:center;
-	margin-top:1px;
-	font-size: 14px;
-	border-radius: 5px;
-}
+
 /*这个是位于菜单下面的 页面 容器*/
 	div.page-content{
-	margin:5px;
 	border:1px solid #C1D4D3;
 	background-color: #E7EEEE;
 	height:auto;
@@ -51,7 +51,7 @@ ul.menu-item li{
 	color: #ffffff;
 	line-height: 30px;
 	font-weight: bold;
-	padding: 8px 8px 0px 8px;
+	padding: 5px 5px 0px 5px;
 }
 
 /*这个class规定了当前页/当前标签的颜色*/
@@ -107,23 +107,22 @@ div#wrdlogo{
 	float: left;
 }
 
-div#videozone,#updates{
-	height:215px;
+div#videozone{
+	margin-top:3px;
 	background-color:#FFFFFF;
 	border-radius: 4px;
 	border:1px solid #C1D4D3;
-	margin-top:5px;
-	padding:5px;
+
 }
-div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist,#aboutus{
-	margin-top:5px;
+div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist,#aboutus,#brochure{
+	margin-top:3px;
+	margin-left:3px;
 	background-color:#FFFFFF;
 	border-radius: 4px;
 	border:1px solid #C1D4D3;
-	margin-top:5px;
 	padding:5px;
 	overflow:hidden;
-	height:auto;
+
 }
 
 div.Cinfo{
@@ -140,4 +139,16 @@ div#R,#E{
 	font-weight:bold;
 	font-size:16pt;
 	float:left;
+}
+li.partner{
+	margin-bottom:5px;
+	width:155px;
+	float:left;
+	margin-left:10px;
+}
+#brochures{
+	background-image:url('../img/download.png');
+	background-repeat:no-repeat;
+	width:131px;
+	margin:auto;
 }
