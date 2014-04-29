@@ -1,17 +1,53 @@
 #top-container.container-fluid{style:"padding:5px"}
-  .col-md-2#news{style:"height:220px"}
+  .col-md-2#news{style:"height:320px"}
     .blockhead{style:"text-align:center;background-color:#bce8f1;border-radius:5px"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       News
     - @news.each do |news|
       %ul.bullets
         %li= news.title
-  .col-md-7#prodparam{style:"height:220px"}
+  .col-md-7#prodparam{style:"height:320px"}
     .blockhead{style:"text-align:center;border-radius:5px"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       Product Parameters
-    =render partial: 'common/theme/carousel', object: @slides
+    /=render partial: 'common/theme/carousel', object: @slides
+    /自己加了一段图片轮播代码
+    .lanrenzhijia
+      .title.cf
+        %ul.title-list.fl.cf
+          %li.on Ball Valves
+          %li Gate Valves
+          %li Check Valves
+          %li Globe Valves
+          %p
+            %b
+      .product-wrap
+        .product{style:"display:block"}
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/KLT.jpg"}
+        .product
+          %ul.cf
+            %li.m10 
+              %img{src:"#{root_url}img/products/klt0.jpg"}
+        .product
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/klt1.jpg"}
+        .product
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/klt3.jpg"}
+
+
+
+    /轮播代码完毕
+
   .col-md-2#videozone{style:"height:220px"}
+    .blockhead
+      %img{src:"#{root_url}img/blockheadericon.png"}
+      Company Video
+
     %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"95%", height:"95%"}
       %param{name:"movie", value:"#{root_url}video/flvplayer.swf"}
       %param{name:"quality", value:"high"}
