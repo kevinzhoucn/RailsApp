@@ -1,13 +1,13 @@
 #top-container.container-fluid{style:"padding:5px"}
-  .col-md-2#news{style:"height:320px"}
-    .blockhead{style:"text-align:center;background-color:#bce8f1;border-radius:5px"}
+  .col-md-2#news{style:"height:320px;"}
+    .blockhead{style:"background-color:#bce8f1;border-radius:5px"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       News
     - @news.each do |news|
       %ul.bullets
         %li= news.title
   .col-md-7#prodparam{style:"height:320px"}
-    .blockhead{style:"text-align:center;border-radius:5px"}
+    .blockhead{style:"text-align:center"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       Product Parameters
     /=render partial: 'common/theme/carousel', object: @slides
@@ -21,6 +21,7 @@
           %li Globe Valves
           %p
             %b
+        %a.btn.btn-primary{style:"position:absolute;right:8px",href:"/products"} More
       .product-wrap
         .product{style:"display:block"}
           %ul.cf
@@ -38,12 +39,9 @@
           %ul.cf
             %li.m10
               %img{src:"#{root_url}img/products/klt3.jpg"}
-
-
-
     /轮播代码完毕
 
-  .col-md-2#videozone{style:"height:220px"}
+  .col-md-2#videozone{style:"height:220px;padding:5px"}
     .blockhead
       %img{src:"#{root_url}img/blockheadericon.png"}
       Company Video
@@ -54,41 +52,66 @@
       %param{name:"allowFullScreen", value:"true"}
       %param{name:"FlashVars", value:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1"}
       %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"95%", height:"95%",style:"margin-top:4px;margin-left:4px"}
+#productmarquee.container-fluid
+  .blockhead
+    sadfasdf
 #middle-container.container-fluid
-.col-md-2#brochure
-  .blockhead{style:"text-align:left;border-radius:5px"}
-    %img{src:"#{root_url}img/blockheadericon.png"}
-    Brochures
-  #brochures
-    %p
-      %a{href:"#",style:"color:#FFFFFF;line-height:37px;font-size:1.2em;padding-left:30px"}
-        Download
+  .col-md-2#downloads
+    .blockhead
+      %img{src:"#{root_url}img/blockheadericon.png"}
+      Downloads
+    #brochures
+      %p
+        %a{href:"#",style:"color:#FFFFFF;line-height:37px;font-size:1.2em;padding-left:30px"}
+          Brochures
+      %br
+    #brochures
+      %p
+        %a{href:"#",style:"color:#FFFFFF;line-height:37px;font-size:1.2em;padding-left:30px"}
+          Blueprints
+      %br
 
-#aboutus{style:"height:295px"}
-  .blockhead{style:"text-align:left;border-radius:5px"}
-    %img{src:"#{root_url}img/blockheadericon.png"}
-    Who We Are
-  #companyintro{style:"height:auto"}
-    #companyintrotitle
-      %h3 Introduction to WRD Valves Ltd.
-      #morediv{style:"text-align:right"}
-        .btn.btn-primary
-          =link_to "More", front_company_path
+    .blockhead
+      %img{src:"#{root_url}img/blockheadericon.png"}
+      Our Partners
+    %div{style:"margin-left:5px;overflow:hidden"}
+      %li
+        %img{src:"#{root_url}img/ts.lg.ua.jpg", alt:"LG"}
+      %li
+        %img{src:"#{root_url}img/www.crm.nl.jpg", alt:"CRM Nederland"}
+      %li
+        %img{src:"#{root_url}img/www.idmar.com.ua.jpg", alt:"Idmar"}
+      %li
+        %img{src:"#{root_url}img/www.nornat.net.jpg", alt:"Nornat"}
+      %li
+        %img{src:"#{root_url}img/www.oilsystem.kz.jpg", alt:"Oil System"}
+      %li
+        %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom"}
 
-.col-md-12#partners{style:"height:auto"}
-  .blockhead{style:"text-align:center;border-radius:5px"}
-    %img{src:"#{root_url}img/blockheadericon.png"}
-    Our Partners
-  %div{style:"margin-left:10px"}
-    %li.partner
-      %img{src:"#{root_url}img/ts.lg.ua.jpg", alt:"LG"}
-    %li.partner
-      %img{src:"#{root_url}img/www.crm.nl.jpg", alt:"CRM Nederland"}
-    %li.partner
-      %img{src:"#{root_url}img/www.idmar.com.ua.jpg", alt:"Idmar"}
-    %li.partner
-      %img{src:"#{root_url}img/www.nornat.net.jpg", alt:"Nornat"}
-    %li.partner
-      %img{src:"#{root_url}img/www.oilsystem.kz.jpg", alt:"Oil System"}
-    %li.partner
-      %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom"}
+  #aboutus{style:"height:295px;margin-right:5px;"}
+    .blockhead
+      %img{src:"#{root_url}img/blockheadericon.png"}
+      Who We Are
+    #companyintro{style:"height:auto"}
+      #companyintrotitle
+        %h3 Introduction to WRD Valves Ltd.
+        #morediv{style:"text-align:right"}
+          .btn.btn-primary
+            =link_to "More", front_company_path
+  .col-md-12
+    .blockhead
+      %img{src:"#{root_url}img/blockheadericon.png"}
+      Our Partners
+    %div{style:"margin-left:10px"}
+      %li.partner
+        %img{src:"#{root_url}img/ts.lg.ua.jpg", alt:"LG"}
+      %li.partner
+        %img{src:"#{root_url}img/www.crm.nl.jpg", alt:"CRM Nederland"}
+      %li.partner
+        %img{src:"#{root_url}img/www.idmar.com.ua.jpg", alt:"Idmar"}
+      %li.partner
+        %img{src:"#{root_url}img/www.nornat.net.jpg", alt:"Nornat"}
+      %li.partner
+        %img{src:"#{root_url}img/www.oilsystem.kz.jpg", alt:"Oil System"}
+      %li.partner
+        %img{src:"#{root_url}img/www.teploenergoprom.ru.jpg", alt:"Teploenergoprom"}

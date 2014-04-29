@@ -17,7 +17,9 @@ ul.bullets li{
 	background-image: url('../img/blocktitlebg.jpg');
 	background-repeat: repeat-x;
 	margin-bottom: 3px;
-	margin-top: 0px;
+	margin:3px;
+	padding-left: 3px;
+	border-radius: 5px;
 }
 
 /*这个是网页总容器，里面装着Banner, Menu, page, footer*/
@@ -48,9 +50,9 @@ div.banner{
 .lanrenzhijia .title h2{ font-size: 20px;font-family: "microsoft yahei";}
 .lanrenzhijia .title-list{ position: relative; top: 6px;}
 .lanrenzhijia .title-list li{ width: 120px; line-height: 20px; text-align: center; float: left; display: inline;}
-.lanrenzhijia .title-list li.on{ color: #ff6600; font-weight: bold;}
-.lanrenzhijia .title-list p{position:absolute;top:24px;left:0px;width:120px;height:7px;border-top: 3px solid #ff6600; overflow: hidden; text-align: center;}
-.lanrenzhijia .title-list b{display:inline-block;width:0;height:0;margin-top:-3px;border-style:solid dashed dashed dashed;border-width:9px;border-color: #ff6600 #fff #fff #fff;overflow: hidden;zoom: 1;font-size: 0;}
+.lanrenzhijia .title-list li.on{ color: #2E86BD; font-weight: bold;}
+.lanrenzhijia .title-list p{position:absolute;top:24px;left:0px;width:120px;height:7px;border-top: 3px solid #2E86BD; overflow: hidden; text-align: center;}
+.lanrenzhijia .title-list b{display:inline-block;width:0;height:0;margin-top:-3px;border-style:solid dashed dashed dashed;border-width:9px;border-color: #2E86BD #fff #fff #fff;overflow: hidden;zoom: 1;font-size: 0;}
 .product{ height: 150px; position: relative; overflow: hidden; display: none; margin-top: 10px;}
 .product ul{ position: absolute; left: 0px;}
 .product-wrap .show{display: block;}
@@ -59,7 +61,7 @@ div.banner{
 .product-wrap .product li a.imgwrap{ display: block; width: 226px; height: 200px; background: #fff; text-align:center;}
 .product-wrap .product li p{padding-left: 15px;color: #666666;line-height: 22px;}
 .product-wrap .product li p a{ color: #666666; text-decoration: none;}
-.product-wrap .product li p a:hover{ color: #ff6600; text-decoration: none;}
+.product-wrap .product li p a:hover{ color: #2E86BD; text-decoration: none;}
 
 
 
@@ -142,7 +144,7 @@ div#videozone{
 	border:1px solid #C1D4D3;
 
 }
-div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist,#aboutus,#brochure{
+div#prodparam,#news,#companyavatar,#companyintro,#partners,.adminlist,#downloads,#aboutus{
 	margin-top:3px;
 	margin-left:1px;
 	background-color:#FFFFFF;
@@ -174,7 +176,7 @@ li.partner{
 	float:left;
 	margin-left:10px;
 }
-#brochures{
+#brochures,#blueprints{
 	background-image:url('../img/download.png');
 	background-repeat:no-repeat;
 	width:131px;
