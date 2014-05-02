@@ -12,14 +12,9 @@ RailsApp::Application.routes.draw do
     get "/home" => :index
     get "/products" => :product, as: 'front_product'
     get "/intmarkets" => :market, as: 'front_market'
-    #fields 改成application了。 get "/fields" => :field, as: 'front_field'
     get "/equipments" => :equipment, as: 'front_equipment'
     get "/contactus" => :contact, as: 'front_contact'
     get "/admin" => :admin, as: 'front_admin'
-    get "/product/ballvalve" => :productballvalve, as:'front_product_ballvalve'
-    get "/product/gatevalve" => :productgatevalve, as:'front_product_gatevalve'
-    get "/product/globevalve" => :productglobevalve, as:'front_product_globevalve'
-    get "/product/checkvalve" => :productcheckvalve, as:'front_product_checkvalve'
     get "/application" => :application, as:'front_application'
   end
   namespace 'admin' do

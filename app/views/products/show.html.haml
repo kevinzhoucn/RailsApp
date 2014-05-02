@@ -1,3 +1,49 @@
+%script{src:"#{root_url}js/tupianlunbo.js"}
+.container.container-fluid{style:"margin-top:5px"}
+  .col-md-2#categories{style:"background-color:#015EA4;"}
+    .blockhead Product Categories
+    %ul.nav.nav-tabs.nav-stacked
+      %li
+        =link_to 'Ball Valves'
+      %li
+        =link_to 'Check Valves'
+      %li
+        =link_to 'Globe Valves'
+      %li
+        =link_to 'Gate Valves'
+  #proddetails{style:"float:left;margin-left:5px"}
+    #Prodmainpic
+      =@product.photo
+    .blockhead
+      Product details
+    .lanrenzhijia
+      .title.cf
+        %ul.title-list.fl.cf
+          %li.on.prod Standards
+          %li.prod Description
+          %li.prod Dimentions
+          %li.prod Drawings
+          %p.prod
+            %b
+      .product-wrap
+        .product{style:"display:block"}
+          %ul.cf
+            %li.m10
+              =@product.standards
+        .product
+          %ul.cf
+            %li.m10 
+              =@product.description
+        .product
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/klt1.jpg"}
+        .product
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/klt3.jpg"}
+
+
 %p#notice= notice
 
 %p

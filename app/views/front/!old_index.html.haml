@@ -10,26 +10,36 @@
     .blockhead{style:"text-align:center"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       Product Parameters
-    %script{src:"http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js"}
-    %script{src:"#{root_url}js/tupianlunbo2.js"}
-    #tupianlunbo
-      %a.btn.btn-info{style:"position:absolute; top:45px;right:15px"} more
-      %dl{style:"width:95%;margin:auto"}
-        %dt Ball Valves
-        %dt Gate Valves
-        %dt Check Valves
-        %dt Globe Valves
-        %dd 
-          %img{src:"#{root_url}img/products/KLT.jpg"}
-        %dd
-          %img{src:"#{root_url}img/products/KLT0.jpg"}
-        %dd
-          %img{src:"#{root_url}img/products/KLT1.jpg"}
-        %dd
-          %img{src:"#{root_url}img/products/KLT3.jpg"}
- 
-
-
+    /=render partial: 'common/theme/carousel', object: @slides
+    /自己加了一段图片轮播代码
+    .lanrenzhijia
+      .title.cf
+        %ul.title-list.fl.cf
+          %li.on Ball Valves
+          %li Gate Valves
+          %li Check Valves
+          %li Globe Valves
+          %p
+            %b
+        %a.btn.btn-primary{style:"position:absolute;right:8px",href:"/products"} More
+      .product-wrap
+        .product{style:"display:block"}
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/KLT.jpg"}
+        .product
+          %ul.cf
+            %li.m10 
+              %img{src:"#{root_url}img/products/klt0.jpg"}
+        .product
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/klt1.jpg"}
+        .product
+          %ul.cf
+            %li.m10
+              %img{src:"#{root_url}img/products/klt3.jpg"}
+    /轮播代码完毕
 
   .col-md-2#videozone{style:"height:220px;padding:5px"}
     .blockhead
