@@ -44,15 +44,22 @@
       %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"95%", height:"95%",style:"margin-top:4px;margin-left:4px"}
 #productmarquee.container-fluid
   .blockhead Our Equipments
-  %marquee{direction:"left",width:"100%",height:"140",scrollamount:"5",scrolldelay:"10"}
-    %img{src:"#{root_url}img/products/KLT.jpg"}
-    %img{src:"#{root_url}img/products/KLT0.jpg"}
-    %img{src:"#{root_url}img/products/KLT1.jpg"}
+  %p{align:"Center"}
+    %marquee{direction:"left",width:"80%",height:"140",scrollamount:"3",scrolldelay:"3"}
+      %img{src:"#{root_url}img/equipments/1.jpg"}
+      %img{src:"#{root_url}img/equipments/2.jpg"}
+      %img{src:"#{root_url}img/equipments/3.jpg"}
+      %img{src:"#{root_url}img/equipments/4.jpg"}
+      %img{src:"#{root_url}img/equipments/5.jpg"}
+      %img{src:"#{root_url}img/equipments/6.jpg"}
+      %img{src:"#{root_url}img/equipments/7.jpg"}
+      %img{src:"#{root_url}img/equipments/8.jpg"}
+      %img{src:"#{root_url}img/equipments/9.jpg"}
+      %img{src:"#{root_url}img/equipments/10.jpg"}
+
 
 #middle-container.container-fluid
   .col-md-2#downloads
-    
-
     .blockhead
       %img{src:"#{root_url}img/blockheadericon.png"}
       Our Partners
@@ -82,13 +89,10 @@
         %a{href:"#",style:"color:#FFFFFF;line-height:37px;font-size:1.2em;padding-left:30px"}
           Drawings
 
-  #aboutus{style:"height:295px;margin-right:5px;"}
-    .blockhead
-      %img{src:"#{root_url}img/blockheadericon.png"}
-      Who We Are
+  #aboutus.col-md-9{style:"height:295px;margin:auto"}
+    .blockhead{style:"width:100%"}
+      %img{src:"#{root_url}img/blockheadericon.png"} Who We Are
     #companyintro{style:"height:auto"}
       #companyintrotitle
         %h3 Introduction to WRD Valves Ltd.
-        #morediv{style:"text-align:right"}
-          .btn.btn-primary
-            =link_to "More", front_company_path
+    #morinfo{style:"width:60px;height:40px;position:relavant;top:35px;right:10px"} more
