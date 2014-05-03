@@ -1,0 +1,26 @@
+.container.container-fluid{style:"margin-top:5px"}
+  .col-md-2#categories{style:"background-color:#015EA4;"}
+    .blockhead Product Categories
+    %ul.nav.nav-tabs.nav-stacked
+      %li
+        =link_to 'Ball Valves'
+      %li
+        =link_to 'Check Valves'
+      %li
+        =link_to 'Globe Valves'
+      %li
+        =link_to 'Gate Valves'
+    %ul.nav.nav-tabs.nav-stacked
+      - @producttypes.each do |type|
+        %li
+          =link_to type.name + 's', product_valve_path(type.id)
+  #thumbs{style:"margin-left:3px;float:left;width:79.4%;"}
+    .blockhead Our products
+    - @products.each do |product|
+      .col-sm-3.col-md-2{style:"background-color:#EEE;margin:20px"}
+        =image_tag product.materials_img(:medium)
+        %h4
+          =product.title
+          =product.description
+
+        =link_to "Details",product,{class:"btn btn-info"}

@@ -1,35 +1,37 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :standards, :title, :materials_img, :dimensions_img, :drawing1_img, :drawing2_img, :photo
+  attr_accessible :description, :standards, :title, :materials_img, :dimensions_img, :drawing1_img, :drawing2_img, :photo, :producttype_id
 
-  has_attached_file :materials_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "100x100>" }, 
+  belongs_to :producttype  
+
+  has_attached_file :materials_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "200x200>" }, 
                     :default_url => "/images/:style/missing.png", :whiny => false,
                     :url => "/uploadfiles/:class/:attachment/:id_partition/materials/:basename_:style.:extension",
                     :path => ":rails_root/public/uploadfiles/:class/:attachment/:id_partition/materials/:basename_:style.:extension"
   validates_attachment_content_type :materials_img, :content_type => /\Aimage\/.*\Z/
   validates_attachment_size :materials_img, :less_than => 2.megabytes
 
-  has_attached_file :dimensions_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "100x100>" }, 
+  has_attached_file :dimensions_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "200x200>" }, 
                     :default_url => "/images/:style/missing.png", :whiny => false,
                     :url => "/uploadfiles/:class/:attachment/:id_partition/dimensions/:basename_:style.:extension",
                     :path => ":rails_root/public/uploadfiles/:class/:attachment/:id_partition/dimensions/:basename_:style.:extension"
   validates_attachment_content_type :dimensions_img, :content_type => /\Aimage\/.*\Z/
   validates_attachment_size :dimensions_img, :less_than => 2.megabytes
 
-  has_attached_file :drawing1_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "100x100>" }, 
+  has_attached_file :drawing1_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "200x200>" }, 
                     :default_url => "/images/:style/missing.png", :whiny => false,
                     :url => "/uploadfiles/:class/:attachment/:id_partition/drawing1/:basename_:style.:extension",
                     :path => ":rails_root/public/uploadfiles/:class/:attachment/:id_partition/drawing1/:basename_:style.:extension"
   validates_attachment_content_type :drawing1_img, :content_type => /\Aimage\/.*\Z/
   validates_attachment_size :drawing1_img, :less_than => 2.megabytes
 
-  has_attached_file :drawing2_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "100x100>" }, 
+  has_attached_file :drawing2_img, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "200x200>" }, 
                     :default_url => "/images/:style/missing.png", :whiny => false,
                     :url => "/uploadfiles/:class/:attachment/:id_partition/drawing2/:basename_:style.:extension",
                     :path => ":rails_root/public/uploadfiles/:class/:attachment/:id_partition/drawing2/:basename_:style.:extension"
   validates_attachment_content_type :drawing2_img, :content_type => /\Aimage\/.*\Z/
   validates_attachment_size :drawing2_img, :less_than => 2.megabytes
 
-  has_attached_file :photo, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "100x100>" }, 
+  has_attached_file :photo, :styles => { :large => "600x400>", :medium => "300x300>", :thumb => "200x200>" }, 
                     :default_url => "/images/:style/missing.png", :whiny => false,
                     :url => "/uploadfiles/:class/:attachment/:id_partition/photo/:basename_:style.:extension",
                     :path => ":rails_root/public/uploadfiles/:class/:attachment/:id_partition/photo/:basename_:style.:extension"

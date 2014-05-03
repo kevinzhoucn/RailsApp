@@ -1,8 +1,7 @@
 RailsApp::Application.routes.draw do
-  resources :products
-
-
   resources :companies
+  resources :products, only: [:index, :show]
+  match 'products/valve/:id' => "products#valve", as: 'product_valve'
 
   devise_for :admins, only: [:session], :path => '/admin', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   
@@ -22,6 +21,8 @@ RailsApp::Application.routes.draw do
     resources :news
     resources :slides
     resources :companies
+    resources :products
+    match 'products/valve/:id' => "products#valve", as: 'product_valve'
   end
 
   # The priority is based upon order of creation:

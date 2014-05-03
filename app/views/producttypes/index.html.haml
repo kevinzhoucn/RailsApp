@@ -1,0 +1,19 @@
+%h1 Listing producttypes
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @producttypes.each do |producttype|
+    %tr
+      %td= producttype.name
+      %td= link_to 'Show', producttype
+      %td= link_to 'Edit', edit_producttype_path(producttype)
+      %td= link_to 'Destroy', producttype, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Producttype', new_producttype_path
