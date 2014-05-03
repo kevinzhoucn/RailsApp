@@ -4,7 +4,6 @@
 	margin: 0px;
 	padding: 0px;
 	font-size: 12px;
-	overflow: hidden;
 	line-height: 35px;
 }
 body{
@@ -49,6 +48,7 @@ h3{
 ul.horizontal li{
 	float:left;
 	padding-left:15px;
+	list-style: none;
 }
 
 p{
@@ -60,6 +60,7 @@ p{
 .generalcontainer{
 	width:1000px;
 	margin: auto;
+	overflow: hidden;
 }
 
 /*IDs*/
@@ -80,6 +81,7 @@ p{
 	border:5px solid #EEE;
 	padding:5px;
  	width:100%;
+ 	overflow: hidden;
 }
 
 .accordion_headings{
@@ -108,6 +110,7 @@ p{
 	padding:15px;
 	background:#FEFEFE;
 	border: 2px solid #DAF0FB;
+	overflow: hidden;
 }
 
 .header_highlight{

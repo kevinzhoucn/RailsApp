@@ -28,8 +28,6 @@
           #homepageitems
             %ul.horizontal
               %li
-                %a{href:"/admin/activities/"} 管理网站动态 <br />
-              %li
                 %a{href:"/admin/news/"} 管理新闻标题 <br />
               %li
                 %a{href:"/admin/slides/"} 管理图片轮播
@@ -74,15 +72,5 @@
         .accordion_child
           %h2 管理联系信息
           %hr
-          %ul.horizontal
-            %li
-              %a 俄文联系人信息
-            %li
-              %a 英文联系人信息
-            %li
-              %a 联系电话
-            %li
-              %a 地址信息
-            %li
-              %a 留言管理
+          =link_to "编辑联系人信息", edit_admin_contact_path(1)
 /*Body*/
