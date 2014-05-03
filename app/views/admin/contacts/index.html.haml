@@ -1,0 +1,36 @@
+%h1 Listing contacts
+
+%table
+  %tr
+    %th English email
+    %th Russian email
+    %th English skype
+    %th Russian skype
+    %th English mobile
+    %th Russian mobile
+    %th Website
+    %th Tel
+    %th Address1
+    %th Address2
+    %th Postcode
+    %th
+    %th
+    %th
+
+  %tr
+    %td= @contact.english_email
+    %td= @contact.russian_email
+    %td= @contact.english_skype
+    %td= @contact.russian_skype
+    %td= @contact.english_mobile
+    %td= @contact.russian_mobile
+    %td= @contact.website
+    %td= @contact.tel
+    %td= @contact.address1
+    %td= @contact.address2
+    %td= @contact.postcode
+    %td= link_to 'Show', @contact
+    %td= link_to 'Edit', edit_admin_contact_path(@contact)
+/     %td= link_to 'Destroy', @contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+/ %br

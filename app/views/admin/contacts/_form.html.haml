@@ -1,0 +1,18 @@
+= simple_form_for([:admin, @contact]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :english_email
+    = f.input :russian_email
+    = f.input :english_skype
+    = f.input :russian_skype
+    = f.input :english_mobile
+    = f.input :russian_mobile
+    = f.input :website
+    = f.input :tel
+    = f.input :address1
+    = f.input :address2
+    = f.input :postcode
+
+  .form-actions
+    = f.button :submit

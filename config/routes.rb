@@ -1,4 +1,7 @@
 RailsApp::Application.routes.draw do
+  resources :contacts, only: [:index, :show]
+
+
   resources :companies
   resources :products, only: [:index, :show]
   match 'products/valve/:id' => "products#valve", as: 'product_valve'
@@ -23,6 +26,7 @@ RailsApp::Application.routes.draw do
     resources :companies
     resources :products
     match 'products/valve/:id' => "products#valve", as: 'product_valve'
+    resources :contacts
   end
 
   # The priority is based upon order of creation:
