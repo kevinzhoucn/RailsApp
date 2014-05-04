@@ -1,16 +1,9 @@
 .container.container-fluid{style:"margin-top:5px"}
-  .col-md-2#categories{style:"background-color:#015EA4;"}
+  .col-md-2#categories.pageblock{style:"background-color:#2E86BD;"}
     .blockhead Product Categories
     %ul.nav.nav-tabs.nav-stacked
-      %li
-        =link_to 'Ball Valves'
-      %li
-        =link_to 'Check Valves'
-      %li
-        =link_to 'Globe Valves'
-      %li
-        =link_to 'Gate Valves'
-    %ul.nav.nav-tabs.nav-stacked
+      %li.active
+        = link_to "All Products"
       - @producttypes.each do |type|
         %li
           =link_to type.name + 's', product_valve_path(type.id)
@@ -24,33 +17,3 @@
           =product.description
 
         =link_to "Details",product,{class:"btn btn-info"}
-
-
-
-
-
-
-
-/  %h1 Listing products
-/
-/  %table
-/    %tr
-/      %th Title
-/      %th Standards
-/      %th Description
-/      %th
-/      %th
-/      %th
-
-/    - @products.each do |product|
-/      %tr
-/       %td= product.title
-/        %td= product.standards
-/        %td= product.description
-/        %td= link_to 'Show', product
-/        %td= link_to 'Edit', edit_product_path(product)
-/        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-/  %br
-
-/  = link_to 'New Product', new_product_path

@@ -1,55 +1,34 @@
 #top-container.container-fluid
-  .col-md-12{style:"margin-top:5px"}
-    %img{src:"#{root_url}img/contact2.jpg",alt:"Contact Us",align:"center"}
-  .col-md-8{style:"margin-left:2%;margin-right:2%"}
-    .panel.panel-info
-      .panel-heading
-        %h3.panel-subject Contact Us
-      #contactcontainer{style:"width:90%;margin:auto"}
-        #R
-          Russian Contact
-          .Cinfo
-            %img{src:"#{root_url}img/mailicon.jpg"}
-            %a{href:"mailto:chinadragon2008@mail.ru",style:"color:#2E86BD"}
-              chinadragon2008@mail.ru
-          .Cinfo
-            %img{src:"#{root_url}img/skype.gif"}
-            Chinadragon2008
-          .Cinfo Mobile: +86-13552546716
-        #E
-          English Contact
-          .Cinfo
-            %img{src:"#{root_url}img/mailicon.jpg"}
-            %a{href:"mailto:nancy2008@163.com",style:"color:#2E86BD"}
-              nancy2008@163.com
-          .Cinfo
-            %img{src:"#{root_url}img/skype.gif"}
-            nancy2008wrh
-          .Cinfo Mobile: +86-13511028009
-        .Cinfo
-          Website:
-          %a{href:"http://www.wrdvalve.com",style:"color:#2E86BD"}
-            www.wrdvalve.com
-        .Cinfo Tel/Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +86-10-87653811
-        .Cinfo Address: Room 521, 4/F Block1, Building No. 15, Fangzhuang South Road, Fengtai Disdrict, Beijing, China
-        .Cinfo Postcode: 100164
-      #leavemsg{style:"width:80%;margin:auto"}
-        %hr
-        %h2 Leave us a message here:
-        .input-group
-          %span.input-group-addon Name
-          %input.form-control{type:"text",placeholder:"Your name"}
-          %span.input-group-addon Phone Number
-          %input.form-control{type:"text",placeholder:"Your contact phone"}
-        #separator{style:"line-height:5px"} &nbsp;
-        .input-group
-          %span.input-group-addon E-mail
-          %input.form-control{type:"text",placeholder:"Your E-Mail"}
-          %span.input-group-addon Mobile Number
-          %input.form-control{type:"text",placeholder:"Your Moile number"}
-        #customermsg{style:"margin-left:5px"}
-          Your Message:
-          %br
-          %textarea{cols:"80",rows:"6"}
-          %br
-          %a.btn.btn-info{href:"#",role:"button",style:"margin-left:20px"} Send
+  .col-md-12{style:"margin-top:5px;padding:5px"}
+    #contactimg{style:"box-shadow: 0 0 85px rgba(0,0,0,.3);width:315px;margin:auto"}
+      %img{src:"#{root_url}img/contact.jpg",alt:"Contact Us",align:"center"}
+#contactform{style:"margin:auto;width:85%"}
+  .container-fluid
+    .Rucontact
+      .blockhead Russian Contact
+      .blockcontent
+        %ul
+          %li.t#email Email
+          %li#email1 = @contact.russian_email
+      .blockcontent
+        %ul
+          %li.t#skype{style:"border-top:0px"} Skype
+          %li#skype1{style:"border-top:0px"} = @contact.russian_skype
+      .blockcontent
+        %ul
+          %li.t{style:"border-top:0px"} Mobile
+          %li{style:"border-top:0px"} = @contact.russian_mobile
+    .Encontact
+      .blockhead English Contact
+      .blockcontent
+        %ul
+          %li.t#email Email
+          %li#email1 = @contact.english_email
+      .blockcontent
+        %ul
+          %li.t#skype{style:"border-top:0px"} Skype
+          %li#skype1{style:"border-top:0px"} = @contact.english_skype
+      .blockcontent
+        %ul
+          %li.t{style:"border-top:0px"} Mobile
+          %li{style:"border-top:0px"} = @contact.english_mobile

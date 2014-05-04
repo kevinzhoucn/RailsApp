@@ -1,12 +1,12 @@
-#top-container.container-fluid{style:"padding:5px"}
-  .col-md-2#news{style:"height:320px;"}
-    .blockhead{style:"background-color:#bce8f1;border-radius:5px"}
+#top-container.container-fluid{style:"padding-top:3px;padding-bottom:3px"}
+  .pageblock.col-md-2{style:"height:250px"}
+    .blockhead
       %img{src:"#{root_url}img/blockheadericon.png"}
       News
     - @news.each do |news|
       %ul.bullets
         %li= news.title
-  .col-md-7#prodparam{style:"height:320px"}
+  .pageblock.col-md-7{style:"height:250px"}
     .blockhead{style:"text-align:center"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       Product Parameters
@@ -15,10 +15,10 @@
     #tupianlunbo
       %a.btn.btn-info{style:"position:absolute; top:45px;right:15px"} more
       %dl{style:"width:95%;margin:auto"}
-        %dt Ball Valves
-        %dt Gate Valves
-        %dt Check Valves
-        %dt Globe Valves
+        %dt Gate Valve
+        %dt Ball Valve
+        %dt Check Valve
+        %dt Globe Valve
         %dd 
           %img{src:"#{root_url}img/products/KLT.jpg"}
         %dd
@@ -27,39 +27,36 @@
           %img{src:"#{root_url}img/products/klt1.jpg"}
         %dd
           %img{src:"#{root_url}img/products/klt3.jpg"}
- 
 
-
-
-  .col-md-2#videozone{style:"height:220px;padding:5px"}
+  .pageblock.col-md-2{style:"height:250px"}
     .blockhead
       %img{src:"#{root_url}img/blockheadericon.png"}
       Company Video
 
-    %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"95%", height:"95%"}
+    %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"95%", height:"auto"}
       %param{name:"movie", value:"#{root_url}video/flvplayer.swf"}
       %param{name:"quality", value:"high"}
       %param{name:"allowFullScreen", value:"true"}
       %param{name:"FlashVars", value:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1"}
-      %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"95%", height:"95%",style:"margin-top:4px;margin-left:4px"}
+      %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"95%", height:"auto",style:"margin-top:4px"}
 #productmarquee.container-fluid
-  .blockhead Our Equipments
-  %p{align:"Center"}
-    %marquee{direction:"left",width:"80%",height:"140",scrollamount:"3",scrolldelay:"3"}
-      %img{src:"#{root_url}img/equipments/1.jpg"}
-      %img{src:"#{root_url}img/equipments/2.jpg"}
-      %img{src:"#{root_url}img/equipments/3.jpg"}
-      %img{src:"#{root_url}img/equipments/4.jpg"}
-      %img{src:"#{root_url}img/equipments/5.jpg"}
-      %img{src:"#{root_url}img/equipments/6.jpg"}
-      %img{src:"#{root_url}img/equipments/7.jpg"}
-      %img{src:"#{root_url}img/equipments/8.jpg"}
-      %img{src:"#{root_url}img/equipments/9.jpg"}
-      %img{src:"#{root_url}img/equipments/10.jpg"}
+  .col-md-12.pageblock
+    .blockhead Our Equipments
+    %p{align:"Center"}
+      %marquee{direction:"left",width:"80%",height:"140",scrollamount:"3",scrolldelay:"3"}
+        %img{src:"#{root_url}img/equipments/1.jpg"}
+        %img{src:"#{root_url}img/equipments/2.jpg"}
+        %img{src:"#{root_url}img/equipments/3.jpg"}
+        %img{src:"#{root_url}img/equipments/4.jpg"}
+        %img{src:"#{root_url}img/equipments/5.jpg"}
+        %img{src:"#{root_url}img/equipments/6.jpg"}
+        %img{src:"#{root_url}img/equipments/7.jpg"}
+        %img{src:"#{root_url}img/equipments/8.jpg"}
+        %img{src:"#{root_url}img/equipments/9.jpg"}
+        %img{src:"#{root_url}img/equipments/10.jpg"}
 
-
-#middle-container.container-fluid
-  .col-md-2#downloads
+#middle-container.container-fluid{style:"padding-top:3px"}
+  .col-md-2.pageblock
     .blockhead
       %img{src:"#{root_url}img/blockheadericon.png"}
       Our Partners
@@ -89,7 +86,7 @@
         %a{href:"#",style:"color:#FFFFFF;line-height:37px;font-size:1.2em;padding-left:30px"}
           Drawings
 
-  #aboutus.col-md-9{style:"height:295px;margin:auto"}
+  .pageblock{style:"margin-right:5px"}
     .blockhead{style:"width:100%"}
       %img{src:"#{root_url}img/blockheadericon.png"} Who We Are
     #companyintro{style:"height:auto"}
