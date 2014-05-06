@@ -107,6 +107,36 @@ dt.active{
 	border-bottom: 2px solid #5bc0de;
 }
 
+/*滚动*/
+#demo {
+background: #FFF;
+overflow:hidden;
+border: 1px dashed #CCC;
+width: 85%;
+margin:auto;
+
+}
+
+#demo1 >a:hover,#demo2 >a:hover{
+	opacity:1;
+}
+#demo1 >a,#demo2 >a{
+	opacity: 0.6;
+}
+#indemo {
+float: left;
+width: 800%;
+}
+#demo1 {
+float: left;
+}
+#demo2 {
+float: left;
+margin-left:3px;
+}
+/*滚动结束*/
+
+
 /*这个class只规定菜单Li的颜色、边框*/
 ul.menu-item li{
 	border-right-style: groove;

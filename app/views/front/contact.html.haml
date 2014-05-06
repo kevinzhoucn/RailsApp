@@ -9,26 +9,32 @@
       .blockcontent
         %ul
           %li.t#email Email
-          %li#email1 = @contact.russian_email
+          %li#email1
+            = @contact.russian_email
       .blockcontent
         %ul
           %li.t#skype{style:"border-top:0px"} Skype
-          %li#skype1{style:"border-top:0px"} = @contact.russian_skype
+          %li#skype1{style:"border-top:0px"}
+            = @contact.russian_skype
       .blockcontent
         %ul
           %li.t{style:"border-top:0px"} Mobile
-          %li{style:"border-top:0px"} = @contact.russian_mobile
+          %li{style:"border-top:0px"} 
+            = @contact.russian_mobile
     .Encontact
       .blockhead English Contact
       .blockcontent
         %ul
           %li.t#email Email
-          %li#email1 = @contact.english_email
+          %li#email1
+            = @contact.english_email
       .blockcontent
         %ul
           %li.t#skype{style:"border-top:0px"} Skype
-          %li#skype1{style:"border-top:0px"} = @contact.english_skype
+          %li#skype1{style:"border-top:0px"}
+            = @contact.english_skype
       .blockcontent
         %ul
           %li.t{style:"border-top:0px"} Mobile
-          %li{style:"border-top:0px"} = @contact.english_mobile
+          %li{style:"border-top:0px"}
+            = @contact.english_mobile

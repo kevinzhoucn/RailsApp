@@ -19,6 +19,7 @@ class FrontController < ApplicationController
   end
 
   def contact
+    @contact = Contact.last
   end
 
   def admin
