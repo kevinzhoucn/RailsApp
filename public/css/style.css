@@ -216,6 +216,7 @@ div#videozone{
 	border-radius: 5px;
 	border:1px solid #C1D4D3;
 	overflow:hidden;
+	box-shadow: 0 0 45px rgba(10,100,120,.2);
 	
 }
 .Rucontact,.Encontact{
