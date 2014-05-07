@@ -1,19 +1,17 @@
 .container.container-fluid{style:"margin-top:5px"}
-  .col-md-2#categories.pageblock{style:"background-color:#2E86BD;"}
+  .col-md-2#categories.pageblock
     .blockhead Product Categories
-    %ul.nav.nav-tabs.nav-stacked
+    %ul.bullets{style:"padding-left:5px"}
       %li
-        =link_to "All Products", front_product_path
+        = link_to "All Products", front_product_path,{style:"color:#9988bb"}
       - @producttypes.each do |type|
         %li
-          =link_to type.name + 's', product_valve_path(type.id)
-  #thumbs{style:"margin-left:3px;float:left;width:79.4%;"}
-    .blockhead Our products
+          =link_to type.name + 's', product_valve_path(type.id),{style:"color:#0306aa"}
+  .pageblock{style:"padding-bottom:10px;min-height:650px"}
+    .blockhead Product List
     - @products.each do |product|
-      .col-sm-3.col-md-2{style:"background-color:#EEE;margin:20px"}
-        =image_tag product.materials_img(:medium)
-        %h4
-          =product.title
-          =product.description
-
-        =link_to "Details",product,{class:"btn btn-info"}
+      .thumb
+        #imagewrapper{style:"width:150px;margin:auto;margin-top:5px"}
+          =image_tag product.materials_img(:medium){style:"height:150px;width:150px"}
+        %h2{style:"z-index:10;position:relative;top:10px;opacity:0.6;text-align:center"}
+          =link_to "#{product.title}", product,{style:"color:#2E86BD;"} 
