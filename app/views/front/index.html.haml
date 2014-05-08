@@ -28,17 +28,19 @@
         %dd
           %img{src:"#{root_url}img/products/klt3.jpg"}
 
-  .pageblock.col-md-2{style:"height:250px"}
+  .pageblock.col-md-2
     .blockhead
       %img{src:"#{root_url}img/blockheadericon.png"}
       Company Video
 
-    %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"95%", height:"auto"}
-      %param{name:"movie", value:"#{root_url}video/flvplayer.swf"}
-      %param{name:"quality", value:"high"}
-      %param{name:"allowFullScreen", value:"true"}
-      %param{name:"FlashVars", value:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1"}
-      %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"95%", height:"auto",style:"margin-top:4px"}
+    %video
+      %source{src:"#{root_url}video/mp4.mp4",typ:"video/mp4"}
+      %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"95%", height:"auto"}
+        %param{name:"movie", value:"#{root_url}video/flvplayer.swf"}
+        %param{name:"quality", value:"high"}
+        %param{name:"allowFullScreen", value:"true"}
+        %param{name:"FlashVars", value:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1"}
+        %embed{src:"#{root_url}video/flvplayer.swf", allowFullScreen:"true", FlashVars:"vcastr_file=#{root_url}video/FlashVideo.flv&LogoText=www.wrdvalve.com&BufferTime=3&IsAutoPlay=1", quality:"high", pluginspage:"http://www.macromedia.com/go/getflashplayer", type:"application/x-shockwave-flash", width:"95%", height:"auto",style:"margin-top:4px"}
 #productmarquee.container-fluid
   .col-md-12.pageblock
     .blockhead{style:"text-align:center"}

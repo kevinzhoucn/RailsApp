@@ -204,7 +204,9 @@ ul.admin-menu a:hover{
 	height:100%;
 	float: left;
 }
-
+#top-container{
+	min-height:300px;
+}
 #videozone{
 	margin-top:3px;
 	background-color:#FFFFFF;
