@@ -46,7 +46,7 @@ ul.bullets li{
 /*这个是网页总容器，里面装着Banner, Menu, page, footer*/
 .mainsheet{
 	border: 1px solid #2B7DB1;
-	width:75%;
+	width:1000px;
 	margin:auto;
 	box-shadow: 0 0 85px rgba(0,0,0,.3);
 	min-height: 800px;
@@ -138,21 +138,39 @@ margin-left:3px;
 
 
 /*这个class只规定菜单Li的颜色、边框*/
-ul.menu-item li{
-	border-right-style: groove;
-	border-width: 3px;
-	background-color: #2E86BD;
-	color: #ffffff;
-	line-height: 30px;
-	font-weight: bold;
-	padding: 5px 5px 0px 5px;
+.menu-item{
+/*	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=#2E86BD);
+	background:-moz-linear-gradient(top,#ffffff,#2E86BD);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#ffffff), to(#2E86BD));*/
+	background-image: url('../img/blocktitlebg.jpg');
+	background-repeat: repeat-x;
+	background-size: 100% 100%;
+	overflow: hidden;
+	color:#2E86BD;
+	font-size: 13pt;
+
+}
+.menu-item > li{
+	float: left;
+	width: 14.25%;
+	line-height: 35px;
+	padding-bottom: 0px;
+	text-align: center;
+	margin:auto;
+}
+.menu-item > li > a{
+	color: #2E86BD;
 }
 
-/*这个class规定了当前页/当前标签的颜色*/
-ul.menu-item li.active{
+.menu-item >li.active{
 	font-weight: bold;
-	color: #015EA4;
+	background-color:#2E86BD;
+	border-radius: 4px;
 }
+.menu-item >li.active >a{
+	color:#FFF;
+}
+
 ul.admin-menu {
 	background-color:#7eaceb;
 	padding-left:5px;
@@ -252,14 +270,14 @@ li.partner{
 	width:131px;
 	margin:auto;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 700px){
 	.Rucontact,.Encontact{
 		width:100%;
 		line-height: 35px;
 		font-size: 1.3em;
 	}
 	.mainsheet{
-		width:95%;
+		width:100%
 	}
 	#sitename{
 		display:none;
@@ -269,6 +287,12 @@ li.partner{
 		float: none;
 		margin:auto;
 		margin-bottom: 5px;
+	}
 
+	.menu-item > li{
+		width:99%;
+		margin-left:2px;
+		margin-right: 2px;
+		margin-bottom: 1px;
 	}
 }
