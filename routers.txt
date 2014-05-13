@@ -1,0 +1,67 @@
+             contacts GET    /contacts(.:format)                  contacts#index
+              contact GET    /contacts/:id(.:format)              contacts#show
+            companies GET    /companies(.:format)                 companies#index
+                      POST   /companies(.:format)                 companies#create
+          new_company GET    /companies/new(.:format)             companies#new
+         edit_company GET    /companies/:id/edit(.:format)        companies#edit
+              company GET    /companies/:id(.:format)             companies#show
+                      PUT    /companies/:id(.:format)             companies#update
+                      DELETE /companies/:id(.:format)             companies#destroy
+             products GET    /products(.:format)                  products#index
+              product GET    /products/:id(.:format)              products#show
+        product_valve        /products/valve/:id(.:format)        products#valve
+    new_admin_session GET    /admin/login(.:format)               devise/sessions#new
+        admin_session POST   /admin/login(.:format)               devise/sessions#create
+destroy_admin_session DELETE /admin/logout(.:format)              devise/sessions#destroy
+        front_company GET    /company(.:format)                   Companies#show
+                 home GET    /home(.:format)                      front#index
+        front_product GET    /products(.:format)                  front#product
+         front_market GET    /intmarkets(.:format)                front#market
+      front_equipment GET    /equipments(.:format)                front#equipment
+        front_contact GET    /contactus(.:format)                 front#contact
+          front_admin GET    /admin(.:format)                     front#admin
+    front_application GET    /application(.:format)               front#application
+     admin_activities GET    /admin/activities(.:format)          admin/activities#index
+                      POST   /admin/activities(.:format)          admin/activities#create
+   new_admin_activity GET    /admin/activities/new(.:format)      admin/activities#new
+  edit_admin_activity GET    /admin/activities/:id/edit(.:format) admin/activities#edit
+       admin_activity GET    /admin/activities/:id(.:format)      admin/activities#show
+                      PUT    /admin/activities/:id(.:format)      admin/activities#update
+                      DELETE /admin/activities/:id(.:format)      admin/activities#destroy
+     admin_news_index GET    /admin/news(.:format)                admin/news#index
+                      POST   /admin/news(.:format)                admin/news#create
+       new_admin_news GET    /admin/news/new(.:format)            admin/news#new
+      edit_admin_news GET    /admin/news/:id/edit(.:format)       admin/news#edit
+           admin_news GET    /admin/news/:id(.:format)            admin/news#show
+                      PUT    /admin/news/:id(.:format)            admin/news#update
+                      DELETE /admin/news/:id(.:format)            admin/news#destroy
+         admin_slides GET    /admin/slides(.:format)              admin/slides#index
+                      POST   /admin/slides(.:format)              admin/slides#create
+      new_admin_slide GET    /admin/slides/new(.:format)          admin/slides#new
+     edit_admin_slide GET    /admin/slides/:id/edit(.:format)     admin/slides#edit
+          admin_slide GET    /admin/slides/:id(.:format)          admin/slides#show
+                      PUT    /admin/slides/:id(.:format)          admin/slides#update
+                      DELETE /admin/slides/:id(.:format)          admin/slides#destroy
+      admin_companies GET    /admin/companies(.:format)           admin/companies#index
+                      POST   /admin/companies(.:format)           admin/companies#create
+    new_admin_company GET    /admin/companies/new(.:format)       admin/companies#new
+   edit_admin_company GET    /admin/companies/:id/edit(.:format)  admin/companies#edit
+        admin_company GET    /admin/companies/:id(.:format)       admin/companies#show
+                      PUT    /admin/companies/:id(.:format)       admin/companies#update
+                      DELETE /admin/companies/:id(.:format)       admin/companies#destroy
+       admin_products GET    /admin/products(.:format)            admin/products#index
+                      POST   /admin/products(.:format)            admin/products#create
+    new_admin_product GET    /admin/products/new(.:format)        admin/products#new
+   edit_admin_product GET    /admin/products/:id/edit(.:format)   admin/products#edit
+        admin_product GET    /admin/products/:id(.:format)        admin/products#show
+                      PUT    /admin/products/:id(.:format)        admin/products#update
+                      DELETE /admin/products/:id(.:format)        admin/products#destroy
+  admin_product_valve        /admin/products/valve/:id(.:format)  admin/products#valve
+       admin_contacts GET    /admin/contacts(.:format)            admin/contacts#index
+                      POST   /admin/contacts(.:format)            admin/contacts#create
+    new_admin_contact GET    /admin/contacts/new(.:format)        admin/contacts#new
+   edit_admin_contact GET    /admin/contacts/:id/edit(.:format)   admin/contacts#edit
+        admin_contact GET    /admin/contacts/:id(.:format)        admin/contacts#show
+                      PUT    /admin/contacts/:id(.:format)        admin/contacts#update
+                      DELETE /admin/contacts/:id(.:format)        admin/contacts#destroy
+                 root        /                                    front#index

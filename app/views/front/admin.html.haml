@@ -55,10 +55,10 @@
           %h2 产品管理
           %hr
           #productitems
-            %a 去产品管理页面
+            =link_to "去产品管理页面", admin_products_path
             %hr
             快捷方式：
-            %a 添加新产品
+            = link_to '添加新产品', new_admin_product_path
       #test4-content
         .accordion_child
           %h2 应用范围和设备

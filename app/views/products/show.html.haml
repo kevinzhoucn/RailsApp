@@ -1,14 +1,14 @@
 %script{src:"#{root_url}js/tupianlunbo.js"}
-.container.container-fluid{style:"margin-top:5px"}
-  .col-md-2#categories.pageblock{style:"background-color:#2E86BD;"}
+.container.container-fluid{style:"margin-top:5px;"}
+  .col-md-2#categories.pageblock
     .blockhead Product Categories
-    %ul.nav.nav-tabs.nav-stacked
+    %ul.bullets{style:"padding-left:5px"}
       %li
-        =link_to "All Products", front_product_path
+        = link_to "All Products", front_product_path,{style:"color:#9988bb"}
       - @producttypes.each do |type|
         %li
-          =link_to type.name + 's', product_valve_path(type.id)
-  #proddetails{style:"float:left;margin-left:5px"}
+          =link_to type.name + 's', product_valve_path(type.id),{style:"color:#0306aa"}
+  .pageblock{style:"padding-bottom:10px;min-height:650px"}
     #Prodmainpic
       =image_tag @product.photo(:large)
     .blockhead
@@ -41,37 +41,37 @@
               %img{src:"#{root_url}img/products/klt3.jpg"}
 
 
-%p#notice= notice
+/ %p#notice= notice
 
-%p
-  %b Title:
-  = @product.title
-%p
-  %b Standards:
-  = @product.standards
-%p
-  %b Description:
-  = @product.description
+/ %p
+/   %b Title:
+/   = @product.title
+/ %p
+/   %b Standards:
+/   = @product.standards
+/ %p
+/   %b Description:
+/   = @product.description
 
-%p
-  %b materials_img:
-  =image_tag @product.materials_img(:medium)
+/ %p
+/   %b materials_img:
+/   =image_tag @product.materials_img(:medium)
 
-%p
-  %b dimensions_img:
-  =image_tag @product.dimensions_img(:medium)
+/ %p
+/   %b dimensions_img:
+/   =image_tag @product.dimensions_img(:medium)
 
-%p
-  %b drawing1_img:
-  =image_tag @product.drawing1_img(:medium)
+/ %p
+/   %b drawing1_img:
+/   =image_tag @product.drawing1_img(:medium)
 
-%p
-  %b drawing2_img:
-  =image_tag @product.drawing2_img(:medium)
+/ %p
+/   %b drawing2_img:
+/   =image_tag @product.drawing2_img(:medium)
 
-%p
-  %b photo:
-  =image_tag @product.photo(:medium)
+/ %p
+/   %b photo:
+/   =image_tag @product.photo(:medium)
 
 / = link_to 'Edit', edit_admin_product_path(@product)
 / \|

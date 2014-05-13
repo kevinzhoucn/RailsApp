@@ -1,29 +1,37 @@
-.container.container-fluid{style:"margin-top:5px"}
-  .col-md-2#categories{style:"background-color:#015EA4;"}
-    .blockhead Product Categories
-    %ul.nav.nav-tabs.nav-stacked
+.generalcontainer#adminbody
+  #adminnav{style:""}
+    %ul.horizontal
       %li
-        =link_to 'Ball Valves'
+        快速导航:
       %li
-        =link_to 'Check Valves'
-      %li
-        =link_to 'Globe Valves'
-      %li
-        =link_to 'Gate Valves'
-    %ul.nav.nav-tabs.nav-stacked
-      - @producttypes.each do |type|
-        %li
-          =link_to type.name + 's', product_valve_path(type.id)
-  #thumbs{style:"margin-left:3px;float:left;width:79.4%;"}
-    .blockhead Our products
-    - @products.each do |product|
-      .col-sm-3.col-md-2{style:"background-color:#EEE;margin:20px"}
-        %img{src:"#{root_url}img/products/ballvalve.jpg",alt:"..."}
-        %h4
-          =product.title
-          =product.description
+        %a{href:"/admin"} 管理员首页
+        >
+      %li 产品管理
+  #basic-accordian
+    #left{style:"float:left;width:25%;"}
+      #test1-header.accordion_headings.header_highlight
+        所有产品
+      %a{href:"/admin",style:"text-decoration:none"}
+        #test2-header.accordion_headings
+          返回管理员首页
 
-        =link_to "Details",product,{class:"btn btn-info"}
+    #right{style:"float:left;width:73%;margin-right:1px"}
+      #test1-content
+        .accordion_child#allnews
+          %h2 当前所有产品
+          %hr
+          #newslist
+            - @products.each do |product|
+              %ul.horizontal
+                %li= product.title
+                %li= link_to '编辑', edit_admin_product_path(product)
+                %li= button_to '删除', admin_products_path(product), :method => :delete, :data => { :confirm => '确定删除吗？' }
+              %br
+
+            = link_to '添加新产品', new_admin_product_path
+      #test2-content
+        .accordion_child
+          正在前往管理员首页...
 
 
 
