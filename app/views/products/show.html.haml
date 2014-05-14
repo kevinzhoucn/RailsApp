@@ -1,4 +1,4 @@
-%script{src:"#{root_url}js/tupianlunbo.js"}
+%script{src:"#{root_url}js/prodtabbing.js"}
 .container.container-fluid{style:"margin-top:5px;"}
   .col-md-2#categories.pageblock
     .blockhead Product Categories
@@ -9,36 +9,57 @@
         %li
           =link_to type.name + 's', product_valve_path(type.id),{style:"color:#0306aa"}
   .pageblock{style:"padding-bottom:10px;min-height:650px"}
-    #Prodmainpic
-      =image_tag @product.photo(:large)
     .blockhead
       Product details
-    .lanrenzhijia
-      .title.cf
-        %ul.title-list.fl.cf
-          %li.on.prod Standards
-          %li.prod Description
-          %li.prod Dimentions
-          %li.prod Drawings
-          %p.prod
-            %b
-      .product-wrap
-        .product{style:"display:block"}
-          %ul.cf
-            %li.m10
-              =@product.standards
-        .product
-          %ul.cf
-            %li.m10 
-              =@product.description
-        .product
-          %ul.cf
-            %li.m10
-              %img{src:"#{root_url}img/products/klt1.jpg"}
-        .product
-          %ul.cf
-            %li.m10
-              %img{src:"#{root_url}img/products/klt3.jpg"}
+    #prodwrapper
+      %ul#prodtab
+        %li.current
+          Description
+        %li
+          Dimesion
+        %li
+          Standards
+        %li
+          Blueprints
+      #prodcontent
+        %ul{style:"display:block"}
+          =image_tag @product.photo(:large)
+        %ul
+          =image_tag @product.photo(:large)
+        %ul
+          =image_tag @product.photo(:large)
+        %ul
+          =image_tag @product.photo(:large)
+
+
+
+
+    / .lanrenzhijia
+    /   .title.cf
+    /     %ul.title-list.fl.cf
+    /       %li.on.prod Standards
+    /       %li.prod Description
+    /       %li.prod Dimentions
+    /       %li.prod Drawings
+    /       %p.prod
+    /         %b
+    /   .product-wrap
+    /     .product{style:"display:block"}
+    /       %ul.cf
+    /         %li.m10
+    /           =@product.standards
+    /     .product
+    /       %ul.cf
+    /         %li.m10 
+    /           =@product.description
+    /     .product
+    /       %ul.cf
+    /         %li.m10
+    /           %img{src:"#{root_url}img/products/klt1.jpg"}
+    /     .product
+    /       %ul.cf
+    /         %li.m10
+    /           %img{src:"#{root_url}img/products/klt3.jpg"}
 
 
 / %p#notice= notice

@@ -73,7 +73,8 @@ p{
 }
 #adminbody{
 	margin-top:3px;
-	background-color:#FFFFFF
+	background-color:#FFFFFF;
+	min-height:600px;
 }
 
 /*left navigation menu*/
@@ -111,6 +112,7 @@ p{
 	background:#FEFEFE;
 	border: 2px solid #DAF0FB;
 	overflow: hidden;
+	min-height: 200px;
 }
 
 .header_highlight{

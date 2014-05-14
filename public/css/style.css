@@ -59,34 +59,44 @@ ul.bullets li{
 	background-image: url('../img/banner.jpg');
 	background-repeat: no-repeat;
 }
-/*图片轮播系列div*/
+/*产品展示页面的Tab*/
 
-.fl{display:inline;float:left}
-.fr{display:inline;float:right}
-.cf:after{content:"";clear:both;display:block;height:0;overflow:hidden}
-.cf{zoom:1}
-.pb10{padding-bottom:10px}
-.mt10{margin-top:10px}
-
-.lanrenzhijia{margin:2px auto;background:#fff;padding:5px;box-shadow:0 0 10px #ccc;}
-.lanrenzhijia .title{height:33px;border-bottom: 3px solid #e7e7e7;padding-bottom:10px;}
-.lanrenzhijia .title h2{ font-size: 20px;font-family: "microsoft yahei";}
-.lanrenzhijia .title-list{ position: relative; top: 6px;}
-.lanrenzhijia .title-list li{ width: 120px; line-height: 20px; text-align: center; float: left; display: inline;}
-.lanrenzhijia .title-list li.prod{ width: 155px; line-height: 20px; text-align: center; float: left; display: inline;border:solid 1px;}
-.lanrenzhijia .title-list li.on{ color: #2E86BD; font-weight: bold;}
-.lanrenzhijia .title-list p{position:absolute;top:24px;left:0px;width:120px;height:7px;border-top: 3px solid #2E86BD; overflow: hidden; text-align: center;}
-.lanrenzhijia .title-list p.prod{position:absolute;top:24px;left:0px;width:155px;height:7px;border-top: 3px solid #2E86BD; overflow: hidden; text-align: center;}
-.lanrenzhijia .title-list b{display:inline-block;width:0;height:0;margin-top:-3px;border-style:solid dashed dashed dashed;border-width:9px;border-color: #2E86BD #fff #fff #fff;overflow: hidden;zoom: 1;font-size: 0;}
-.product{ height: 200px; position: relative; overflow: hidden; display: none; margin-top: 10px;}
-.product ul{ position: absolute; left: 0px;}
-.product-wrap .show{display: block;}
-.product-wrap .product li{ float: left; display: inline; margin-left: 13px;background: #f3f3f3;border: 2px solid #fafafa; transition:0.4s;-webkit-transition:0.4s;-moz-transition: 0.4s;-o-transition: 0.4s;-ms-transition: 0.4s;}
-.product-wrap .product li.ml0{margin-left:0px;}
-.product-wrap .product li a.imgwrap{ display: block; width: 226px; height: 200px; background: #fff; text-align:center;}
-.product-wrap .product li p{padding-left: 15px;color: #666666;line-height: 22px;}
-.product-wrap .product li p a{ color: #666666; text-decoration: none;}
-.product-wrap .product li p a:hover{ color: #2E86BD; text-decoration: none;}
+#prodwrapper {
+    margin:5px auto auto 5px;
+    width: 90%;
+}
+#prodtab {
+    overflow:hidden;
+    zoom:1;
+    background:#EEE;
+    border:1px solid #C1D4D3;
+}
+#prodtab li {
+    float:left;
+    color:#2E86BD;
+    height:30px;
+    cursor:pointer;
+    line-height:30px;
+    list-style-type:none;
+    padding:0 20px;
+}
+#prodtab li.current {
+    color:#FFFFEF;
+    font-weight: bolder;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=#2E86BD);
+	background:-moz-linear-gradient(top,#ffffff,#2E86BD);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#ffffff), to(#2E86BD));*/
+}
+#prodcontent {
+    border:1px solid #C1D4D3;
+    border-top-width:0;
+}
+#prodcontent ul {
+    line-height:25px;
+    display:none;
+    margin:0 30px;
+    padding:10px 0;
+}
 
 
 /*This is a new set of css for the new tupianlunbo*/
@@ -164,8 +174,10 @@ margin-left:3px;
 
 .menu-item >li.active{
 	font-weight: bold;
-	background-color:#2E86BD;
-	border-radius: 4px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#EFEFEF,endColorStr=#2E86BD);
+	background:-moz-linear-gradient(top,#EFEFEF,#2E86BD);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#EFEFEF), to(#2E86BD));*/
+
 }
 .menu-item >li.active >a{
 	color:#FFF;

@@ -37,24 +37,5 @@ function setMenuBackground()
         $("#home").removeClass("active");
         $("#contactus").removeClass("inactive").addClass("active");
     }
-    else if(/ballvalve/.test(url.toLowerCase()))
-    {
-        $("#home").removeClass("active");
-        $("#products").removeClass("inactive").addClass("active");
-    }
-    else if(/checkvalve/.test(url.toLowerCase()))
-    {
-        $("#home").removeClass("active");
-        $("#products").removeClass("inactive").addClass("active");
-    }
-    else if(/globevalve/.test(url.toLowerCase()))
-    {
-        $("#home").removeClass("active");
-        $("#products").removeClass("inactive").addClass("active");
-    }
-    else if(/gatevalve/.test(url.toLowerCase()))
-    {
-        $("#home").removeClass("active");
-        $("#products").removeClass("inactive").addClass("active");
-    }
+
 }

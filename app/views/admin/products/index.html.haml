@@ -6,7 +6,7 @@
       %li
         %a{href:"/admin"} 管理员首页
         >
-      %li 产品管理
+      %li 产品列表
   #basic-accordian
     #left{style:"float:left;width:25%;"}
       #test1-header.accordion_headings.header_highlight
@@ -25,7 +25,7 @@
               %ul.horizontal
                 %li= product.title
                 %li= link_to '编辑', edit_admin_product_path(product)
-                %li= button_to '删除', admin_products_path(product), :method => :delete, :data => { :confirm => '确定删除吗？' }
+                %li= button_to '删除', admin_product_path(product), :method => :delete, :data => { :confirm => '确定删除吗？' }
               %br
 
             = link_to '添加新产品', new_admin_product_path

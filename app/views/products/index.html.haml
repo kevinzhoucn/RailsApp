@@ -12,7 +12,7 @@
     - @products.each do |product|
       .thumb
         #imagewrapper{style:"width:150px;margin:auto;margin-top:5px"}
-          %img{src:"#{root_url}img/products/ballvalve.jpg",alt:"..."}
+          =image_tag product.photo(:medium)
           %h2{style:"text-align:center"}
             =link_to "#{product.title}", product,{style:"color:#2E86BD;"}
 

@@ -1,5 +1,5 @@
 /*Body*/
-.generalcontainer#adminbody{style:"height:600px;"}
+.generalcontainer#adminbody
   #adminnav{style:""}
     %ul.horizontal
       %li
@@ -55,10 +55,11 @@
           %h2 产品管理
           %hr
           #productitems
-            =link_to "去产品管理页面", admin_products_path
-            %hr
-            快捷方式：
-            = link_to '添加新产品', new_admin_product_path
+            %ul.horizontal
+              %li
+                =link_to "产品列表", admin_products_path
+              %li
+                = link_to '添加新产品', new_admin_product_path
       #test4-content
         .accordion_child
           %h2 应用范围和设备
