@@ -13,22 +13,22 @@
       Product details
     #prodwrapper
       %ul#prodtab
-        %li.current
+        %li.current#tab1
           Description
-        %li
+        %li#tab2
           Dimesion
-        %li
+        %li#tab3
           Standards
-        %li
+        %li#tab4
           Blueprints
       #prodcontent
-        %ul{style:"display:block"}
+        %ul#content1{style:"display:block"}
           =image_tag @product.photo(:large)
-        %ul
+        %ul#content2
           =image_tag @product.photo(:large)
-        %ul
+        %ul#content3
           =image_tag @product.photo(:large)
-        %ul
+        %ul#content4
           =image_tag @product.photo(:large)
 
 

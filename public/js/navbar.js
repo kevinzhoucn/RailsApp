@@ -1,8 +1,3 @@
-window.onload=function()
-{
-    setMenuBackground();
-}
-
 function setMenuBackground()
 {
     var url = document.URL;//取得当前页的URL
