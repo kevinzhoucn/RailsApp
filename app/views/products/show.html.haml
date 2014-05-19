@@ -9,9 +9,10 @@
         %li
           =link_to type.name + 's', product_valve_path(type.id),{style:"color:#0306aa"}
   .pageblock{style:"padding-bottom:10px;min-height:650px"}
-    .blockhead
-      Product details
     #prodwrapper
+      #producttitle.blockhead
+        %h2
+          =@product.title
       %ul#prodtab
         %li.current#tab1
           Description
@@ -20,80 +21,13 @@
         %li#tab3
           Standards
         %li#tab4
-          Blueprints
+          Drawing
       #prodcontent
         %ul#content1{style:"display:block"}
-          =image_tag @product.photo(:large)
+          =@product.description
         %ul#content2
-          =image_tag @product.photo(:large)
+          /=imag_tag @product.dimension(:large)
         %ul#content3
           =image_tag @product.photo(:large)
         %ul#content4
           =image_tag @product.photo(:large)
-
-
-
-
-    / .lanrenzhijia
-    /   .title.cf
-    /     %ul.title-list.fl.cf
-    /       %li.on.prod Standards
-    /       %li.prod Description
-    /       %li.prod Dimentions
-    /       %li.prod Drawings
-    /       %p.prod
-    /         %b
-    /   .product-wrap
-    /     .product{style:"display:block"}
-    /       %ul.cf
-    /         %li.m10
-    /           =@product.standards
-    /     .product
-    /       %ul.cf
-    /         %li.m10 
-    /           =@product.description
-    /     .product
-    /       %ul.cf
-    /         %li.m10
-    /           %img{src:"#{root_url}img/products/klt1.jpg"}
-    /     .product
-    /       %ul.cf
-    /         %li.m10
-    /           %img{src:"#{root_url}img/products/klt3.jpg"}
-
-
-/ %p#notice= notice
-
-/ %p
-/   %b Title:
-/   = @product.title
-/ %p
-/   %b Standards:
-/   = @product.standards
-/ %p
-/   %b Description:
-/   = @product.description
-
-/ %p
-/   %b materials_img:
-/   =image_tag @product.materials_img(:medium)
-
-/ %p
-/   %b dimensions_img:
-/   =image_tag @product.dimensions_img(:medium)
-
-/ %p
-/   %b drawing1_img:
-/   =image_tag @product.drawing1_img(:medium)
-
-/ %p
-/   %b drawing2_img:
-/   =image_tag @product.drawing2_img(:medium)
-
-/ %p
-/   %b photo:
-/   =image_tag @product.photo(:medium)
-
-/ = link_to 'Edit', edit_admin_product_path(@product)
-/ \|
-/ = link_to 'Back', products_path

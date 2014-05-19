@@ -11,7 +11,7 @@
     .blockhead Product List
     - @products.each do |product|
       .thumb
-        #imagewrapper{style:"width:150px;margin:auto;margin-top:5px"}
-          =image_tag product.materials_img(:medium){style:"height:150px;width:150px"}
-        %h2{style:"z-index:10;position:relative;top:10px;opacity:0.6;text-align:center"}
-          =link_to "#{product.title}", product,{style:"color:#2E86BD;"} 
+        #imagewrapper{style:"margin-top:5px"}
+          =image_tag product.materials_img(:small)
+        %div{style:"text-align:center;"}
+          =link_to "#{product.title}", product,{style:"color:#2E86BD;"}
