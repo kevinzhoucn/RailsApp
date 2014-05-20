@@ -44,5 +44,24 @@
         %ul
           %li.t#website
             Website
-          %li#website{style:"width:80%"}
-            =link_to @contact.website, root_url,{style:"color:#2E86BD"}
+          %li#website{style:"width:79.48%"}
+            =link_to 'http://'+@contact.website, root_url,{style:"color:#2E86BD"}
+    .websiteinfo
+      .blockcontent{style:"overflow:hidden"}
+        %ul
+          %li.t#website{style:"border-top:0px"}
+            Tel/Fax
+          %li#website{style:"width:79.48%;border-top:0px"}
+            = @contact.tel
+    .websiteinfo
+      .blockcontent{style:"overflow:hidden"}
+        %ul
+          %li.t#website{style:"border-top:0px;line-height:75px"}
+            Address
+          %li#website{style:"width:79.48%;border-top:0px"}
+            = @contact.address1
+            %br
+            = @contact.address2
+            %br
+            Post Code
+            = @contact.postcode
