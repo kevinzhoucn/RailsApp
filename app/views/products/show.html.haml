@@ -12,27 +12,30 @@
     #prodwrapper
       #producttitle.blockhead
         =@product.title
+      #photowrapper{style:"width:60%;float:left;height:auto;overflow:hidden"}
+        =image_tag @product.photo, {alt:"Product Image",width:"100%",height:"100%"}
+      #tablewrapper{style:"width:40%;float:left"}
 
-      =image_tag @product.photo, {alt:"Product Image",width:"100%",height:"100%"}
-      %ul#prodtab
-        %li.current#tab1
-          Description
-        %li#tab2
-          Dimesion
-        %li#tab3
-          Standards
-        %li#tab4
-          Drawings & Materials
-      #prodcontent
-        %ul#content1{style:"display:block"}
-          =@product.description
-        %ul#content2
-          =image_tag @product.dimensions_img,{style:"width:100%"}
-        %ul#content3
-          = @product.standards
-        %ul#content4
-          =image_tag @product.drawing1_img,{style:"width:100%"}
-          %br
-          =image_tag @product.drawing2_img,{style:"width:100%"}
-          %br
-          =image_tag @product.materials_img,{style:"width:100%"}
+      #productdetails{style:"width:100%;height:auto;overflow:hidden"}
+        %ul#prodtab
+          %li.current#tab1
+            Description
+          %li#tab2
+            Dimesion
+          %li#tab3
+            Standards
+          %li#tab4
+            Drawings & Materials
+        #prodcontent
+          %ul#content1{style:"display:block"}
+            =@product.description
+          %ul#content2
+            =image_tag @product.dimensions_img,{style:"width:100%"}
+          %ul#content3
+            = @product.standards
+          %ul#content4
+            =image_tag @product.drawing1_img,{style:"width:100%"}
+            %br
+            =image_tag @product.drawing2_img,{style:"width:100%"}
+            %br
+            =image_tag @product.materials_img,{style:"width:100%"}
