@@ -11,8 +11,9 @@
   .pageblock{style:"padding-bottom:10px;min-height:650px"}
     #prodwrapper
       #producttitle.blockhead
-        %h2
-          =@product.title
+        =@product.title
+
+      =image_tag @product.photo, {alt:"Product Image",width:"100%",height:"100%"}
       %ul#prodtab
         %li.current#tab1
           Description
@@ -21,13 +22,17 @@
         %li#tab3
           Standards
         %li#tab4
-          Drawing
+          Drawings & Materials
       #prodcontent
         %ul#content1{style:"display:block"}
           =@product.description
         %ul#content2
-          /=imag_tag @product.dimension(:large)
+          =image_tag @product.dimensions_img,{style:"width:100%"}
         %ul#content3
           = @product.standards
         %ul#content4
-          =image_tag @product.photo(:large)
+          =image_tag @product.drawing1_img,{style:"width:100%"}
+          %br
+          =image_tag @product.drawing2_img,{style:"width:100%"}
+          %br
+          =image_tag @product.materials_img,{style:"width:100%"}
