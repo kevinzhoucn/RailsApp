@@ -10,7 +10,8 @@
         %ul
           %li.t#email Email
           %li#email1
-            = @contact.russian_email
+            %a{href:"mailto:#{@contact.russian_email}",style:"color:#2E86BD"}
+              = @contact.russian_email
       .blockcontent
         %ul
           %li.t#skype{style:"border-top:0px"} Skype
@@ -27,7 +28,8 @@
         %ul
           %li.t#email Email
           %li#email1
-            = @contact.english_email
+            %a{href:"mailto:#{@contact.english_email}",style:"color:#2E86BD"}
+              = @contact.english_email
       .blockcontent
         %ul
           %li.t#skype{style:"border-top:0px"} Skype
