@@ -1,5 +1,6 @@
 class Admin::SlidesController < ApplicationController
   layout 'admin'
+  before_filter :authenticate_admin!, :only => [:admin]
   def index
     @slides = Slide.all
 

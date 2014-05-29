@@ -1,5 +1,6 @@
 class Admin::ProductsController < ApplicationController
   layout "admin"
+  before_filter :authenticate_admin!, :only => [:admin]
   # GET /products
   # GET /products.json
   def index

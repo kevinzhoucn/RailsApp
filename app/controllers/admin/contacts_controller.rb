@@ -1,5 +1,6 @@
 class Admin::ContactsController < ApplicationController
   layout 'admin'
+  before_filter :authenticate_admin!, :only => [:admin]
   # GET /contacts
   # GET /contacts.json
   def index

@@ -1,5 +1,7 @@
 class FrontController < ApplicationController
   layout 'admin', :only => [:admin]
+  before_filter :authenticate_admin!, :only => [:admin]
+
   def index
     @activities = Activity.all
     @news = News.all
