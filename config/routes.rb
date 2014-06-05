@@ -1,4 +1,10 @@
 RailsApp::Application.routes.draw do
+  resources :equipment
+
+
+  resources :applications
+
+
   resources :contacts, only: [:index, :show]
   resources :companies
   resources :products, only: [:index, :show]
