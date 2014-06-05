@@ -3,6 +3,9 @@
 
   .form-inputs
     = f.input :title
+  
+  .form-inputs
+    = f.input :avatar, as: :file, label: 'Picture'
 
   .form-actions
     = f.button :submit
