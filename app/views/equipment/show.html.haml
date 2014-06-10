@@ -1,9 +1,22 @@
-%p#notice= notice
-
-%p
-  %b Title:
+#top-container.container-fluid
+  %h3 Our Equipments
+  - if not @equipment.nil?
+    =image_tag @equipment.avatar.url(:thumb)
+  - else
+    %p 
+      %b No equipment available.
+- if not @equipment.nil?
+  #companyintrotitle
+    
   = @equipment.title
 
-= link_to 'Edit', edit_equipment_path(@equipment)
-\|
-= link_to 'Back', equipment_index_path
+/ %p#notice= notice
+
+/ %p
+/   %b Title:
+/   = @equipment.title
+/   =image_tag @equipment.avatar(:large)
+
+/ = link_to 'Edit', edit_equipment_path(@equipment)
+/ \|
+/ = link_to 'Back', equipment_index_path

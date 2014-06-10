@@ -3,6 +3,7 @@
 %p
   %b Title:
   = @application.title
+  =image_tag @application.avatar(:large)
 
 = link_to 'Edit', edit_application_path(@application)
 \|

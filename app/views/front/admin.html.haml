@@ -37,8 +37,8 @@
           %hr
           #companypicNintro
             - if not @company.nil?
-              %h3 公司图片(小)
-              =image_tag @company.avatar.url(:small)
+              %h3 公司图片
+              =image_tag @company.avatar.url(:thumb)
             - else
               %p 
                 %b 无公司简介信息

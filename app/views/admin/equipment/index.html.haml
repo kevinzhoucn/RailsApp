@@ -1,0 +1,19 @@
+%h1 Listing admin_equipment
+
+%table
+  %tr
+    %th Content
+    %th
+    %th
+    %th
+
+  - @admin_equipment.each do |admin_equipment|
+    %tr
+      %td= admin_equipment.content
+      %td= link_to 'Show', admin_equipment
+      %td= link_to 'Edit', edit_admin_equipment_path(admin_equipment)
+      %td= link_to 'Destroy', admin_equipment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Equipment', new_admin_equipment_path
