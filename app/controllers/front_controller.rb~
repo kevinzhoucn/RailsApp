@@ -6,7 +6,6 @@ class FrontController < ApplicationController
     @activities = Activity.all
     @news = News.all
     @slides = Slide.all
-    @equipments = Equipment.all
   end
 
   def product
