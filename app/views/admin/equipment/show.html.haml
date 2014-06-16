@@ -1,9 +1,18 @@
 %p#notice= notice
 
 %p
+<<<<<<< HEAD
   %b Content:
   = @admin_equipment.content
 
 = link_to 'Edit', edit_admin_equipment_path(@admin_equipment)
 \|
 = link_to 'Back', admin_equipment_index_path
+=======
+  %b Title:
+  = @equipment.title
+
+= link_to 'Edit', edit_equipment_path(@equipment)
+\|
+= link_to 'Back', equipment_index_path
+>>>>>>> bcfa866b1bbd64aebe4c3a10680050bc753c7dc7
