@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 %h1 Listing admin_equipment
 
 %table
   %tr
     %th Content
-=======
-%h1 Listing equipment
-
-%table
-  %tr
-    %th Title
->>>>>>> bcfa866b1bbd64aebe4c3a10680050bc753c7dc7
     %th
     %th
     %th
 
-<<<<<<< HEAD
   - @admin_equipment.each do |admin_equipment|
     %tr
       %td= admin_equipment.content
@@ -26,15 +17,3 @@
 %br
 
 = link_to 'New Equipment', new_admin_equipment_path
-=======
-  - @equipment.each do |equipment|
-    %tr
-      %td= equipment.title
-      %td= link_to 'Show', equipment
-      %td= link_to 'Edit', edit_equipment_path(equipment)
-      %td= link_to 'Destroy', equipment, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Equipment', new_equipment_path
->>>>>>> bcfa866b1bbd64aebe4c3a10680050bc753c7dc7

@@ -43,7 +43,8 @@
               %p 
                 %b 无公司简介信息
               %p 
-                %b 请先添加公司简介
+                %b 请先
+                =link_to '添加公司简介', new_admin_company_path
             - if not @company.nil?
               #companyintro{style:"height:auto"}
                 #companyintrotitle
