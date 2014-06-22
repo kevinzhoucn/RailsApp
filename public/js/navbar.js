@@ -22,7 +22,7 @@ function setMenuBackground()
         $("#home").removeClass("active");
         $("#internationalmarkets").removeClass("inactive").addClass("active");
     }
-    else if(/equipments/.test(url.toLowerCase()))
+    else if(/equipment/.test(url.toLowerCase()))
     {
         $("#home").removeClass("active");
         $("#equipments").removeClass("inactive").addClass("active");

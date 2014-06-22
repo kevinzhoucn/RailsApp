@@ -1,8 +1,10 @@
-= simple_form_for(@admin_equipment) do |f|
+= simple_form_for([:admin, @admin_equipment]) do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :content
+    = f.input :title
+  .form-inputs
+    = f.input :avatar, as: :file
 
   .form-actions
     = f.button :submit

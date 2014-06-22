@@ -1,13 +1,9 @@
-%script{src:"#{root_url}js/admincompanyloader.js"}
 .generalcontainer#adminbody
   #adminnav{style:""}
     %ul.horizontal
       %li 快速导航:
       %li
         %a{href:"/admin"} 管理员首页
-        >
-      %li
-        %a{href:"/admin/companies"} 公司简介管理
         >
       %li 编辑公司简介
   #basic-accordian
@@ -23,6 +19,9 @@
           %h2 编辑公司简介
           %hr
           = render 'form'
+          %script{src:"#{root_url}ckeditor/ckeditor.js"}
+          %script{type:"text/javascript"}
+            CKEDITOR.replace('company_content');
       #test2-content
         .accordion_child
           正在前往管理员首页...

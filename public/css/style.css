@@ -168,20 +168,27 @@ margin-left:3px;
 	padding-bottom: 0px;
 	text-align: center;
 	margin:auto;
+	font-weight: bold;
 }
+
+
 .menu-item > li > a{
 	color: #2E86BD;
+	display: block;
+	width:100%;
+}
+.menu-item >li >a:hover,.menu-item >li.active >a{
+	color:#FFF;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#EFEFEF,endColorStr=#2E86BD);
+	background:-moz-linear-gradient(top,#EFEFEF,#2E86BD);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#EFEFEF), to(#2E86BD));*/
 }
 
 .menu-item >li.active{
-	font-weight: bold;
 	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#EFEFEF,endColorStr=#2E86BD);
 	background:-moz-linear-gradient(top,#EFEFEF,#2E86BD);
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#EFEFEF), to(#2E86BD));*/
 
-}
-.menu-item >li.active >a{
-	color:#FFF;
 }
 
 ul.admin-menu {

@@ -8,23 +8,3 @@
           =image_tag equipment.avatar,{width:"172",height:"172"}
         %div{style:"text-align:center;"}
           =link_to "#{equipment.title}", equipment,{style:"color:#2E86BD;"}
-          
-/ %h1 Listing equipment
-
-/ %table
-/   %tr
-/     %th Title
-/     %th
-/     %th
-/     %th
-
-/   - @equipment.each do |equipment|
-/     %tr
-/       %td= equipment.title
-/       %td= link_to 'Show', equipment
-/       %td= link_to 'Edit', edit_equipment_path(equipment)
-/       %td= link_to 'Destroy', equipment, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-/ %br
-
-/ = link_to 'New Equipment', new_equipment_path

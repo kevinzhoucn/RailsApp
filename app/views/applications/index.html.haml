@@ -1,21 +1,31 @@
-%h1 Listing applications
+.container.container-fluid{style:"margin-top:5px;"}
+  .pageblock{style:"padding-bottom:10px;min-height:650px"}
+    .blockhead{style:"width:80%"} Applications of Our Products
+    .col-md-12
+    - @applications.each do |application|
+      .thumb
+        #imagewrapper{style:"margin:auto;margin:5px auto;text-align:center"}
+          =image_tag application.avatar,{width:"172",height:"172"}
+        %div{style:"text-align:center;"}
+          =link_to "#{application.title}", application,{style:"color:#2E86BD;"}
 
-%table
-  %tr
-    %th Title
-    %th
-    %th
-    %th
 
-  - @applications.each do |application|
-    %tr
-      %td= application.title
-      %td
-        =image_tag application.avatar(:medium)
-      %td= link_to 'Show', application
-      %td= link_to 'Edit', edit_application_path(application)
-      %td= link_to 'Destroy', application, :method => :delete, :data => { :confirm => 'Are you sure?' }
+/ %h1 Listing applications
 
-%br
+/ %table
+/   %tr
+/     %th Title
+/     %th
+/     %th
+/     %th
 
-= link_to 'New Application', new_application_path
+/   - @applications.each do |application|
+/     %tr
+/       %td= application.title
+/       %td
+/         =image_tag application.avatar(:medium)
+/       %td= link_to 'Show', application
+/       %td= link_to 'Edit', edit_application_path(application)
+/       %td= link_to 'Destroy', application, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+/ %br

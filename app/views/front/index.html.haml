@@ -68,7 +68,7 @@
         #demo1
           - @equipments.each do |equipment|
             %a{href:"/equipment"}
-              =image_tag equipment.avatar
+              =image_tag equipment.avatar,{width:"172",height:"172"}
           
         #demo2
     %script{src:"#{root_url}js/rolling.js"}

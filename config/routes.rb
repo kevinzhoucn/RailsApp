@@ -14,13 +14,13 @@ RailsApp::Application.routes.draw do
     get "/home" => :index
     get "/products" => :product, as: 'front_product'
     get "/intmarkets" => :market, as: 'front_market'
-    get "/equipments" => :equipment, as: 'front_equipment'
+    get "/equipment" => :equipment, as: 'front_equipment'
     get "/contactus" => :contact, as: 'front_contact'
     get "/admin" => :admin, as: 'front_admin'
-    get "/application" => :application, as:'front_application'
+#    get "/application" => :application, as:'front_application'
   end
   namespace 'admin' do
-    resources :activities
+#    resources :activities
     resources :news
     resources :slides
     resources :companies
@@ -29,6 +29,7 @@ RailsApp::Application.routes.draw do
     resources :contacts
     resources :applications
     resources :equipment
+
   end
 
   # The priority is based upon order of creation:

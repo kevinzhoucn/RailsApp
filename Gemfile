@@ -49,3 +49,7 @@ gem 'paperclip', '~> 3.5.3'
 
 # To use debugger
 # gem 'debugger'
+
+
+
+# gem 'test'

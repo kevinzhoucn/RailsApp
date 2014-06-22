@@ -32,33 +32,3 @@
       #test2-content
         .accordion_child
           正在前往管理员首页...
-
-
-
-
-
-
-
-/  %h1 Listing products
-/
-/  %table
-/    %tr
-/      %th Title
-/      %th Standards
-/      %th Description
-/      %th
-/      %th
-/      %th
-
-/    - @products.each do |product|
-/      %tr
-/       %td= product.title
-/        %td= product.standards
-/        %td= product.description
-/        %td= link_to 'Show', product
-/        %td= link_to 'Edit', edit_product_path(product)
-/        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-/  %br
-
-/  = link_to 'New Product', new_product_path

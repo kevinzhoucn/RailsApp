@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @application.title
+
+= link_to '编辑', edit_admin_application_path(admin_applications)
+\|
+= link_to 'Back', application_path
