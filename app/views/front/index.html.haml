@@ -14,18 +14,12 @@
     %script{src:"#{root_url}js/tupianlunbo2.js"}
     #tupianlunbo
       %dl{style:"width:95%;margin:auto"}
-        %dt Gate Valve
-        %dt Ball Valve
-        %dt Check Valve
-        %dt Globe Valve
-        %dd 
-          %img{src:"#{root_url}img/products/KLT.jpg"}
-        %dd
-          %img{src:"#{root_url}img/products/klt0.jpg"}
-        %dd
-          %img{src:"#{root_url}img/products/klt1.jpg"}
-        %dd
-          %img{src:"#{root_url}img/products/klt3.jpg"}
+        - @slides.each do |slides|
+          %dt
+            =slides.title
+        - @slides.each do |slides|
+          %dd
+            =image_tag slides.avatar
 
   .pageblock.col-md-2{style:"min-height:350px"}
     #rightwrapper
@@ -36,6 +30,7 @@
       %video{autoplay:"autoplay",width:"100%",height:"100%"}
         %source{src:"http://public.dm2303.livefilestore.com/y2pCeDLNZTckPiSCzm3k9Wf768C6TkOzfpyN3cHQkFuH1O8-ff_ADIYn1VcSIC071hNb65IaDiy_Aqa52c4TvVJ4D_7oa9Uw4s9tvfdwxdY7JA",type:"video/mp4"}
         /打算放弃纯flash视频
+        %p We are sorry but your browser does not support HTML5 videos
         / %object{classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", codebase: "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0", width:"95%", height:"auto"}
         /   %param{name:"movie", value:"#{root_url}video/flvplayer.swf"}
         /   %param{name:"quality", value:"high"}
