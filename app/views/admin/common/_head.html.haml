@@ -10,8 +10,10 @@
       %a{href:"/",target:"_blank"} 预览网站首页
       &nbsp;|
     %li
-      %a 更改登录密码
+      =link_to "更改登录密码", root_url
       &nbsp;|
     %li
-      =link_to "注销", destroy_admin_session_path, { :method => :delete }
+      /=link_to "注销", root_url
+      %a#logout{href:"/admin/logout",type:"DELETE"} 注销
+
 /*Header*/

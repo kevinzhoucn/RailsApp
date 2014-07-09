@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WRD Valve Administration Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<%= root_url %>css/bootstrap.css" rel="stylesheet">
+    <link href="<%= root_url %>css/style.css" rel="stylesheet">
+    <script src="<%= root_url %>js/jquery.min.js"></script>
+    <!--script src="<%= root_url %>js/tupianlunbo.js"></script-->
+    <%= stylesheet_link_tag "application" %>    
+    <%= javascript_include_tag "application" %>  
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+          <div class="container" >
+            <%= yield %>
+          </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- <script src="<%= root_url %>js/jquery-1.11.0.min.js"></script>  -->  
+  <script src="<%= root_url %>js/bootstrap.js"></script>  
+  <div id="footer" style="width:100%;text-align:center">
+  <p>
+    Copyright(C) WRD Valves Ltd. | Powered by w3try.com
+  </p>
+</div>
+  </body>
+</html>

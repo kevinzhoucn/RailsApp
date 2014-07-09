@@ -1,6 +1,6 @@
 class Admin::CompaniesController < ApplicationController
   layout 'admin'
-  before_filter :authenticate_admin!, :only => [:admin]
+  before_filter :authenticate_admin!
   # GET /companies/1
   # GET /companies/1.json
   def show
