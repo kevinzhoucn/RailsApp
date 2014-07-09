@@ -13,5 +13,19 @@
       %a 更改登录密码
       &nbsp;|
     %li
-      %a 注销
+      %a.logout 注销
 /*Header*/
+
+:javascript
+  $(document).ready(function() {
+    var load = new Accordian('basic-accordian',5,'header_highlight');
+    $(".logout").click(function(){
+      $.ajax({
+        type: "DELETE",
+        url: "/admin/logout",
+        data: "",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json"
+      });
+  });
+

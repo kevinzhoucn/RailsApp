@@ -30,5 +30,8 @@ class FrontController < ApplicationController
 
   def application
   end
+
+  def userlogout
+  end
   
 end

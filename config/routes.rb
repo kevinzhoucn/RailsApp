@@ -18,6 +18,7 @@ RailsApp::Application.routes.draw do
     get "/contactus" => :contact, as: 'front_contact'
     get "/admin" => :admin, as: 'front_admin'
     get "/application" => :application, as:'front_application'
+    get '/userlogout' => :userlogout, as: 'front_userlogout'
   end
   namespace 'admin' do
     resources :activities
