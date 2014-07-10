@@ -6,7 +6,8 @@ RailsApp::Application.routes.draw do
   resources :products, only: [:index, :show]
   match 'products/valve/:id' => "products#valve", as: 'product_valve'
 
-  devise_for :admins, only: [:session], :path => '/admin', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  #devise_for :admins, only: [:session], :path => '/admin', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_for :admins, :path => '/admin', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   
   get "/company" => "Companies#show", as: 'front_company'
 
@@ -17,8 +18,8 @@ RailsApp::Application.routes.draw do
     get "/equipment" => :equipment, as: 'front_equipment'
     get "/contactus" => :contact, as: 'front_contact'
     get "/admin" => :admin, as: 'front_admin'
-#    get "/application" => :application, as:'front_application'
-  end
+    get '/userlogout' => :userlogout, as: 'front_userlogout'
+
   namespace 'admin' do
 #    resources :activities
     resources :news

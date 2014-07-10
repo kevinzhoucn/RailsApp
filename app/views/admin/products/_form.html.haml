@@ -3,8 +3,8 @@
 
   .form-inputs
     = f.input :title
-    = f.input :standards
-    = f.input :description
+    = f.text_area :standards,:rows => 10, :cols => 90
+    = f.text_area :description,:rows => 10, :cols => 90
     = f.association :producttype, label: "Category", include_blank: false
 
   .form-inputs

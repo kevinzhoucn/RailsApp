@@ -10,10 +10,29 @@
       %a{href:"/",target:"_blank"} 预览网站首页
       &nbsp;|
     %li
+<<<<<<< HEAD
       =link_to "更改登录密码", root_url
       &nbsp;|
     %li
       /=link_to "注销", root_url
       %a#logout{href:"/admin/logout",type:"DELETE"} 注销
 
+      = link_to '更改登录密码', edit_admin_registration_path(current_admin)
+      &nbsp;|
+    %li
+      %a.logout 注销
 /*Header*/
+
+:javascript
+  $(document).ready(function() {
+    var load = new Accordian('basic-accordian',5,'header_highlight');
+    $(".logout").click(function(){
+      $.ajax({
+        type: "DELETE",
+        url: "/admin/logout",
+        data: "",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json"
+      });
+  });
+
