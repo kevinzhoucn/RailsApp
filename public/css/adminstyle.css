@@ -14,7 +14,7 @@ body{
 }
 a,a:visited{
 	outline-style:none;
-	color:#234393;
+	color:#4895FF;
 	text-decoration:none
 }
 a.button,a.button:hover{
@@ -122,4 +122,28 @@ p{
 	background-position: 0px 16px;
 	padding-left:17px;
 	color:#FEFEFE;
+}
+
+#menu-header > li{
+	padding:5px;
+	padding-left:17px;
+	background:#DAF0FB;
+	background-image: url('../img/blockheadericon.png');
+	background-repeat:no-repeat;
+	background-position: 0px 16px;
+	color:#4895FF;
+	border:1px solid #FFF;
+	cursor:pointer;
+	font-weight:bold;
+}
+#menu-header > li.current{
+	background-color:#58b5DD;
+	color:#FFF;
+}
+
+.show{
+	display:block;
+}
+.hide{
+	display:none;
 }

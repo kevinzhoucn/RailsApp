@@ -11,26 +11,18 @@
       %li 添加图片轮播
   #basic-accordian
     #left{style:"float:left;width:25%;"}
-      #test1-header.accordion_headings.header_highlight
-        添加图片轮播
-      %a{href:"./",style:"text-decoration:none"}
-        #test2-header.accordion_headings
-          返回上一级
-      %a{href:"/admin",style:"text-decoration:none"}
-        #test3-header.accordion_headings
-          返回管理员首页
+      %ul#menu-header
+        %li.current{name:"leftlist",onclick:"tabbing(this)"} 添加图片轮播
+        %li{name:"leftlist",onclick:"tabbing(this)"}
+          %a{href:"/admin/slides",style:"display:block;width:100%"} 返回上一级
+        %li{name:"leftlist",onclick:"tabbing(this);"}
+          %a{href:"/admin",style:"display:block;width:100%"} 返回管理员首页
     #right{style:"float:left;width:73%;margin-right:1px"}
-      #test1-content
-        .accordion_child#allnews
-          %h2 添加图片轮播
-          %hr
-          = render 'form'
-      #test2-content
-        .accordion_child
-          正在前往上一级...
-      #test3-content
-        .accordion_child
-          正在前往管理员首页...
-
-  
-
+      #content1.show{name:"content"}
+        %h2 添加图片轮播
+        %hr
+        = render 'form'
+      #content2.hide{name:"content"}
+        正在前往上一级...
+      #content3.hide{name:"content"}
+        正在前往管理员首页...

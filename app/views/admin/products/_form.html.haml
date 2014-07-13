@@ -2,8 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :title
-    = f.text_area :standards,:rows => 10, :cols => 90
+    = f.input :title, label:"产品名称"
+    %h2 产品标准
+    = f.text_area :standards, :rows => 10, :cols => 90
+    %h2 产品描述
     = f.text_area :description,:rows => 10, :cols => 90
     = f.association :producttype, label: "Category", include_blank: false
 

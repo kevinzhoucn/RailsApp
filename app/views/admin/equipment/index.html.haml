@@ -9,48 +9,22 @@
       %li 设备管理
   #basic-accordian
     #left{style:"float:left;width:25%;"}
-      #test1-header.accordion_headings.header_highlight
-        设备管理
-      %a{href:"/admin",style:"text-decoration:none"}
-        #test2-header.accordion_headings
-          返回管理员首页
-
+      %ul#menu-header
+        %li.current{name:"leftlist",onclick:"tabbing(this)"} 设备管理
+        %li{name:"leftlist",onclick:"tabbing(this);"}
+          %a{href:"/admin",style:"display:block;width:100%"} 返回管理员首页
     #right{style:"float:left;width:73%;margin-right:1px"}
-      #test1-content
-        .accordion_child#allnews
-          %h2 当前所有设备
-          %hr
-          #newslist
-            - @admin_equipment.each do |admin_equipment|
-              %ul.horizontal
-                %li= admin_equipment.title
-                %li= link_to '编辑', edit_admin_equipment_path(admin_equipment)
-                %li= button_to '删除', admin_equipment_path(admin_equipment), :method => :delete, :data => { :confirm => '确定删除吗？' }
-              %br
+      #content1.show{name:"content"}
+        %h2 当前所有设备
+        %hr
+        #newslist
+          - @admin_equipment.each do |admin_equipment|
+            %ul.horizontal
+              %li= admin_equipment.title
+              %li= link_to '编辑', edit_admin_equipment_path(admin_equipment)
+              %li= button_to '删除', admin_equipment_path(admin_equipment), :method => :delete, :data => { :confirm => '确定删除吗？' }
+            %br
 
-            = link_to '添加新设备', new_admin_equipment_path
-      #test2-content
-        .accordion_child
-          正在前往管理员首页...
-
-
-
-/ %h1 Listing admin_equipment
-
-/ %table
-/   %tr
-/     %th Content
-/     %th
-/     %th
-/     %th
-
-/   - @admin_equipment.each do |admin_equipment|
-/     %tr
-/       %td= admin_equipment.title
-/       %td= link_to 'Show', admin_equipment
-/       %td= link_to 'Edit', edit_admin_equipment_path(admin_equipment)
-/       %td= link_to 'Destroy', admin_equipment, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-/ %br
-
-/ = link_to 'New Equipment', new_admin_equipment_path
+          = link_to '添加新设备', new_admin_equipment_path
+      #content2.hide{name:"content"}
+        正在前往管理员首页...

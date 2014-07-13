@@ -9,24 +9,21 @@
       %li 公司简介管理
   #basic-accordian
     #left{style:"float:left;width:25%;"}
-      #test1-header.accordion_headings.header_highlight
-        公司简介信息
-      %a{href:"/admin",style:"text-decoration:none"}
-        #test2-header.accordion_headings
-          返回管理员首页
-
+      %ul#menu-header
+        %li.current{name:"leftlist",onclick:"tabbing(this)"} 公司简介
+        %li{name:"leftlist",onclick:"tabbing(this);"}
+          %a{href:"/admin",style:"display:block;width:100%"} 返回管理员首页
     #right{style:"float:left;width:73%;margin-right:1px"}
-      #test1-content
-        .accordion_child#allnews
-          %h2 当前所有图片轮播
-          %hr
-          #newslist
-            - @companies.each do |companies|
-              %ul.horizontal
-                %li= companies.title
-                %li= link_to '编辑', edit_admin_slide_path(companies)
-                %li= link_to '删除', admin_slide_path(companies), :method => :delete, :data => { :confirm => '确定删除吗？' }
-
-      #test2-content
-        .accordion_child
-          正在前往管理员首页...
+      #content1.show{name:"content"}
+        %h2 当前公司简介
+        %hr
+        #newslist
+          - @companies.each do |company|
+            %ul.horizontal
+              %li= admin_company.content
+              %li= link_to '编辑', edit_company_path(company)
+              %li= button_to '删除', company, :method => :delete, :data => { :confirm => '确定删除吗？' }
+            %br
+          = link_to '添加公司简介', new_admin_company_path
+      #content2.hide{name:"content"}
+        正在前往管理员首页...

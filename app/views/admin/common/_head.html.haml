@@ -10,22 +10,14 @@
       %a{href:"/",target:"_blank"} 预览网站首页
       &nbsp;|
     %li
-<<<<<<< HEAD
-      =link_to "更改登录密码", root_url
-      &nbsp;|
-    %li
-      /=link_to "注销", root_url
-      %a#logout{href:"/admin/logout",type:"DELETE"} 注销
-
       = link_to '更改登录密码', edit_admin_registration_path(current_admin)
       &nbsp;|
     %li
-      %a.logout 注销
+    = link_to("注销", destroy_admin_session_path, :method => :delete)
 /*Header*/
 
 :javascript
   $(document).ready(function() {
-    var load = new Accordian('basic-accordian',5,'header_highlight');
     $(".logout").click(function(){
       $.ajax({
         type: "DELETE",
@@ -36,3 +28,18 @@
       });
   });
 
+:javascript
+  function tabbing(b){
+    var ul = document.getElementsByName("leftlist");
+    var c = document.getElementsByName("content");
+
+    for(var i=0;i<ul.length;i++){
+      if(ul[i]==b){
+        ul[i].className="current";
+        c[i].className="show";
+      }else{
+        ul[i].className="";
+        c[i].className="hide";
+      }
+    }
+  }
