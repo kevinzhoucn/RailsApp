@@ -237,6 +237,7 @@ ul.admin-menu a:hover{
 }
 #wrdlogo{
 	background-image:url('../img/logoNtext.png');
+	background-size:100%;
 	background-repeat:no-repeat;
 	width: 70%;
 	height:100%;
