@@ -1,1 +1,1 @@
-window.onload = function() {setMenuBackground();tabbing()}
+window.onload = function() {setMenuBackground();}

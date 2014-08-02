@@ -296,6 +296,12 @@ li.partner{
 	width:131px;
 	margin:auto;
 }
+#photowrapper{
+		width:60%;
+		float:left;
+		height:auto;
+		overflow:hidden;
+	}
 @media screen and (max-width: 700px){
 	.Rucontact,.Encontact,.websiteinfo{
 		width:100%;
@@ -320,5 +326,8 @@ li.partner{
 		margin-left:2px;
 		margin-right: 2px;
 		margin-bottom: 1px;
+	}
+	#photowrapper{
+		width:100%;
 	}
 }

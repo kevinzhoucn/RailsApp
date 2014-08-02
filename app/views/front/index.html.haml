@@ -10,16 +10,66 @@
     .blockhead{style:"text-align:center"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       Product Parameters
-    %script{src:"http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js"}
-    %script{src:"#{root_url}js/tupianlunbo2.js"}
-    #tupianlunbo
-      %dl{style:"width:95%;margin:auto"}
+    /Slideshow starts
+    %script{src:"#{root_url}js/sliders/startslider.js"}
+    #sliderb_container{style:"position:relative;width:500px;height:250px; overflow: hidden;"}
+      %div{u:"loading", style:"position: absolute; top: 0px; left: 0px;"}
+        %div{style:"filter:alpha(opacity=70);opacity:0.7;position: absolute; display: block;background-color:#000; top:0px; left:0px;width:100%;height:100%;"}
+        %div{style:"position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top:0px; left: 0px;width: 100%;height:100%;"}
+      /slides container
+      %div{u:"slides",style:"cursor: move; position: absolute; left:0px; top: 0px; width: 500px; height: 250px; overflow: hidden;"}
         - @slides.each do |slides|
-          %dt
-            =slides.title
-        - @slides.each do |slides|
-          %dd
-            =image_tag slides.avatar
+          %div
+            =image_tag slides.avatar{u:"image"}
+            %div{u:"thumb"}
+              =slides.title
+      /thumnail Navigator skin begin
+      .sliderb-T{u:"thumbnavigator",style:"position: absolute; bottom: 0px; left: 0px; height:45px; width:500px;"}
+        %div{style:"filter: alpha(opacity=40); opacity:0.8; position: absolute; display: block;background-color:#1E86BD; top: 0px; left: 0px; width: 100%; height: 100%;"}
+        /thumbnail item skin begin
+        %div{u:"slides"}
+          %div{u:"prototype",style:"position: absolute; width: 500px; height: 45px; top: 0; left: 0;"}
+            %thumbnailtemplate{style:"position: absolute; width: 100%; height: 100%; top: 0; left: 0; font-family: verdana; font-weight: normal; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"}
+        /thumbnail item skin end
+      /thumbnail navigator skin end
+      %style{type:"text/css", media:"screen"}
+        / .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av{filter: alpha(opacity=70); opacity: .7;overflow:hidden;cursor: pointer;border: #000 1px solid;}
+        / .jssorb01 div { background-color: #2E86BD; }
+        / .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+        / .jssorb01 .av { background-color: #fff; }
+        / .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+      /bullet navigator container
+      .jssorb01{u:"navigator",style:"position: absolute; bottom: 16px; right: 10px;"}
+        /bullet navigator item prototype
+        %div{u:"prototype",style:"POSITION: absolute; WIDTH: 12px; HEIGHT: 12px;"}
+      /bullet navigator skin end
+      /arrow navigator skin begin
+      %style{type:"text/css", media:"screen"}
+        / .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn{position: absolute;cursor: pointer;display: block;background: url(../img/a17.png) no-repeat;overflow:hidden;}
+        / .jssora05l { background-position: -10px -40px; }
+        / .jssora05r { background-position: -70px -40px; }
+        / .jssora05l:hover { background-position: -130px -40px; }
+        / .jssora05r:hover { background-position: -190px -40px; }
+        / .jssora05ldn { background-position: -250px -40px; }
+        / .jssora05rdn { background-position: -310px -40px; }
+      %span.jssora05l{u:"arrowleft",style:"width: 40px; height: 40px; top: 123px; left: 8px;"}
+      %span.jssora05r{u:"arrowright",style:"width: 40px; height: 40px; top: 123px; right: 8px"}
+      /arrow navigator skin end
+      :javascript
+        jssor_sliderb_starter('sliderb_container');
+    /slidshow ends
+
+    /以下代码准备废弃
+    / %script{src:"http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js"}
+    / %script{src:"#{root_url}js/tupianlunbo2.js"}
+    / #tupianlunbo
+    /   %dl{style:"width:95%;margin:auto"}
+    /     - @slides.each do |slides|
+    /       %dt
+    /         =slides.title
+    /     - @slides.each do |slides|
+    /       %dd
+    /         =image_tag slides.avatar
 
   .pageblock.col-md-2{style:"min-height:350px"}
     #rightwrapper
@@ -58,15 +108,33 @@
     .blockhead{style:"text-align:center"}
       %img{src:"#{root_url}img/blockheadericon.png"}
       Our Equipments
-    #demo
-      #indemo
-        #demo1
-          - @equipments.each do |equipment|
+    /start roller
+    %script{src:"#{root_url}js/sliders/startroller.js"}
+    /roller begin
+    #slider1_container{style:"position:relative;top:0px;left:0px;width:980px;height:110px;overflow:hidden;"}
+      /Loading Screen
+      #loderwapper{u:"loading", style:"position:absolute;top:0px;left:0px;"}
+        #loadereffect{style:"filter:alpha(opacity=70);opacity:0.7;position:absolute;display:block; background-color: #000;top:0px;left:0px;width:100%;height:100%;"}
+        #loaderskin{style:"position:absolute;display:block;background:url(../img/loading.gif) no-repeat center center;top:0px;left:0px;width:100%;height:100%;"}
+      /roller container
+      #rollerbody{u:"slides",style:"cursor:move;position:absolute;left:0px;top:0px;width:980px;height:110px;overflow:hidden;"}
+        - @equipments.each do |equipment|
+          .rollerimagecontainer
             %a{href:"/equipment"}
-              =image_tag equipment.avatar,{width:"172",height:"172"}
-          
-        #demo2
-    %script{src:"#{root_url}js/rolling.js"}
+              =image_tag equipment.avatar,{u:"image"}
+      :javascript
+        jssor_slider1_starter('slider1_container');
+    /end roller
+
+    /以下代码准备废弃
+    / #demo
+    /   #indemo
+    /     #demo1
+    /       - @equipments.each do |equipment|
+    /         %a{href:"/equipment"}
+    /           =image_tag equipment.avatar,{width:"172",height:"172"}
+    /     #demo2
+    / %script{src:"#{root_url}js/equipments/rolling.js"}
 
 #middle-container.container-fluid{style:"padding-top:3px"}
   .col-md-2.pageblock{style:"height:275px"}
