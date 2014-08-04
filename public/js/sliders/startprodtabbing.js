@@ -43,7 +43,7 @@ jssor_slider2_starter = function (containerId) {
             var sliderWidth = parentWidth;
 
             //keep the slider width no more than 602
-            sliderWidth = Math.min(sliderWidth, 602);
+            sliderWidth = Math.min(sliderWidth, 720);
 
             jssor_slider2.$SetScaleWidth(sliderWidth);
         }

@@ -16,58 +16,37 @@
         =image_tag @product.photo, {alt:"Product Image",width:"100%",height:"100%"}
       #spacing{style:"height:15px;width:100%;clear:both"}
       #productdetails{style:"width:100%;height:auto;overflow:hidden"}
-        %script{src:"#{root_url}js/sliders/startprodtabbing.js"}
-        /tab container begin
-        #slider2_container{style:"position:relative;top:0px;left:0px;width:602px;height:331px;background:#fff;overflow:hidden;"}
-          /slide container
-          #slidecontainer{u:"slides", style:"cursor:move;position:absolute;left:0px;top:29px;width:600px;height:300px;border:1px solid gray;-webkit-filter:blur(0px);background-color:#fff;overflow:hidden;"}
-            /slide content and navigator
-            #tabcontainer
-              #content{style:"margin:10px;overflow:hidden;color:#000;"}
-                =@product.description
-              #navigator{u:"thumb"}
-                Description
-            #tabcontainer
-              #content{style:"margin:10px;overflow:hidden;color:#000;"}
-                =image_tag @product.dimensions_img,{style:"width:100%"}
-              #navigator{u:"thumb"}
-                Dimension
-            #tabcontainer
-              #content{style:"margin:10px;overflow:hidden;color:#000;"}
-                = @product.standards
-              #navigator{u:"thumb"}
-                Standards
-            #tabcontainer
-              #content{style:"margin:10px;overflow:hidden;color:#000;"}
-                =image_tag @product.drawing1_img,{style:"width:100%"}
-                %br
-                =image_tag @product.drawing2_img,{style:"width:100%"}
-                %br
-                =image_tag @product.materials_img,{style:"width:100%"}
-              #navigator{u:"thumb"}
-                Drawings & Materials
-          /thumbnail navigator skin begin
-          .jssort12{u:"thumbnavigator",style:"position:absolute;width:600px;height:30px;left:0px;top:0px;"}
-            %style{type:"text/css", media:"screen"}
-              / 
-              / /*.jssort12 .p            (normal)
-              / .jssort12 .p:hover      (normal mouseover)
-              / .jssort12 .pav          (active)
-              / .jssort12 .pav:hover    (active mouseover)
-              / .jssort12 .pdn          (mousedown)
-              / */
-              / .jssort12 .w, .jssort12 .phv .w{cursor: pointer;position: absolute;WIDTH: 150px;HEIGHT: 28px;border: 1px solid gray;top: 0px;left: -1px;}
-              / .jssort12 .pav .w, .jssort12 .pdn .w{border-bottom: 1px solid #FFF;}
-              / .jssort12 .c{color: #000;font-size:15px;}
-              / .jssort12 .p .c, .jssort12 .pav:hover .c{background-color:#eee;}
-              / .jssort12 .pav .c, .jssort12 .p:hover .c, .jssort12 .phv .c{background-color:#EEE;}
-            #theunknownid{u:"slides",style:"cursor:move;top:0px;left:0px;border-left:1px solid gray;"}
-              .p{u:"prototype",style:"POSITION:absolute;WIDTH:150px;HEIGHT:30px;TOP:0;LEFT:0;padding:0px;"}
-                .w
-                  %ThumbnailTemplate.c{style:"WIDTH:100%;HEIGHT:100%;position:absolute;TOP:0;LEFT:0;line-height:28px;text-align:center;"}
-          /ThumbnailNavigator Skin End
-          :javascript
-            jssor_slider2_starter('slider2_container');
+        %script{src:"#{root_url}js/jquery-ui.js"}
+        :javascript
+          $(function() {
+            $( "#tabs" ).tabs(); });
+        #tabs
+          #navigator-wrapper
+            %ul#prodtab
+              %li
+                %a{href:"#tabs-1"}
+                  Description
+              %li
+                %a{href:"#tabs-2"}
+                  Dimensions
+              %li
+                %a{href:"#tabs-3"}
+                  Standards
+              %li
+                %a{href:"#tabs-4"}
+                  Drawings & Materials
+          #tabs-1
+            =@product.description.html_safe
+          #tabs-2
+            =image_tag @product.dimensions_img,{style:"width:100%"}
+          #tabs-3
+            = @product.standards.html_safe
+          #tabs-4
+            =image_tag @product.drawing1_img,{style:"width:100%"}
+            %br
+            =image_tag @product.drawing2_img,{style:"width:100%"}
+            %br
+            =image_tag @product.materials_img,{style:"width:100%"}
 
         /以下代码准备废弃
         / %ul#prodtab
