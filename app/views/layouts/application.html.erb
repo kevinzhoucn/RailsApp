@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="<%= root_url %>css/bootstrap.css" rel="stylesheet">
     <link href="<%= root_url %>css/style.css" rel="stylesheet">
-    <!--script src="<%= root_url %>js/jquery-ui.min.js"></script-->
+    
     <%= stylesheet_link_tag "application" %>    
     <%= javascript_include_tag "application" %>  
     <%= csrf_meta_tag %>
@@ -34,8 +34,9 @@
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <!-- <script src="<%= root_url %>js/jquery-1.11.0.min.js"></script>  -->  
+  <!-- Placed at the end of the document so the pages load faster --> 
+  <script src="<%= root_url %>js/jquery-1.11.0.min.js"></script> 
+  <script src="<%= root_url %>js/jquery-ui.js"></script>
   <script src="<%= root_url %>js/bootstrap.js"></script>  
   </body>
 </html>

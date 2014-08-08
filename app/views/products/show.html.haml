@@ -35,13 +35,13 @@
               %li
                 %a{href:"#tabs-4"}
                   Drawings & Materials
-          #tabs-1
+          #tabs-1.prodcontent
             =@product.description.html_safe
-          #tabs-2
+          #tabs-2.prodcontent
             =image_tag @product.dimensions_img,{style:"width:100%"}
-          #tabs-3
+          #tabs-3.prodcontent
             = @product.standards.html_safe
-          #tabs-4
+          #tabs-4.prodcontent
             =image_tag @product.drawing1_img,{style:"width:100%"}
             %br
             =image_tag @product.drawing2_img,{style:"width:100%"}

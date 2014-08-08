@@ -1,7 +1,97 @@
 #top-container.container-fluid
   .col-md-12{style:"margin-top:5px;padding:5px"}
-    #contactimg{style:"box-shadow: 0 0 85px rgba(0,0,0,.3);width:315px;margin:auto"}
-      %img{src:"#{root_url}img/contact.jpg",alt:"Contact Us",align:"center"}
+    %script{src:"#{root_url}js/sliders/startfullwidthslider.js"}
+    #slider1_container{style:"position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;"}
+      /slide container
+      #slidecontainer{u:"slides",style:"cursor:move;position:absolute;left:0px;top:0px;width:1300px;height:500px;overflow:hidden;"}
+        #slide1
+          %img{u:"image",src:"#{root_url}img/blue.jpg"}
+          .innertitle{style:"position: absolute; width:480px;height:120px;top:30px;left:30px;padding:5px;text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;color: #FFFFFF;"}
+            English Contact
+          .innercontent{style:"position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;text-align: left; line-height: 36px; font-size: 30px;color: #FFFFFF;"}
+            Email:
+            =@contact.english_email
+            %br
+            Mobile:
+            =@contact.english_mobile
+            %br
+            Skype:
+            =@contact.english_skype
+        #slide2
+          %img{u:"image",src:"#{root_url}img/red.jpg"}
+          .innertitle{style:"position: absolute; width:480px;height:120px;top:30px;left:30px;padding:5px;text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;color: #FFFFFF;"}
+            Russian Contact
+          .innercontent{style:"position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;text-align: left; line-height: 36px; font-size: 30px;color: #FFFFFF;"}
+            Email:
+            =@contact.russian_email
+            %br
+            Mobile:
+            =@contact.russian_mobile
+            %br
+            Skype:
+            =@contact.russian_skype
+        #slide3
+          %img{u:"image",src:"#{root_url}img/purple.jpg"}
+          .innertitle{style:"position: absolute; width:480px;height:120px;top:30px;left:30px;padding:5px;text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;color: #FFFFFF;"}
+            We can also be reached...
+          .innercontent{style:"position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;text-align: left; line-height: 36px; font-size: 30px;color: #FFFFFF;"}
+            Website:
+            =link_to 'http://'+@contact.website, root_url,{style:"color:#2E86BD"}
+            %br
+            Tel/Fax: 
+            = @contact.tel
+            %br
+            Address: 
+            = @contact.address1
+            %br
+            = @contact.address2
+            %br
+            Post Code
+            = @contact.postcode
+      %style{type:"text/css", media:"screen"}
+        / /* jssor slider bullet navigator skin 21 css */
+        / /*
+        /   .jssorb21 div           (normal)
+        /   .jssorb21 div:hover     (normal mouseover)
+        /   .jssorb21 .av           (active)
+        /   .jssorb21 .av:hover     (active mouseover)
+        /   .jssorb21 .dn           (mousedown)
+        / */
+        / .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av{background: url(../img/b21.png) no-repeat;overflow:hidden;cursor: pointer;}
+        / .jssorb21 div { background-position: -5px -5px; }
+        / .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+        / .jssorb21 .av { background-position: -65px -5px; }
+        / .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+      /bullet navigator container
+      .jssorb21{u:"navigator",style:"position: absolute; bottom: 26px; left: 6px;"}
+        /bullet navigator item prototype
+        #bulletnavigatorprototype{u:"prototype",style:"POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"}
+      %style{type:"text/css", media:"screen"}
+        / /* jssor slider arrow navigator skin 21 css */
+        / /*
+        / .jssora21l              (normal)
+        / .jssora21r              (normal)
+        / .jssora21l:hover        (normal mouseover)
+        / .jssora21r:hover        (normal mouseover)
+        / .jssora21ldn            (mousedown)
+        / .jssora21rdn            (mousedown)
+        / */
+        / .jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn{position:absolute;cursor:pointer;display: block;background: url(../img/a21.png) center center no-repeat;overflow: hidden;}
+        / .jssora21l { background-position: -3px -33px; }
+        / .jssora21r { background-position: -63px -33px; }
+        / .jssora21l:hover { background-position: -123px -33px; }
+        / .jssora21r:hover { background-position: -183px -33px; }
+        / .jssora21ldn { background-position: -243px -33px; }
+        / .jssora21rdn { background-position: -303px -33px; }
+
+
+
+
+
+
+    / 以下代码准备淘汰,取而代之的是 full width slider
+    / #contactimg{style:"box-shadow: 0 0 85px rgba(0,0,0,.3);width:315px;margin:auto"}
+    /   %img{src:"#{root_url}img/contact.jpg",alt:"Contact Us",align:"center"}
 #contactform{style:"margin:auto;width:85%"}
   .container-fluid
     .Rucontact

@@ -98,16 +98,17 @@ ul.bullets li{
 	border:1px;
 	border-color:#69A6CD;
 }
-#prodcontent {
+.prodcontent {
     border:1px solid #C1D4D3;
     border-top-width:0;
+    margin-right:8px;
+    padding:5px;
     min-height: 400px;
+    background-color:#EFF4F3;
 }
-#prodcontent ul {
-    line-height:25px;
-    display:none;
-    margin:0 30px;
-    padding:10px 0;
+.prodcontent >p>a {
+    color:#2a6496;
+    text-decoration: none;
 }
 
 
@@ -199,7 +200,6 @@ margin-left:3px;
 	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#EFEFEF,endColorStr=#2E86BD);
 	background:-moz-linear-gradient(top,#EFEFEF,#2E86BD);
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#EFEFEF), to(#2E86BD));*/
-
 }
 
 ul.admin-menu {
@@ -349,5 +349,12 @@ li.partner{
 	#prodtab >li>a{
 		display:block;
 		width:100%;
+	}
+	.prodcontent,#prodtab{
+		font-size:1.5em;
+		line-height: 40px;
+	}
+	.bullets{
+		font-size:1.5em;
 	}
 }

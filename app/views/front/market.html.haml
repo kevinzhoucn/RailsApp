@@ -1,6 +1,29 @@
 #top-container.container-fluid
-  .panel.panel-info
-    .panel-heading
-      %h2.panel-subject International Marketing
-    %img{src:"#{root_url}img/worldmap-resized.jpg",width:"100%",height:"100%"}
-    %p we trade with the whole world
+  .col-md-12{style:"padding:5px"}
+    %script{src:"#{root_url}js/sliders/startmarketslider.js"}
+    #slider1_container{style:"position: relative; width: 995px;height: 577px; overflow: hidden;"}
+      /the loading screen
+      #loadingdiv{u:"loading",style:"position:absolute;top:0px;left:0px;"}
+        #insideloading{style:"filter:alpha(opacity=70);opacity:0.7;position:absolute;display:block;background-color:#000;top:0px;left:0px;width:100%;height:100%;"}
+        #insideloading2{style:"position:absolute;display:block;background: url(../img/loading.gif) no-repeat center center;top:0px;left:0px;width:100%;height:100%;"}
+      /the slides container
+      #theslidescontainer{u:"slides",style:"cursor:move;position:absolute;left:0px;top:0px;width:995px;height:577px;overflow:hidden;"}
+        #slidewithtext
+          %a{u:"image",href:"#"}
+            %img{src:"#{root_url}img/market/asia.jpg"}
+          #marketasia{u:"caption",t:"*",style:"position:absolute; left:20px;top:30px;height:30px;"}
+            %h1{style:"font-size:+2;color:#e01f1f;"}We have already developed a mature maket within Asia-Pacific
+            %h1{style:"color:#e01f1f;font-size:18px"} And, are gaining the market share.
+        #slidewithtext
+          %a{u:"image",href:"#"}
+            %img{src:"#{root_url}img/market/euaf.jpg"}
+          #marketeu{u:"caption",t:"*",style:"position:absolute; left:20px;top:30px;width:300px;height:30px;"}
+            %h1{style:"font-size:+2;color:#EF2aab"}
+              We have more partners and clients based in Russia, Germany, UK and even more...
+
+        #slidewithtext
+          %a{u:"image",href:"#"}
+            %img{src:"#{root_url}img/market/na.jpg"}
+          #marketna{u:"caption",t:"*",style:"position:absolute; left:20px;top:30px;width:300px;height:30px;"}
+            %h1{style:"font-size:+2;color:#2E86BD"}
+              We are ambisious and actively developing the Americas Market.
