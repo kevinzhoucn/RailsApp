@@ -10,3 +10,5 @@
 Admin.create(email: "admin01@yahoo.com", password: "Passw0rd01!")
 Admin.create(email: "admin02@yahoo.com", password: "Passw0rd01!")
 Admin.create(email: "admin03@yahoo.com", password: "Passw0rd01!")
+Admin.create(email: "roma@wrdvalve.com", password: "wrdvalve")
+Admin.create(email: "nancy@wrdvalve.com", password: "wrdvalve")

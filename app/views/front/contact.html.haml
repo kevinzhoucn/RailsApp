@@ -41,6 +41,7 @@
             Tel/Fax: 
             = @contact.tel
             %br
+            %br
             Address: 
             = @contact.address1
             %br
@@ -148,9 +149,9 @@
     .websiteinfo
       .blockcontent{style:"overflow:hidden"}
         %ul
-          %li.t#website{style:"border-top:0px;line-height:75px"}
+          %li.t#address{style:"border-top:0px;line-height:100px"}
             Address
-          %li#website{style:"width:79.48%;border-top:0px"}
+          %li#website{style:"width:79.48%;border-top:0px;height:101px"}
             = @contact.address1
             %br
             = @contact.address2

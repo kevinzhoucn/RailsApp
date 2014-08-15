@@ -313,7 +313,7 @@ li.partner{
 		height:auto;
 		overflow:hidden;
 	}
-@media screen and (max-width: 700px){
+@media screen and (max-width: 640px){
 	.Rucontact,.Encontact,.websiteinfo{
 		width:100%;
 		line-height: 35px;
@@ -357,4 +357,7 @@ li.partner{
 	.bullets{
 		font-size:1.5em;
 	}
+	/*.blockcontent li.t{
+		height:101px;
+	}*/
 }
